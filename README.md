@@ -1,8 +1,24 @@
-# understanding deep learning
-A lecture note for understanding deep learning.
 
-Lecture video can be found in Bilibili: 许志钦
+# 理解深度学习
 
-https://space.bilibili.com/95975441/channel/seriesdetail?sid=3749682
+本仓库包含了关于深度学习的讲义和相关资源，帮助深入理解深度学习的核心概念。
 
-contact: xuzhiqin@sjtu.edu.cn
+## 课程视频
+
+完整的课程视频可以在 [Bilibili](https://space.bilibili.com/95975441/channel/seriesdetail?sid=3749682) （许志钦）上观看，涵盖了深度学习的基础和进阶内容。
+
+## 更新内容（2024年11月13日）
+
+### 1. 实验部分
+   - **新增内容**：添加了实验部分，包括详细的实验讲义和对应的 Jupyter 文件。这些资料提供了深度学习的实际应用案例和数据分析，以加强讲义内容的理解。
+
+### 2. 初始化对推理的影响
+   - **理论驱动的应用**：新增了一节关于初始化对推理性能影响的讨论，将凝聚理论应用到大语言模型中，展示了如何将理论见解有效地融入实际应用，形成从理论到应用的完整故事线。
+
+### 3. 模型章节修改
+   - **变分自编码器更新**：对变分自编码器部分进行了改进。
+
+## 联系方式
+
+如有问题或进一步讨论，请联系：[xuzhiqin@sjtu.edu.cn](mailto:xuzhiqin@sjtu.edu.cn)
+
