@@ -1,4 +1,4 @@
-# understanding_deep_learning
+# understanding deep learning
 A lecture note for understanding deep learning.
 
 Lecture video can be found in Bilibili: 许志钦

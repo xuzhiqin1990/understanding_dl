@@ -1,0 +1,358 @@
+2024-09-07 05:12:33 - INFO: data type: 2order_train         ex: [13, 72, 72, 12, 38, 13, 78, 8, 8, 84, 12, 78, 12, 8]
+2024-09-07 05:12:33 - INFO: data type: 2order_train         ex: [6, 25, 65, 15, 71, 6, 15, 1, 1, 77, 77, 71, 1, 71]
+2024-09-07 05:12:33 - INFO: data type: 2order_train         ex: [10, 29, 51, 21, 16, 86, 29, 34, 21, 16, 86, 10, 10, 34]
+2024-09-07 05:12:33 - INFO: data type: 2order_train         ex: [66, 87, 15, 50, 86, 96, 87, 86, 96, 97, 50, 66, 87, 96]
+2024-09-07 05:12:33 - INFO: data type: 2order_train         ex: [60, 64, 11, 10, 5, 60, 64, 23, 87, 11, 10, 5, 60, 23]
+2024-09-07 05:12:33 - INFO: data type: 2order_test          ex: [99, 1, 21, 99, 38, 95, 1, 38, 19, 21, 95, 23, 1, 95]
+2024-09-07 05:12:33 - INFO: data type: 2order_test          ex: [75, 43, 2, 75, 98, 6, 43, 50, 5, 2, 50, 98, 50, 6]
+2024-09-07 05:12:33 - INFO: data type: 2order_test          ex: [91, 98, 98, 40, 54, 91, 40, 22, 22, 19, 19, 56, 54, 98]
+2024-09-07 05:12:33 - INFO: data type: 2order_test          ex: [38, 61, 61, 59, 59, 42, 90, 53, 41, 38, 42, 90, 61, 42]
+2024-09-07 05:12:33 - INFO: data type: 2order_test          ex: [81, 79, 26, 69, 19, 36, 79, 26, 69, 61, 61, 19, 81, 26]
+2024-09-07 05:12:33 - INFO: data type: 2order_OOD           ex: [95, 8, 186, 165, 140, 105, 8, 127, 127, 186, 105, 95, 105, 8]
+2024-09-07 05:12:33 - INFO: data type: 2order_OOD           ex: [124, 182, 182, 109, 90, 87, 176, 90, 170, 124, 109, 176, 176, 87]
+2024-09-07 05:12:33 - INFO: data type: 2order_OOD           ex: [88, 124, 135, 165, 124, 101, 122, 71, 71, 88, 101, 135, 122, 88]
+2024-09-07 05:12:33 - INFO: data type: 2order_OOD           ex: [177, 41, 169, 101, 41, 25, 101, 127, 176, 169, 127, 177, 177, 25]
+2024-09-07 05:12:33 - INFO: data type: 2order_OOD           ex: [160, 192, 198, 160, 90, 51, 171, 90, 173, 171, 192, 173, 171, 51]
+2024-09-07 05:12:34 - INFO: Total parameters: 3358201
+2024-09-07 05:12:41 - INFO: data type: 2order_train              Acc: 1.0215%
+2024-09-07 05:12:41 - INFO: data type: 2order_test               Acc: 1.0600%
+2024-09-07 05:12:41 - INFO: data type: 2order_OOD                Acc: 0.9533%
+2024-09-07 05:12:53 - INFO: Epoch: 0      Train Loss: 4.7053e+00  Test Loss: 4.6134e+00  [ 2order_test: 4.61e+00  2order_OOD: 4.61e+00 ]  lr: 6.50e-05
+2024-09-07 05:13:05 - INFO: Epoch: 1      Train Loss: 4.5228e+00  Test Loss: 4.4119e+00  [ 2order_test: 4.54e+00  2order_OOD: 4.29e+00 ]  lr: 8.00e-05
+2024-09-07 05:13:16 - INFO: Epoch: 2      Train Loss: 4.0405e+00  Test Loss: 4.1299e+00  [ 2order_test: 4.33e+00  2order_OOD: 3.93e+00 ]  lr: 9.50e-05
+2024-09-07 05:13:28 - INFO: Epoch: 3      Train Loss: 3.7918e+00  Test Loss: 3.8235e+00  [ 2order_test: 4.13e+00  2order_OOD: 3.52e+00 ]  lr: 1.10e-04
+2024-09-07 05:13:39 - INFO: Epoch: 4      Train Loss: 3.4818e+00  Test Loss: 3.5456e+00  [ 2order_test: 3.96e+00  2order_OOD: 3.13e+00 ]  lr: 1.25e-04
+2024-09-07 05:13:43 - INFO: data type: 2order_train              Acc: 18.0604%
+2024-09-07 05:13:43 - INFO: data type: 2order_test               Acc: 11.7400%
+2024-09-07 05:13:44 - INFO: data type: 2order_OOD                Acc: 36.3267%
+2024-09-07 05:13:55 - INFO: Epoch: 5      Train Loss: 3.2314e+00  Test Loss: 3.2880e+00  [ 2order_test: 3.76e+00  2order_OOD: 2.81e+00 ]  lr: 1.40e-04
+2024-09-07 05:14:07 - INFO: Epoch: 6      Train Loss: 2.9975e+00  Test Loss: 3.0800e+00  [ 2order_test: 3.60e+00  2order_OOD: 2.56e+00 ]  lr: 1.55e-04
+2024-09-07 05:14:19 - INFO: Epoch: 7      Train Loss: 2.8079e+00  Test Loss: 2.8085e+00  [ 2order_test: 3.39e+00  2order_OOD: 2.23e+00 ]  lr: 1.70e-04
+2024-09-07 05:14:30 - INFO: Epoch: 8      Train Loss: 2.6123e+00  Test Loss: 2.5468e+00  [ 2order_test: 3.15e+00  2order_OOD: 1.94e+00 ]  lr: 1.85e-04
+2024-09-07 05:14:42 - INFO: Epoch: 9      Train Loss: 2.4657e+00  Test Loss: 2.3421e+00  [ 2order_test: 3.01e+00  2order_OOD: 1.67e+00 ]  lr: 2.00e-04
+2024-09-07 05:14:46 - INFO: data type: 2order_train              Acc: 21.6956%
+2024-09-07 05:14:47 - INFO: data type: 2order_test               Acc: 11.1333%
+2024-09-07 05:14:47 - INFO: data type: 2order_OOD                Acc: 49.2333%
+2024-09-07 05:14:59 - INFO: Epoch: 10     Train Loss: 2.3453e+00  Test Loss: 2.1820e+00  [ 2order_test: 2.88e+00  2order_OOD: 1.48e+00 ]  lr: 2.00e-04
+2024-09-07 05:15:10 - INFO: Epoch: 11     Train Loss: 2.2129e+00  Test Loss: 2.0021e+00  [ 2order_test: 2.73e+00  2order_OOD: 1.27e+00 ]  lr: 2.00e-04
+2024-09-07 05:15:22 - INFO: Epoch: 12     Train Loss: 2.0633e+00  Test Loss: 1.8247e+00  [ 2order_test: 2.55e+00  2order_OOD: 1.10e+00 ]  lr: 2.00e-04
+2024-09-07 05:15:33 - INFO: Epoch: 13     Train Loss: 1.9736e+00  Test Loss: 1.7817e+00  [ 2order_test: 2.47e+00  2order_OOD: 1.09e+00 ]  lr: 2.00e-04
+2024-09-07 05:15:45 - INFO: Epoch: 14     Train Loss: 1.9180e+00  Test Loss: 1.7557e+00  [ 2order_test: 2.44e+00  2order_OOD: 1.07e+00 ]  lr: 1.99e-04
+2024-09-07 05:15:50 - INFO: data type: 2order_train              Acc: 23.7715%
+2024-09-07 05:15:51 - INFO: data type: 2order_test               Acc: 12.1467%
+2024-09-07 05:15:51 - INFO: data type: 2order_OOD                Acc: 49.8800%
+2024-09-07 05:16:02 - INFO: Epoch: 15     Train Loss: 1.8802e+00  Test Loss: 1.7306e+00  [ 2order_test: 2.41e+00  2order_OOD: 1.05e+00 ]  lr: 1.99e-04
+2024-09-07 05:16:14 - INFO: Epoch: 16     Train Loss: 1.8560e+00  Test Loss: 1.7052e+00  [ 2order_test: 2.39e+00  2order_OOD: 1.02e+00 ]  lr: 1.98e-04
+2024-09-07 05:16:26 - INFO: Epoch: 17     Train Loss: 1.8301e+00  Test Loss: 1.7114e+00  [ 2order_test: 2.36e+00  2order_OOD: 1.06e+00 ]  lr: 1.98e-04
+2024-09-07 05:16:38 - INFO: Epoch: 18     Train Loss: 1.8129e+00  Test Loss: 1.6918e+00  [ 2order_test: 2.36e+00  2order_OOD: 1.02e+00 ]  lr: 1.97e-04
+2024-09-07 05:16:50 - INFO: Epoch: 19     Train Loss: 1.7928e+00  Test Loss: 1.6688e+00  [ 2order_test: 2.35e+00  2order_OOD: 9.84e-01 ]  lr: 1.96e-04
+2024-09-07 05:16:56 - INFO: data type: 2order_train              Acc: 26.3507%
+2024-09-07 05:16:57 - INFO: data type: 2order_test               Acc: 11.6800%
+2024-09-07 05:16:57 - INFO: data type: 2order_OOD                Acc: 51.7733%
+2024-09-07 05:17:09 - INFO: Epoch: 20     Train Loss: 1.7758e+00  Test Loss: 1.6652e+00  [ 2order_test: 2.34e+00  2order_OOD: 9.89e-01 ]  lr: 1.96e-04
+2024-09-07 05:17:25 - INFO: Epoch: 21     Train Loss: 1.7537e+00  Test Loss: 1.6524e+00  [ 2order_test: 2.38e+00  2order_OOD: 9.27e-01 ]  lr: 1.95e-04
+2024-09-07 05:17:36 - INFO: Epoch: 22     Train Loss: 1.6971e+00  Test Loss: 2.0859e+00  [ 2order_test: 3.27e+00  2order_OOD: 9.07e-01 ]  lr: 1.94e-04
+2024-09-07 05:17:48 - INFO: Epoch: 23     Train Loss: 1.5261e+00  Test Loss: 1.7325e+00  [ 2order_test: 2.53e+00  2order_OOD: 9.30e-01 ]  lr: 1.93e-04
+2024-09-07 05:17:59 - INFO: Epoch: 24     Train Loss: 3.6190e-01  Test Loss: 1.9221e-01  [ 2order_test: 7.00e-03  2order_OOD: 3.77e-01 ]  lr: 1.91e-04
+2024-09-07 05:18:04 - INFO: data type: 2order_train              Acc: 99.9393%
+2024-09-07 05:18:04 - INFO: data type: 2order_test               Acc: 99.9400%
+2024-09-07 05:18:04 - INFO: data type: 2order_OOD                Acc: 87.1467%
+2024-09-07 05:18:16 - INFO: Epoch: 25     Train Loss: 2.8131e-03  Test Loss: 2.6416e-01  [ 2order_test: 2.99e-03  2order_OOD: 5.25e-01 ]  lr: 1.90e-04
+2024-09-07 05:18:28 - INFO: Epoch: 26     Train Loss: 5.8605e-04  Test Loss: 1.6259e-01  [ 2order_test: 3.96e-04  2order_OOD: 3.25e-01 ]  lr: 1.89e-04
+2024-09-07 05:18:40 - INFO: Epoch: 27     Train Loss: 1.0790e-04  Test Loss: 1.5062e-01  [ 2order_test: 2.07e-04  2order_OOD: 3.01e-01 ]  lr: 1.87e-04
+2024-09-07 05:18:52 - INFO: Epoch: 28     Train Loss: 7.1203e-05  Test Loss: 1.4509e-01  [ 2order_test: 1.41e-04  2order_OOD: 2.90e-01 ]  lr: 1.86e-04
+2024-09-07 05:19:04 - INFO: Epoch: 29     Train Loss: 5.4758e-05  Test Loss: 1.4915e-01  [ 2order_test: 1.03e-04  2order_OOD: 2.98e-01 ]  lr: 1.84e-04
+2024-09-07 05:19:09 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:19:09 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:19:09 - INFO: data type: 2order_OOD                Acc: 89.0067%
+2024-09-07 05:19:21 - INFO: Epoch: 30     Train Loss: 4.4687e-05  Test Loss: 1.5254e-01  [ 2order_test: 7.94e-05  2order_OOD: 3.05e-01 ]  lr: 1.83e-04
+2024-09-07 05:19:33 - INFO: Epoch: 31     Train Loss: 3.7566e-05  Test Loss: 1.2992e-01  [ 2order_test: 6.38e-05  2order_OOD: 2.60e-01 ]  lr: 1.81e-04
+2024-09-07 05:19:44 - INFO: Epoch: 32     Train Loss: 3.2326e-05  Test Loss: 1.2382e-01  [ 2order_test: 5.30e-05  2order_OOD: 2.48e-01 ]  lr: 1.79e-04
+2024-09-07 05:19:56 - INFO: Epoch: 33     Train Loss: 2.8486e-05  Test Loss: 1.1472e-01  [ 2order_test: 4.57e-05  2order_OOD: 2.29e-01 ]  lr: 1.78e-04
+2024-09-07 05:20:07 - INFO: Epoch: 34     Train Loss: 2.5418e-05  Test Loss: 1.0570e-01  [ 2order_test: 3.97e-05  2order_OOD: 2.11e-01 ]  lr: 1.76e-04
+2024-09-07 05:20:12 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:20:12 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:20:13 - INFO: data type: 2order_OOD                Acc: 92.3800%
+2024-09-07 05:20:24 - INFO: Epoch: 35     Train Loss: 2.2772e-05  Test Loss: 1.0050e-01  [ 2order_test: 3.49e-05  2order_OOD: 2.01e-01 ]  lr: 1.74e-04
+2024-09-07 05:20:36 - INFO: Epoch: 36     Train Loss: 2.0441e-05  Test Loss: 1.0360e-01  [ 2order_test: 3.08e-05  2order_OOD: 2.07e-01 ]  lr: 1.72e-04
+2024-09-07 05:20:47 - INFO: Epoch: 37     Train Loss: 1.8402e-05  Test Loss: 9.5304e-02  [ 2order_test: 2.71e-05  2order_OOD: 1.91e-01 ]  lr: 1.70e-04
+2024-09-07 05:20:59 - INFO: Epoch: 38     Train Loss: 1.6588e-05  Test Loss: 1.1044e-01  [ 2order_test: 2.37e-05  2order_OOD: 2.21e-01 ]  lr: 1.67e-04
+2024-09-07 05:21:11 - INFO: Epoch: 39     Train Loss: 1.4996e-05  Test Loss: 1.0039e-01  [ 2order_test: 2.10e-05  2order_OOD: 2.01e-01 ]  lr: 1.65e-04
+2024-09-07 05:21:16 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:21:16 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:21:16 - INFO: data type: 2order_OOD                Acc: 92.8600%
+2024-09-07 05:21:28 - INFO: Epoch: 40     Train Loss: 1.3617e-05  Test Loss: 1.1659e-01  [ 2order_test: 1.87e-05  2order_OOD: 2.33e-01 ]  lr: 1.63e-04
+2024-09-07 05:21:45 - INFO: Epoch: 41     Train Loss: 1.2375e-05  Test Loss: 1.1603e-01  [ 2order_test: 1.67e-05  2order_OOD: 2.32e-01 ]  lr: 1.61e-04
+2024-09-07 05:21:57 - INFO: Epoch: 42     Train Loss: 1.1261e-05  Test Loss: 1.2236e-01  [ 2order_test: 1.49e-05  2order_OOD: 2.45e-01 ]  lr: 1.58e-04
+2024-09-07 05:22:08 - INFO: Epoch: 43     Train Loss: 1.0267e-05  Test Loss: 1.0752e-01  [ 2order_test: 1.34e-05  2order_OOD: 2.15e-01 ]  lr: 1.56e-04
+2024-09-07 05:22:20 - INFO: Epoch: 44     Train Loss: 9.3541e-06  Test Loss: 1.1607e-01  [ 2order_test: 1.20e-05  2order_OOD: 2.32e-01 ]  lr: 1.53e-04
+2024-09-07 05:22:25 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:22:26 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:22:26 - INFO: data type: 2order_OOD                Acc: 91.6600%
+2024-09-07 05:22:38 - INFO: Epoch: 45     Train Loss: 8.4947e-06  Test Loss: 1.1774e-01  [ 2order_test: 1.08e-05  2order_OOD: 2.35e-01 ]  lr: 1.51e-04
+2024-09-07 05:22:49 - INFO: Epoch: 46     Train Loss: 7.7123e-06  Test Loss: 9.9455e-02  [ 2order_test: 9.73e-06  2order_OOD: 1.99e-01 ]  lr: 1.48e-04
+2024-09-07 05:23:01 - INFO: Epoch: 47     Train Loss: 7.0025e-06  Test Loss: 1.1647e-01  [ 2order_test: 8.69e-06  2order_OOD: 2.33e-01 ]  lr: 1.46e-04
+2024-09-07 05:23:13 - INFO: Epoch: 48     Train Loss: 6.3728e-06  Test Loss: 1.1661e-01  [ 2order_test: 7.86e-06  2order_OOD: 2.33e-01 ]  lr: 1.43e-04
+2024-09-07 05:23:25 - INFO: Epoch: 49     Train Loss: 5.7988e-06  Test Loss: 1.1751e-01  [ 2order_test: 7.08e-06  2order_OOD: 2.35e-01 ]  lr: 1.40e-04
+2024-09-07 05:23:29 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:23:30 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:23:30 - INFO: data type: 2order_OOD                Acc: 91.6400%
+2024-09-07 05:23:41 - INFO: Epoch: 50     Train Loss: 5.2797e-06  Test Loss: 1.2309e-01  [ 2order_test: 6.40e-06  2order_OOD: 2.46e-01 ]  lr: 1.38e-04
+2024-09-07 05:23:53 - INFO: Epoch: 51     Train Loss: 4.8065e-06  Test Loss: 1.1573e-01  [ 2order_test: 5.80e-06  2order_OOD: 2.31e-01 ]  lr: 1.35e-04
+2024-09-07 05:24:05 - INFO: Epoch: 52     Train Loss: 4.3714e-06  Test Loss: 1.2365e-01  [ 2order_test: 5.24e-06  2order_OOD: 2.47e-01 ]  lr: 1.32e-04
+2024-09-07 05:24:16 - INFO: Epoch: 53     Train Loss: 3.9782e-06  Test Loss: 1.2556e-01  [ 2order_test: 4.72e-06  2order_OOD: 2.51e-01 ]  lr: 1.30e-04
+2024-09-07 05:24:27 - INFO: Epoch: 54     Train Loss: 3.6170e-06  Test Loss: 1.3722e-01  [ 2order_test: 4.26e-06  2order_OOD: 2.74e-01 ]  lr: 1.27e-04
+2024-09-07 05:24:32 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:24:33 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:24:33 - INFO: data type: 2order_OOD                Acc: 90.6800%
+2024-09-07 05:24:45 - INFO: Epoch: 55     Train Loss: 3.2893e-06  Test Loss: 1.2035e-01  [ 2order_test: 3.86e-06  2order_OOD: 2.41e-01 ]  lr: 1.24e-04
+2024-09-07 05:24:56 - INFO: Epoch: 56     Train Loss: 2.9906e-06  Test Loss: 1.3261e-01  [ 2order_test: 3.50e-06  2order_OOD: 2.65e-01 ]  lr: 1.21e-04
+2024-09-07 05:25:08 - INFO: Epoch: 57     Train Loss: 2.7154e-06  Test Loss: 1.3727e-01  [ 2order_test: 3.16e-06  2order_OOD: 2.75e-01 ]  lr: 1.18e-04
+2024-09-07 05:25:20 - INFO: Epoch: 58     Train Loss: 2.4647e-06  Test Loss: 1.4181e-01  [ 2order_test: 2.85e-06  2order_OOD: 2.84e-01 ]  lr: 1.16e-04
+2024-09-07 05:25:31 - INFO: Epoch: 59     Train Loss: 2.2361e-06  Test Loss: 1.3427e-01  [ 2order_test: 2.57e-06  2order_OOD: 2.69e-01 ]  lr: 1.13e-04
+2024-09-07 05:25:36 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:25:37 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:25:37 - INFO: data type: 2order_OOD                Acc: 90.9733%
+2024-09-07 05:25:48 - INFO: Epoch: 60     Train Loss: 2.0269e-06  Test Loss: 1.4339e-01  [ 2order_test: 2.33e-06  2order_OOD: 2.87e-01 ]  lr: 1.10e-04
+2024-09-07 05:26:04 - INFO: Epoch: 61     Train Loss: 1.8353e-06  Test Loss: 1.3916e-01  [ 2order_test: 2.09e-06  2order_OOD: 2.78e-01 ]  lr: 1.07e-04
+2024-09-07 05:26:16 - INFO: Epoch: 62     Train Loss: 1.6601e-06  Test Loss: 1.4617e-01  [ 2order_test: 1.89e-06  2order_OOD: 2.92e-01 ]  lr: 1.04e-04
+2024-09-07 05:26:28 - INFO: Epoch: 63     Train Loss: 1.4988e-06  Test Loss: 1.5285e-01  [ 2order_test: 1.69e-06  2order_OOD: 3.06e-01 ]  lr: 1.02e-04
+2024-09-07 05:26:39 - INFO: Epoch: 64     Train Loss: 1.3392e-06  Test Loss: 1.0993e-01  [ 2order_test: 1.52e-06  2order_OOD: 2.20e-01 ]  lr: 9.87e-05
+2024-09-07 05:26:44 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:26:45 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:26:45 - INFO: data type: 2order_OOD                Acc: 92.3733%
+2024-09-07 05:26:57 - INFO: Epoch: 65     Train Loss: 1.2030e-02  Test Loss: 8.5915e-01  [ 2order_test: 2.72e-03  2order_OOD: 1.72e+00 ]  lr: 9.59e-05
+2024-09-07 05:27:09 - INFO: Epoch: 66     Train Loss: 1.1872e-03  Test Loss: 2.5168e-01  [ 2order_test: 1.92e-03  2order_OOD: 5.01e-01 ]  lr: 9.31e-05
+2024-09-07 05:27:21 - INFO: Epoch: 67     Train Loss: 7.3461e-04  Test Loss: 3.4603e-01  [ 2order_test: 1.11e-04  2order_OOD: 6.92e-01 ]  lr: 9.04e-05
+2024-09-07 05:27:32 - INFO: Epoch: 68     Train Loss: 1.1166e-04  Test Loss: 1.7258e-01  [ 2order_test: 3.67e-05  2order_OOD: 3.45e-01 ]  lr: 8.76e-05
+2024-09-07 05:27:44 - INFO: Epoch: 69     Train Loss: 1.4307e-05  Test Loss: 1.5273e-01  [ 2order_test: 2.19e-05  2order_OOD: 3.05e-01 ]  lr: 8.49e-05
+2024-09-07 05:27:49 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:27:49 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:27:49 - INFO: data type: 2order_OOD                Acc: 91.2667%
+2024-09-07 05:28:01 - INFO: Epoch: 70     Train Loss: 1.0545e-05  Test Loss: 1.4846e-01  [ 2order_test: 1.59e-05  2order_OOD: 2.97e-01 ]  lr: 8.22e-05
+2024-09-07 05:28:13 - INFO: Epoch: 71     Train Loss: 7.9473e-06  Test Loss: 1.4561e-01  [ 2order_test: 1.13e-05  2order_OOD: 2.91e-01 ]  lr: 7.95e-05
+2024-09-07 05:28:25 - INFO: Epoch: 72     Train Loss: 5.8704e-06  Test Loss: 1.5082e-01  [ 2order_test: 7.36e-06  2order_OOD: 3.02e-01 ]  lr: 7.69e-05
+2024-09-07 05:28:36 - INFO: Epoch: 73     Train Loss: 4.5052e-06  Test Loss: 1.5863e-01  [ 2order_test: 5.72e-06  2order_OOD: 3.17e-01 ]  lr: 7.43e-05
+2024-09-07 05:28:49 - INFO: Epoch: 74     Train Loss: 3.8505e-06  Test Loss: 1.6229e-01  [ 2order_test: 4.85e-06  2order_OOD: 3.25e-01 ]  lr: 7.17e-05
+2024-09-07 05:28:54 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:28:54 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:28:54 - INFO: data type: 2order_OOD                Acc: 90.1600%
+2024-09-07 05:29:06 - INFO: Epoch: 75     Train Loss: 3.4162e-06  Test Loss: 1.5811e-01  [ 2order_test: 4.34e-06  2order_OOD: 3.16e-01 ]  lr: 6.91e-05
+2024-09-07 05:29:17 - INFO: Epoch: 76     Train Loss: 3.1002e-06  Test Loss: 1.5610e-01  [ 2order_test: 3.94e-06  2order_OOD: 3.12e-01 ]  lr: 6.66e-05
+2024-09-07 05:29:29 - INFO: Epoch: 77     Train Loss: 2.8342e-06  Test Loss: 1.5648e-01  [ 2order_test: 3.59e-06  2order_OOD: 3.13e-01 ]  lr: 6.42e-05
+2024-09-07 05:29:40 - INFO: Epoch: 78     Train Loss: 2.6012e-06  Test Loss: 1.5592e-01  [ 2order_test: 3.29e-06  2order_OOD: 3.12e-01 ]  lr: 6.18e-05
+2024-09-07 05:29:52 - INFO: Epoch: 79     Train Loss: 2.3940e-06  Test Loss: 1.5219e-01  [ 2order_test: 3.02e-06  2order_OOD: 3.04e-01 ]  lr: 5.94e-05
+2024-09-07 05:29:57 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:29:57 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:29:57 - INFO: data type: 2order_OOD                Acc: 90.7333%
+2024-09-07 05:30:09 - INFO: Epoch: 80     Train Loss: 2.2103e-06  Test Loss: 1.5301e-01  [ 2order_test: 2.79e-06  2order_OOD: 3.06e-01 ]  lr: 5.71e-05
+2024-09-07 05:30:25 - INFO: Epoch: 81     Train Loss: 2.0454e-06  Test Loss: 1.5279e-01  [ 2order_test: 2.58e-06  2order_OOD: 3.06e-01 ]  lr: 5.48e-05
+2024-09-07 05:30:37 - INFO: Epoch: 82     Train Loss: 1.8924e-06  Test Loss: 1.5310e-01  [ 2order_test: 2.35e-06  2order_OOD: 3.06e-01 ]  lr: 5.26e-05
+2024-09-07 05:30:49 - INFO: Epoch: 83     Train Loss: 1.6977e-06  Test Loss: 1.7486e-01  [ 2order_test: 2.08e-06  2order_OOD: 3.50e-01 ]  lr: 5.05e-05
+2024-09-07 05:31:01 - INFO: Epoch: 84     Train Loss: 1.5104e-06  Test Loss: 2.1569e-01  [ 2order_test: 1.85e-06  2order_OOD: 4.31e-01 ]  lr: 4.84e-05
+2024-09-07 05:31:06 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:31:06 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:31:06 - INFO: data type: 2order_OOD                Acc: 86.6400%
+2024-09-07 05:31:18 - INFO: Epoch: 85     Train Loss: 1.3421e-06  Test Loss: 2.5138e-01  [ 2order_test: 1.63e-06  2order_OOD: 5.03e-01 ]  lr: 4.64e-05
+2024-09-07 05:31:30 - INFO: Epoch: 86     Train Loss: 1.1885e-06  Test Loss: 2.7463e-01  [ 2order_test: 1.43e-06  2order_OOD: 5.49e-01 ]  lr: 4.44e-05
+2024-09-07 05:31:43 - INFO: Epoch: 87     Train Loss: 1.0517e-06  Test Loss: 2.7901e-01  [ 2order_test: 1.26e-06  2order_OOD: 5.58e-01 ]  lr: 4.25e-05
+2024-09-07 05:31:54 - INFO: Epoch: 88     Train Loss: 9.3412e-07  Test Loss: 2.6045e-01  [ 2order_test: 1.12e-06  2order_OOD: 5.21e-01 ]  lr: 4.07e-05
+2024-09-07 05:32:06 - INFO: Epoch: 89     Train Loss: 8.3505e-07  Test Loss: 2.4347e-01  [ 2order_test: 1.00e-06  2order_OOD: 4.87e-01 ]  lr: 3.89e-05
+2024-09-07 05:32:11 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:32:11 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:32:12 - INFO: data type: 2order_OOD                Acc: 85.0800%
+2024-09-07 05:32:24 - INFO: Epoch: 90     Train Loss: 7.5222e-07  Test Loss: 2.2032e-01  [ 2order_test: 8.98e-07  2order_OOD: 4.41e-01 ]  lr: 3.72e-05
+2024-09-07 05:32:36 - INFO: Epoch: 91     Train Loss: 6.8227e-07  Test Loss: 1.9371e-01  [ 2order_test: 8.16e-07  2order_OOD: 3.87e-01 ]  lr: 3.56e-05
+2024-09-07 05:32:48 - INFO: Epoch: 92     Train Loss: 6.2272e-07  Test Loss: 1.7288e-01  [ 2order_test: 7.43e-07  2order_OOD: 3.46e-01 ]  lr: 3.40e-05
+2024-09-07 05:33:00 - INFO: Epoch: 93     Train Loss: 5.7181e-07  Test Loss: 1.4916e-01  [ 2order_test: 6.82e-07  2order_OOD: 2.98e-01 ]  lr: 3.25e-05
+2024-09-07 05:33:11 - INFO: Epoch: 94     Train Loss: 5.2759e-07  Test Loss: 1.3008e-01  [ 2order_test: 6.29e-07  2order_OOD: 2.60e-01 ]  lr: 3.11e-05
+2024-09-07 05:33:16 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:33:17 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:33:17 - INFO: data type: 2order_OOD                Acc: 91.5000%
+2024-09-07 05:33:28 - INFO: Epoch: 95     Train Loss: 4.8858e-07  Test Loss: 1.1458e-01  [ 2order_test: 5.84e-07  2order_OOD: 2.29e-01 ]  lr: 2.98e-05
+2024-09-07 05:33:41 - INFO: Epoch: 96     Train Loss: 4.5417e-07  Test Loss: 1.0270e-01  [ 2order_test: 5.43e-07  2order_OOD: 2.05e-01 ]  lr: 2.86e-05
+2024-09-07 05:33:52 - INFO: Epoch: 97     Train Loss: 4.2336e-07  Test Loss: 9.4266e-02  [ 2order_test: 5.11e-07  2order_OOD: 1.89e-01 ]  lr: 2.74e-05
+2024-09-07 05:34:04 - INFO: Epoch: 98     Train Loss: 3.9592e-07  Test Loss: 8.6366e-02  [ 2order_test: 4.79e-07  2order_OOD: 1.73e-01 ]  lr: 2.63e-05
+2024-09-07 05:34:09 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 05:34:09 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 05:34:09 - INFO: data type: 2order_OOD                Acc: 94.4267%
+2024-09-07 05:34:20 - INFO: Epoch: 99     Train Loss: 3.7083e-07  Test Loss: 7.9339e-02  [ 2order_test: 4.52e-07  2order_OOD: 1.59e-01 ]  lr: 2.53e-05
+2024-09-07 09:05:49 - INFO: data type: 2order_train         ex: [13, 72, 72, 12, 38, 13, 78, 8, 8, 84, 12, 78, 12, 8]
+2024-09-07 09:05:49 - INFO: data type: 2order_train         ex: [6, 25, 65, 15, 71, 6, 15, 1, 1, 77, 77, 71, 1, 71]
+2024-09-07 09:05:49 - INFO: data type: 2order_train         ex: [10, 29, 51, 21, 16, 86, 29, 34, 21, 16, 86, 10, 10, 34]
+2024-09-07 09:05:49 - INFO: data type: 2order_train         ex: [66, 87, 15, 50, 86, 96, 87, 86, 96, 97, 50, 66, 87, 96]
+2024-09-07 09:05:49 - INFO: data type: 2order_train         ex: [60, 64, 11, 10, 5, 60, 64, 23, 87, 11, 10, 5, 60, 23]
+2024-09-07 09:05:49 - INFO: data type: 2order_test          ex: [99, 1, 21, 99, 38, 95, 1, 38, 19, 21, 95, 23, 1, 95]
+2024-09-07 09:05:49 - INFO: data type: 2order_test          ex: [75, 43, 2, 75, 98, 6, 43, 50, 5, 2, 50, 98, 50, 6]
+2024-09-07 09:05:49 - INFO: data type: 2order_test          ex: [91, 98, 98, 40, 54, 91, 40, 22, 22, 19, 19, 56, 54, 98]
+2024-09-07 09:05:49 - INFO: data type: 2order_test          ex: [38, 61, 61, 59, 59, 42, 90, 53, 41, 38, 42, 90, 61, 42]
+2024-09-07 09:05:49 - INFO: data type: 2order_test          ex: [81, 79, 26, 69, 19, 36, 79, 26, 69, 61, 61, 19, 81, 26]
+2024-09-07 09:05:49 - INFO: data type: 2order_OOD           ex: [95, 8, 186, 165, 140, 105, 8, 127, 127, 186, 105, 95, 105, 8]
+2024-09-07 09:05:49 - INFO: data type: 2order_OOD           ex: [124, 182, 182, 109, 90, 87, 176, 90, 170, 124, 109, 176, 176, 87]
+2024-09-07 09:05:49 - INFO: data type: 2order_OOD           ex: [88, 124, 135, 165, 124, 101, 122, 71, 71, 88, 101, 135, 122, 88]
+2024-09-07 09:05:49 - INFO: data type: 2order_OOD           ex: [177, 41, 169, 101, 41, 25, 101, 127, 176, 169, 127, 177, 177, 25]
+2024-09-07 09:05:49 - INFO: data type: 2order_OOD           ex: [160, 192, 198, 160, 90, 51, 171, 90, 173, 171, 192, 173, 171, 51]
+2024-09-07 09:05:49 - INFO: Total parameters: 3358201
+2024-09-07 09:05:56 - INFO: data type: 2order_train              Acc: 1.0215%
+2024-09-07 09:05:56 - INFO: data type: 2order_test               Acc: 1.0600%
+2024-09-07 09:05:56 - INFO: data type: 2order_OOD                Acc: 0.9533%
+2024-09-07 09:06:03 - INFO: Epoch: 0      Train Loss: 4.7053e+00  Test Loss: 4.6134e+00  [ 2order_test: 4.61e+00  2order_OOD: 4.61e+00 ]  lr: 6.50e-05
+2024-09-07 09:06:09 - INFO: Epoch: 1      Train Loss: 4.5228e+00  Test Loss: 4.4119e+00  [ 2order_test: 4.54e+00  2order_OOD: 4.29e+00 ]  lr: 8.00e-05
+2024-09-07 09:06:16 - INFO: Epoch: 2      Train Loss: 4.0405e+00  Test Loss: 4.1299e+00  [ 2order_test: 4.33e+00  2order_OOD: 3.93e+00 ]  lr: 9.50e-05
+2024-09-07 09:06:23 - INFO: Epoch: 3      Train Loss: 3.7918e+00  Test Loss: 3.8235e+00  [ 2order_test: 4.13e+00  2order_OOD: 3.52e+00 ]  lr: 1.10e-04
+2024-09-07 09:06:30 - INFO: Epoch: 4      Train Loss: 3.4818e+00  Test Loss: 3.5456e+00  [ 2order_test: 3.96e+00  2order_OOD: 3.13e+00 ]  lr: 1.25e-04
+2024-09-07 09:06:34 - INFO: data type: 2order_train              Acc: 18.0604%
+2024-09-07 09:06:34 - INFO: data type: 2order_test               Acc: 11.7400%
+2024-09-07 09:06:34 - INFO: data type: 2order_OOD                Acc: 36.3267%
+2024-09-07 09:06:41 - INFO: Epoch: 5      Train Loss: 3.2314e+00  Test Loss: 3.2880e+00  [ 2order_test: 3.76e+00  2order_OOD: 2.81e+00 ]  lr: 1.40e-04
+2024-09-07 09:06:48 - INFO: Epoch: 6      Train Loss: 2.9975e+00  Test Loss: 3.0800e+00  [ 2order_test: 3.60e+00  2order_OOD: 2.56e+00 ]  lr: 1.55e-04
+2024-09-07 09:06:56 - INFO: Epoch: 7      Train Loss: 2.8079e+00  Test Loss: 2.8085e+00  [ 2order_test: 3.39e+00  2order_OOD: 2.23e+00 ]  lr: 1.70e-04
+2024-09-07 09:07:03 - INFO: Epoch: 8      Train Loss: 2.6123e+00  Test Loss: 2.5468e+00  [ 2order_test: 3.15e+00  2order_OOD: 1.94e+00 ]  lr: 1.85e-04
+2024-09-07 09:07:09 - INFO: Epoch: 9      Train Loss: 2.4657e+00  Test Loss: 2.3421e+00  [ 2order_test: 3.01e+00  2order_OOD: 1.67e+00 ]  lr: 2.00e-04
+2024-09-07 09:07:13 - INFO: data type: 2order_train              Acc: 21.6956%
+2024-09-07 09:07:13 - INFO: data type: 2order_test               Acc: 11.1333%
+2024-09-07 09:07:13 - INFO: data type: 2order_OOD                Acc: 49.2333%
+2024-09-07 09:07:21 - INFO: Epoch: 10     Train Loss: 2.3453e+00  Test Loss: 2.1820e+00  [ 2order_test: 2.88e+00  2order_OOD: 1.48e+00 ]  lr: 2.00e-04
+2024-09-07 09:07:28 - INFO: Epoch: 11     Train Loss: 2.2129e+00  Test Loss: 2.0021e+00  [ 2order_test: 2.73e+00  2order_OOD: 1.27e+00 ]  lr: 2.00e-04
+2024-09-07 09:07:34 - INFO: Epoch: 12     Train Loss: 2.0633e+00  Test Loss: 1.8247e+00  [ 2order_test: 2.55e+00  2order_OOD: 1.10e+00 ]  lr: 2.00e-04
+2024-09-07 09:07:41 - INFO: Epoch: 13     Train Loss: 1.9736e+00  Test Loss: 1.7817e+00  [ 2order_test: 2.47e+00  2order_OOD: 1.09e+00 ]  lr: 2.00e-04
+2024-09-07 09:07:48 - INFO: Epoch: 14     Train Loss: 1.9180e+00  Test Loss: 1.7557e+00  [ 2order_test: 2.44e+00  2order_OOD: 1.07e+00 ]  lr: 1.99e-04
+2024-09-07 09:07:53 - INFO: data type: 2order_train              Acc: 23.7715%
+2024-09-07 09:07:53 - INFO: data type: 2order_test               Acc: 12.1467%
+2024-09-07 09:07:53 - INFO: data type: 2order_OOD                Acc: 49.8800%
+2024-09-07 09:08:00 - INFO: Epoch: 15     Train Loss: 1.8802e+00  Test Loss: 1.7306e+00  [ 2order_test: 2.41e+00  2order_OOD: 1.05e+00 ]  lr: 1.99e-04
+2024-09-07 09:08:06 - INFO: Epoch: 16     Train Loss: 1.8560e+00  Test Loss: 1.7052e+00  [ 2order_test: 2.39e+00  2order_OOD: 1.02e+00 ]  lr: 1.98e-04
+2024-09-07 09:08:14 - INFO: Epoch: 17     Train Loss: 1.8301e+00  Test Loss: 1.7114e+00  [ 2order_test: 2.36e+00  2order_OOD: 1.06e+00 ]  lr: 1.98e-04
+2024-09-07 09:08:21 - INFO: Epoch: 18     Train Loss: 1.8129e+00  Test Loss: 1.6918e+00  [ 2order_test: 2.36e+00  2order_OOD: 1.02e+00 ]  lr: 1.97e-04
+2024-09-07 09:08:28 - INFO: Epoch: 19     Train Loss: 1.7928e+00  Test Loss: 1.6688e+00  [ 2order_test: 2.35e+00  2order_OOD: 9.84e-01 ]  lr: 1.96e-04
+2024-09-07 09:08:32 - INFO: data type: 2order_train              Acc: 26.3507%
+2024-09-07 09:08:32 - INFO: data type: 2order_test               Acc: 11.6800%
+2024-09-07 09:08:33 - INFO: data type: 2order_OOD                Acc: 51.7733%
+2024-09-07 09:08:40 - INFO: Epoch: 20     Train Loss: 1.7758e+00  Test Loss: 1.6652e+00  [ 2order_test: 2.34e+00  2order_OOD: 9.89e-01 ]  lr: 1.96e-04
+2024-09-07 09:08:51 - INFO: Epoch: 21     Train Loss: 1.7537e+00  Test Loss: 1.6524e+00  [ 2order_test: 2.38e+00  2order_OOD: 9.27e-01 ]  lr: 1.95e-04
+2024-09-07 09:08:57 - INFO: Epoch: 22     Train Loss: 1.6971e+00  Test Loss: 2.0859e+00  [ 2order_test: 3.27e+00  2order_OOD: 9.07e-01 ]  lr: 1.94e-04
+2024-09-07 09:09:04 - INFO: Epoch: 23     Train Loss: 1.5261e+00  Test Loss: 1.7325e+00  [ 2order_test: 2.53e+00  2order_OOD: 9.30e-01 ]  lr: 1.93e-04
+2024-09-07 09:09:11 - INFO: Epoch: 24     Train Loss: 3.6190e-01  Test Loss: 1.9221e-01  [ 2order_test: 7.00e-03  2order_OOD: 3.77e-01 ]  lr: 1.91e-04
+2024-09-07 09:09:15 - INFO: data type: 2order_train              Acc: 99.9393%
+2024-09-07 09:09:15 - INFO: data type: 2order_test               Acc: 99.9400%
+2024-09-07 09:09:16 - INFO: data type: 2order_OOD                Acc: 87.1467%
+2024-09-07 09:09:22 - INFO: Epoch: 25     Train Loss: 2.8131e-03  Test Loss: 2.6416e-01  [ 2order_test: 2.99e-03  2order_OOD: 5.25e-01 ]  lr: 1.90e-04
+2024-09-07 09:09:29 - INFO: Epoch: 26     Train Loss: 5.8605e-04  Test Loss: 1.6259e-01  [ 2order_test: 3.96e-04  2order_OOD: 3.25e-01 ]  lr: 1.89e-04
+2024-09-07 09:09:36 - INFO: Epoch: 27     Train Loss: 1.0790e-04  Test Loss: 1.5062e-01  [ 2order_test: 2.07e-04  2order_OOD: 3.01e-01 ]  lr: 1.87e-04
+2024-09-07 09:09:43 - INFO: Epoch: 28     Train Loss: 7.1203e-05  Test Loss: 1.4509e-01  [ 2order_test: 1.41e-04  2order_OOD: 2.90e-01 ]  lr: 1.86e-04
+2024-09-07 09:09:51 - INFO: Epoch: 29     Train Loss: 5.4758e-05  Test Loss: 1.4915e-01  [ 2order_test: 1.03e-04  2order_OOD: 2.98e-01 ]  lr: 1.84e-04
+2024-09-07 09:09:55 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:09:55 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:09:56 - INFO: data type: 2order_OOD                Acc: 89.0067%
+2024-09-07 09:10:02 - INFO: Epoch: 30     Train Loss: 4.4687e-05  Test Loss: 1.5254e-01  [ 2order_test: 7.94e-05  2order_OOD: 3.05e-01 ]  lr: 1.83e-04
+2024-09-07 09:10:09 - INFO: Epoch: 31     Train Loss: 3.7566e-05  Test Loss: 1.2992e-01  [ 2order_test: 6.38e-05  2order_OOD: 2.60e-01 ]  lr: 1.81e-04
+2024-09-07 09:10:16 - INFO: Epoch: 32     Train Loss: 3.2326e-05  Test Loss: 1.2382e-01  [ 2order_test: 5.30e-05  2order_OOD: 2.48e-01 ]  lr: 1.79e-04
+2024-09-07 09:10:22 - INFO: Epoch: 33     Train Loss: 2.8486e-05  Test Loss: 1.1472e-01  [ 2order_test: 4.57e-05  2order_OOD: 2.29e-01 ]  lr: 1.78e-04
+2024-09-07 09:10:29 - INFO: Epoch: 34     Train Loss: 2.5418e-05  Test Loss: 1.0570e-01  [ 2order_test: 3.97e-05  2order_OOD: 2.11e-01 ]  lr: 1.76e-04
+2024-09-07 09:10:34 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:10:34 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:10:34 - INFO: data type: 2order_OOD                Acc: 92.3800%
+2024-09-07 09:10:40 - INFO: Epoch: 35     Train Loss: 2.2772e-05  Test Loss: 1.0050e-01  [ 2order_test: 3.49e-05  2order_OOD: 2.01e-01 ]  lr: 1.74e-04
+2024-09-07 09:10:47 - INFO: Epoch: 36     Train Loss: 2.0441e-05  Test Loss: 1.0360e-01  [ 2order_test: 3.08e-05  2order_OOD: 2.07e-01 ]  lr: 1.72e-04
+2024-09-07 09:10:53 - INFO: Epoch: 37     Train Loss: 1.8402e-05  Test Loss: 9.5304e-02  [ 2order_test: 2.71e-05  2order_OOD: 1.91e-01 ]  lr: 1.70e-04
+2024-09-07 09:11:00 - INFO: Epoch: 38     Train Loss: 1.6588e-05  Test Loss: 1.1044e-01  [ 2order_test: 2.37e-05  2order_OOD: 2.21e-01 ]  lr: 1.67e-04
+2024-09-07 09:11:08 - INFO: Epoch: 39     Train Loss: 1.4996e-05  Test Loss: 1.0039e-01  [ 2order_test: 2.10e-05  2order_OOD: 2.01e-01 ]  lr: 1.65e-04
+2024-09-07 09:11:12 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:11:12 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:11:12 - INFO: data type: 2order_OOD                Acc: 92.8600%
+2024-09-07 09:11:20 - INFO: Epoch: 40     Train Loss: 1.3617e-05  Test Loss: 1.1659e-01  [ 2order_test: 1.87e-05  2order_OOD: 2.33e-01 ]  lr: 1.63e-04
+2024-09-07 09:11:31 - INFO: Epoch: 41     Train Loss: 1.2375e-05  Test Loss: 1.1603e-01  [ 2order_test: 1.67e-05  2order_OOD: 2.32e-01 ]  lr: 1.61e-04
+2024-09-07 09:11:38 - INFO: Epoch: 42     Train Loss: 1.1261e-05  Test Loss: 1.2236e-01  [ 2order_test: 1.49e-05  2order_OOD: 2.45e-01 ]  lr: 1.58e-04
+2024-09-07 09:11:45 - INFO: Epoch: 43     Train Loss: 1.0267e-05  Test Loss: 1.0752e-01  [ 2order_test: 1.34e-05  2order_OOD: 2.15e-01 ]  lr: 1.56e-04
+2024-09-07 09:11:52 - INFO: Epoch: 44     Train Loss: 9.3541e-06  Test Loss: 1.1607e-01  [ 2order_test: 1.20e-05  2order_OOD: 2.32e-01 ]  lr: 1.53e-04
+2024-09-07 09:11:57 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:11:57 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:11:57 - INFO: data type: 2order_OOD                Acc: 91.6600%
+2024-09-07 09:12:04 - INFO: Epoch: 45     Train Loss: 8.4947e-06  Test Loss: 1.1774e-01  [ 2order_test: 1.08e-05  2order_OOD: 2.35e-01 ]  lr: 1.51e-04
+2024-09-07 09:12:10 - INFO: Epoch: 46     Train Loss: 7.7123e-06  Test Loss: 9.9455e-02  [ 2order_test: 9.73e-06  2order_OOD: 1.99e-01 ]  lr: 1.48e-04
+2024-09-07 09:12:17 - INFO: Epoch: 47     Train Loss: 7.0025e-06  Test Loss: 1.1647e-01  [ 2order_test: 8.69e-06  2order_OOD: 2.33e-01 ]  lr: 1.46e-04
+2024-09-07 09:12:24 - INFO: Epoch: 48     Train Loss: 6.3728e-06  Test Loss: 1.1661e-01  [ 2order_test: 7.86e-06  2order_OOD: 2.33e-01 ]  lr: 1.43e-04
+2024-09-07 09:12:31 - INFO: Epoch: 49     Train Loss: 5.7988e-06  Test Loss: 1.1751e-01  [ 2order_test: 7.08e-06  2order_OOD: 2.35e-01 ]  lr: 1.40e-04
+2024-09-07 09:12:35 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:12:35 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:12:35 - INFO: data type: 2order_OOD                Acc: 91.6400%
+2024-09-07 09:12:42 - INFO: Epoch: 50     Train Loss: 5.2797e-06  Test Loss: 1.2309e-01  [ 2order_test: 6.40e-06  2order_OOD: 2.46e-01 ]  lr: 1.38e-04
+2024-09-07 09:12:49 - INFO: Epoch: 51     Train Loss: 4.8065e-06  Test Loss: 1.1573e-01  [ 2order_test: 5.80e-06  2order_OOD: 2.31e-01 ]  lr: 1.35e-04
+2024-09-07 09:12:56 - INFO: Epoch: 52     Train Loss: 4.3714e-06  Test Loss: 1.2365e-01  [ 2order_test: 5.24e-06  2order_OOD: 2.47e-01 ]  lr: 1.32e-04
+2024-09-07 09:13:03 - INFO: Epoch: 53     Train Loss: 3.9782e-06  Test Loss: 1.2556e-01  [ 2order_test: 4.72e-06  2order_OOD: 2.51e-01 ]  lr: 1.30e-04
+2024-09-07 09:13:09 - INFO: Epoch: 54     Train Loss: 3.6170e-06  Test Loss: 1.3722e-01  [ 2order_test: 4.26e-06  2order_OOD: 2.74e-01 ]  lr: 1.27e-04
+2024-09-07 09:13:13 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:13:13 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:13:14 - INFO: data type: 2order_OOD                Acc: 90.6800%
+2024-09-07 09:13:21 - INFO: Epoch: 55     Train Loss: 3.2893e-06  Test Loss: 1.2035e-01  [ 2order_test: 3.86e-06  2order_OOD: 2.41e-01 ]  lr: 1.24e-04
+2024-09-07 09:13:27 - INFO: Epoch: 56     Train Loss: 2.9906e-06  Test Loss: 1.3261e-01  [ 2order_test: 3.50e-06  2order_OOD: 2.65e-01 ]  lr: 1.21e-04
+2024-09-07 09:13:33 - INFO: Epoch: 57     Train Loss: 2.7154e-06  Test Loss: 1.3727e-01  [ 2order_test: 3.16e-06  2order_OOD: 2.75e-01 ]  lr: 1.18e-04
+2024-09-07 09:13:39 - INFO: Epoch: 58     Train Loss: 2.4647e-06  Test Loss: 1.4181e-01  [ 2order_test: 2.85e-06  2order_OOD: 2.84e-01 ]  lr: 1.16e-04
+2024-09-07 09:13:46 - INFO: Epoch: 59     Train Loss: 2.2361e-06  Test Loss: 1.3427e-01  [ 2order_test: 2.57e-06  2order_OOD: 2.69e-01 ]  lr: 1.13e-04
+2024-09-07 09:13:50 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:13:50 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:13:51 - INFO: data type: 2order_OOD                Acc: 90.9733%
+2024-09-07 09:13:57 - INFO: Epoch: 60     Train Loss: 2.0269e-06  Test Loss: 1.4339e-01  [ 2order_test: 2.33e-06  2order_OOD: 2.87e-01 ]  lr: 1.10e-04
+2024-09-07 09:14:08 - INFO: Epoch: 61     Train Loss: 1.8353e-06  Test Loss: 1.3916e-01  [ 2order_test: 2.09e-06  2order_OOD: 2.78e-01 ]  lr: 1.07e-04
+2024-09-07 09:14:15 - INFO: Epoch: 62     Train Loss: 1.6601e-06  Test Loss: 1.4617e-01  [ 2order_test: 1.89e-06  2order_OOD: 2.92e-01 ]  lr: 1.04e-04
+2024-09-07 09:14:22 - INFO: Epoch: 63     Train Loss: 1.4988e-06  Test Loss: 1.5285e-01  [ 2order_test: 1.69e-06  2order_OOD: 3.06e-01 ]  lr: 1.02e-04
+2024-09-07 09:14:29 - INFO: Epoch: 64     Train Loss: 1.3392e-06  Test Loss: 1.0993e-01  [ 2order_test: 1.52e-06  2order_OOD: 2.20e-01 ]  lr: 9.87e-05
+2024-09-07 09:14:33 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:14:33 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:14:33 - INFO: data type: 2order_OOD                Acc: 92.3733%
+2024-09-07 09:14:41 - INFO: Epoch: 65     Train Loss: 1.2030e-02  Test Loss: 8.5915e-01  [ 2order_test: 2.72e-03  2order_OOD: 1.72e+00 ]  lr: 9.59e-05
+2024-09-07 09:14:47 - INFO: Epoch: 66     Train Loss: 1.1872e-03  Test Loss: 2.5168e-01  [ 2order_test: 1.92e-03  2order_OOD: 5.01e-01 ]  lr: 9.31e-05
+2024-09-07 09:14:54 - INFO: Epoch: 67     Train Loss: 7.3461e-04  Test Loss: 3.4603e-01  [ 2order_test: 1.11e-04  2order_OOD: 6.92e-01 ]  lr: 9.04e-05
+2024-09-07 09:15:00 - INFO: Epoch: 68     Train Loss: 1.1166e-04  Test Loss: 1.7258e-01  [ 2order_test: 3.67e-05  2order_OOD: 3.45e-01 ]  lr: 8.76e-05
+2024-09-07 09:15:07 - INFO: Epoch: 69     Train Loss: 1.4307e-05  Test Loss: 1.5273e-01  [ 2order_test: 2.19e-05  2order_OOD: 3.05e-01 ]  lr: 8.49e-05
+2024-09-07 09:15:11 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:15:11 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:15:11 - INFO: data type: 2order_OOD                Acc: 91.2667%
+2024-09-07 09:15:18 - INFO: Epoch: 70     Train Loss: 1.0545e-05  Test Loss: 1.4846e-01  [ 2order_test: 1.59e-05  2order_OOD: 2.97e-01 ]  lr: 8.22e-05
+2024-09-07 09:15:25 - INFO: Epoch: 71     Train Loss: 7.9473e-06  Test Loss: 1.4561e-01  [ 2order_test: 1.13e-05  2order_OOD: 2.91e-01 ]  lr: 7.95e-05
+2024-09-07 09:15:32 - INFO: Epoch: 72     Train Loss: 5.8704e-06  Test Loss: 1.5082e-01  [ 2order_test: 7.36e-06  2order_OOD: 3.02e-01 ]  lr: 7.69e-05
+2024-09-07 09:15:39 - INFO: Epoch: 73     Train Loss: 4.5052e-06  Test Loss: 1.5863e-01  [ 2order_test: 5.72e-06  2order_OOD: 3.17e-01 ]  lr: 7.43e-05
+2024-09-07 09:15:46 - INFO: Epoch: 74     Train Loss: 3.8505e-06  Test Loss: 1.6229e-01  [ 2order_test: 4.85e-06  2order_OOD: 3.25e-01 ]  lr: 7.17e-05
+2024-09-07 09:15:50 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:15:50 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:15:50 - INFO: data type: 2order_OOD                Acc: 90.1600%
+2024-09-07 09:15:57 - INFO: Epoch: 75     Train Loss: 3.4162e-06  Test Loss: 1.5811e-01  [ 2order_test: 4.34e-06  2order_OOD: 3.16e-01 ]  lr: 6.91e-05
+2024-09-07 09:16:04 - INFO: Epoch: 76     Train Loss: 3.1002e-06  Test Loss: 1.5610e-01  [ 2order_test: 3.94e-06  2order_OOD: 3.12e-01 ]  lr: 6.66e-05
+2024-09-07 09:16:10 - INFO: Epoch: 77     Train Loss: 2.8342e-06  Test Loss: 1.5648e-01  [ 2order_test: 3.59e-06  2order_OOD: 3.13e-01 ]  lr: 6.42e-05
+2024-09-07 09:16:17 - INFO: Epoch: 78     Train Loss: 2.6012e-06  Test Loss: 1.5592e-01  [ 2order_test: 3.29e-06  2order_OOD: 3.12e-01 ]  lr: 6.18e-05
+2024-09-07 09:16:24 - INFO: Epoch: 79     Train Loss: 2.3940e-06  Test Loss: 1.5219e-01  [ 2order_test: 3.02e-06  2order_OOD: 3.04e-01 ]  lr: 5.94e-05
+2024-09-07 09:16:28 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:16:28 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:16:29 - INFO: data type: 2order_OOD                Acc: 90.7333%
+2024-09-07 09:16:36 - INFO: Epoch: 80     Train Loss: 2.2103e-06  Test Loss: 1.5301e-01  [ 2order_test: 2.79e-06  2order_OOD: 3.06e-01 ]  lr: 5.71e-05
+2024-09-07 09:16:47 - INFO: Epoch: 81     Train Loss: 2.0454e-06  Test Loss: 1.5279e-01  [ 2order_test: 2.58e-06  2order_OOD: 3.06e-01 ]  lr: 5.48e-05
+2024-09-07 09:16:53 - INFO: Epoch: 82     Train Loss: 1.8924e-06  Test Loss: 1.5310e-01  [ 2order_test: 2.35e-06  2order_OOD: 3.06e-01 ]  lr: 5.26e-05
+2024-09-07 09:17:00 - INFO: Epoch: 83     Train Loss: 1.6977e-06  Test Loss: 1.7486e-01  [ 2order_test: 2.08e-06  2order_OOD: 3.50e-01 ]  lr: 5.05e-05
+2024-09-07 09:17:08 - INFO: Epoch: 84     Train Loss: 1.5104e-06  Test Loss: 2.1569e-01  [ 2order_test: 1.85e-06  2order_OOD: 4.31e-01 ]  lr: 4.84e-05
+2024-09-07 09:17:12 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:17:12 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:17:12 - INFO: data type: 2order_OOD                Acc: 86.6400%
+2024-09-07 09:17:19 - INFO: Epoch: 85     Train Loss: 1.3421e-06  Test Loss: 2.5138e-01  [ 2order_test: 1.63e-06  2order_OOD: 5.03e-01 ]  lr: 4.64e-05
+2024-09-07 09:17:25 - INFO: Epoch: 86     Train Loss: 1.1885e-06  Test Loss: 2.7463e-01  [ 2order_test: 1.43e-06  2order_OOD: 5.49e-01 ]  lr: 4.44e-05
+2024-09-07 09:17:32 - INFO: Epoch: 87     Train Loss: 1.0517e-06  Test Loss: 2.7901e-01  [ 2order_test: 1.26e-06  2order_OOD: 5.58e-01 ]  lr: 4.25e-05
+2024-09-07 09:17:39 - INFO: Epoch: 88     Train Loss: 9.3412e-07  Test Loss: 2.6045e-01  [ 2order_test: 1.12e-06  2order_OOD: 5.21e-01 ]  lr: 4.07e-05
+2024-09-07 09:17:46 - INFO: Epoch: 89     Train Loss: 8.3505e-07  Test Loss: 2.4347e-01  [ 2order_test: 1.00e-06  2order_OOD: 4.87e-01 ]  lr: 3.89e-05
+2024-09-07 09:17:50 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:17:51 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:17:51 - INFO: data type: 2order_OOD                Acc: 85.0800%
+2024-09-07 09:17:58 - INFO: Epoch: 90     Train Loss: 7.5222e-07  Test Loss: 2.2032e-01  [ 2order_test: 8.98e-07  2order_OOD: 4.41e-01 ]  lr: 3.72e-05
+2024-09-07 09:18:05 - INFO: Epoch: 91     Train Loss: 6.8227e-07  Test Loss: 1.9371e-01  [ 2order_test: 8.16e-07  2order_OOD: 3.87e-01 ]  lr: 3.56e-05
+2024-09-07 09:18:11 - INFO: Epoch: 92     Train Loss: 6.2272e-07  Test Loss: 1.7288e-01  [ 2order_test: 7.43e-07  2order_OOD: 3.46e-01 ]  lr: 3.40e-05
+2024-09-07 09:18:17 - INFO: Epoch: 93     Train Loss: 5.7181e-07  Test Loss: 1.4916e-01  [ 2order_test: 6.82e-07  2order_OOD: 2.98e-01 ]  lr: 3.25e-05
+2024-09-07 09:18:24 - INFO: Epoch: 94     Train Loss: 5.2759e-07  Test Loss: 1.3008e-01  [ 2order_test: 6.29e-07  2order_OOD: 2.60e-01 ]  lr: 3.11e-05
+2024-09-07 09:18:28 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:18:29 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:18:29 - INFO: data type: 2order_OOD                Acc: 91.5000%
+2024-09-07 09:18:37 - INFO: Epoch: 95     Train Loss: 4.8858e-07  Test Loss: 1.1458e-01  [ 2order_test: 5.84e-07  2order_OOD: 2.29e-01 ]  lr: 2.98e-05
+2024-09-07 09:18:43 - INFO: Epoch: 96     Train Loss: 4.5417e-07  Test Loss: 1.0270e-01  [ 2order_test: 5.43e-07  2order_OOD: 2.05e-01 ]  lr: 2.86e-05
+2024-09-07 09:18:49 - INFO: Epoch: 97     Train Loss: 4.2336e-07  Test Loss: 9.4266e-02  [ 2order_test: 5.11e-07  2order_OOD: 1.89e-01 ]  lr: 2.74e-05
+2024-09-07 09:18:56 - INFO: Epoch: 98     Train Loss: 3.9592e-07  Test Loss: 8.6366e-02  [ 2order_test: 4.79e-07  2order_OOD: 1.73e-01 ]  lr: 2.63e-05
+2024-09-07 09:19:01 - INFO: data type: 2order_train              Acc: 100.0000%
+2024-09-07 09:19:01 - INFO: data type: 2order_test               Acc: 100.0000%
+2024-09-07 09:19:01 - INFO: data type: 2order_OOD                Acc: 94.4267%
+2024-09-07 09:19:08 - INFO: Epoch: 99     Train Loss: 3.7083e-07  Test Loss: 7.9339e-02  [ 2order_test: 4.52e-07  2order_OOD: 1.59e-01 ]  lr: 2.53e-05

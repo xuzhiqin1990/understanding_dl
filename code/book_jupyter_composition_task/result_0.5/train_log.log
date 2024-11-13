@@ -1,0 +1,639 @@
+2024-11-09 23:09:22 - INFO: Total parameters: 2732201
+2024-11-09 23:09:24 - INFO: data type: 13_xm0 	 Acc: 0.0017777777777777779
+2024-11-09 23:09:25 - INFO: data type: 23_xm0 	 Acc: 0.0032
+2024-11-09 23:09:25 - INFO: data type: 43_xm0 	 Acc: 0.0021333333333333334
+2024-11-09 23:09:25 - INFO: data type: 31_xm0 	 Acc: 0.0019555555555555554
+2024-11-09 23:09:25 - INFO: data type: 32_xm0 	 Acc: 0.0028444444444444446
+2024-11-09 23:09:25 - INFO: data type: 34_xm0 	 Acc: 0.003022222222222222
+2024-11-09 23:09:25 - INFO: data type: 12_xm0 	 Acc: 0.0016
+2024-11-09 23:09:25 - INFO: data type: 14_xm0 	 Acc: 0.002488888888888889
+2024-11-09 23:09:25 - INFO: data type: 21_xm0 	 Acc: 0.012088888888888889
+2024-11-09 23:09:25 - INFO: data type: 41_xm0 	 Acc: 0.0026666666666666666
+2024-11-09 23:09:26 - INFO: data type: 24_xm0 	 Acc: 0.0021333333333333334
+2024-11-09 23:09:26 - INFO: data type: 42_xm0 	 Acc: 0.004266666666666667
+2024-11-09 23:09:26 - INFO: data type: 11_xm0 	 Acc: 0.00035555555555555557
+2024-11-09 23:09:26 - INFO: data type: 22_xm0 	 Acc: 0.002488888888888889
+2024-11-09 23:09:26 - INFO: data type: 33_xm0 	 Acc: 0.0016
+2024-11-09 23:09:26 - INFO: data type: 44_xm0 	 Acc: 0.0021333333333333334
+2024-11-09 23:09:27 - INFO: data type: 13_xel 	 Acc: 0.0017185185185185185
+2024-11-09 23:09:27 - INFO: data type: 23_xel 	 Acc: 0.0023901234567901236
+2024-11-09 23:09:28 - INFO: data type: 43_xel 	 Acc: 0.0024691358024691358
+2024-11-09 23:09:29 - INFO: data type: 31_xel 	 Acc: 0.0023901234567901236
+2024-11-09 23:09:30 - INFO: data type: 32_xel 	 Acc: 0.004128395061728395
+2024-11-09 23:09:31 - INFO: data type: 34_xel 	 Acc: 0.0031604938271604936
+2024-11-09 23:09:32 - INFO: data type: 12_xel 	 Acc: 0.0028641975308641974
+2024-11-09 23:09:32 - INFO: data type: 14_xel 	 Acc: 0.0027061728395061727
+2024-11-09 23:09:33 - INFO: data type: 21_xel 	 Acc: 0.0017185185185185185
+2024-11-09 23:09:34 - INFO: data type: 41_xel 	 Acc: 0.002765432098765432
+2024-11-09 23:09:35 - INFO: data type: 24_xel 	 Acc: 0.003219753086419753
+2024-11-09 23:09:35 - INFO: data type: 42_xel 	 Acc: 0.004483950617283951
+2024-11-09 23:09:36 - INFO: data type: 11_xel 	 Acc: 0.002034567901234568
+2024-11-09 23:09:37 - INFO: data type: 22_xel 	 Acc: 0.0043851851851851855
+2024-11-09 23:09:38 - INFO: data type: 33_xel 	 Acc: 0.0020148148148148148
+2024-11-09 23:09:38 - INFO: data type: 44_xel 	 Acc: 0.0026074074074074072
+2024-11-09 23:09:39 - INFO: Deviation Distribution:
+2024-11-09 23:09:39 - INFO:   deviation: -79 	 Acc: 0.0000
+2024-11-09 23:09:39 - INFO:   deviation: -78 	 Acc: 0.0000
+2024-11-09 23:09:39 - INFO:   deviation: -77 	 Acc: 0.0000
+2024-11-09 23:09:39 - INFO:   deviation: -76 	 Acc: 0.0002
+2024-11-09 23:09:39 - INFO:   deviation: -75 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -74 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -73 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: -72 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: -71 	 Acc: 0.0004
+2024-11-09 23:09:39 - INFO:   deviation: -70 	 Acc: 0.0004
+2024-11-09 23:09:39 - INFO:   deviation: -69 	 Acc: 0.0004
+2024-11-09 23:09:39 - INFO:   deviation: -68 	 Acc: 0.0002
+2024-11-09 23:09:39 - INFO:   deviation: -67 	 Acc: 0.0003
+2024-11-09 23:09:39 - INFO:   deviation: -66 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: -65 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -64 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -63 	 Acc: 0.0006
+2024-11-09 23:09:39 - INFO:   deviation: -62 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -61 	 Acc: 0.0006
+2024-11-09 23:09:39 - INFO:   deviation: -60 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -59 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -58 	 Acc: 0.0009
+2024-11-09 23:09:39 - INFO:   deviation: -57 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -56 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -55 	 Acc: 0.0010
+2024-11-09 23:09:39 - INFO:   deviation: -54 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -53 	 Acc: 0.0009
+2024-11-09 23:09:39 - INFO:   deviation: -52 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -51 	 Acc: 0.0012
+2024-11-09 23:09:39 - INFO:   deviation: -50 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: -49 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -48 	 Acc: 0.0008
+2024-11-09 23:09:39 - INFO:   deviation: -47 	 Acc: 0.0008
+2024-11-09 23:09:39 - INFO:   deviation: -46 	 Acc: 0.0016
+2024-11-09 23:09:39 - INFO:   deviation: -45 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: -44 	 Acc: 0.0012
+2024-11-09 23:09:39 - INFO:   deviation: -43 	 Acc: 0.0004
+2024-11-09 23:09:39 - INFO:   deviation: -42 	 Acc: 0.0010
+2024-11-09 23:09:39 - INFO:   deviation: -41 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -40 	 Acc: 0.0017
+2024-11-09 23:09:39 - INFO:   deviation: -39 	 Acc: 0.0014
+2024-11-09 23:09:39 - INFO:   deviation: -38 	 Acc: 0.0008
+2024-11-09 23:09:39 - INFO:   deviation: -37 	 Acc: 0.0015
+2024-11-09 23:09:39 - INFO:   deviation: -36 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -35 	 Acc: 0.0010
+2024-11-09 23:09:39 - INFO:   deviation: -34 	 Acc: 0.0011
+2024-11-09 23:09:39 - INFO:   deviation: -33 	 Acc: 0.0015
+2024-11-09 23:09:39 - INFO:   deviation: -32 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -31 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -30 	 Acc: 0.0016
+2024-11-09 23:09:39 - INFO:   deviation: -29 	 Acc: 0.0020
+2024-11-09 23:09:39 - INFO:   deviation: -28 	 Acc: 0.0015
+2024-11-09 23:09:39 - INFO:   deviation: -27 	 Acc: 0.0015
+2024-11-09 23:09:39 - INFO:   deviation: -26 	 Acc: 0.0011
+2024-11-09 23:09:39 - INFO:   deviation: -25 	 Acc: 0.0013
+2024-11-09 23:09:39 - INFO:   deviation: -24 	 Acc: 0.0008
+2024-11-09 23:09:39 - INFO:   deviation: -23 	 Acc: 0.0016
+2024-11-09 23:09:39 - INFO:   deviation: -22 	 Acc: 0.0014
+2024-11-09 23:09:39 - INFO:   deviation: -21 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: -20 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: -19 	 Acc: 0.0018
+2024-11-09 23:09:39 - INFO:   deviation: -18 	 Acc: 0.0017
+2024-11-09 23:09:39 - INFO:   deviation: -17 	 Acc: 0.0015
+2024-11-09 23:09:39 - INFO:   deviation: -16 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: -15 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: -14 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: -13 	 Acc: 0.0014
+2024-11-09 23:09:39 - INFO:   deviation: -12 	 Acc: 0.0018
+2024-11-09 23:09:39 - INFO:   deviation: -11 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: -10 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: -9 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: -8 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: -7 	 Acc: 0.0023
+2024-11-09 23:09:39 - INFO:   deviation: -6 	 Acc: 0.0027
+2024-11-09 23:09:39 - INFO:   deviation: -5 	 Acc: 0.0017
+2024-11-09 23:09:39 - INFO:   deviation: -4 	 Acc: 0.0033
+2024-11-09 23:09:39 - INFO:   deviation: -3 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: -2 	 Acc: 0.0025
+2024-11-09 23:09:39 - INFO:   deviation: -1 	 Acc: 0.0026
+2024-11-09 23:09:39 - INFO:   deviation: 0 	 Acc: 0.0025
+2024-11-09 23:09:39 - INFO:   deviation: 1 	 Acc: 0.0024
+2024-11-09 23:09:39 - INFO:   deviation: 2 	 Acc: 0.0027
+2024-11-09 23:09:39 - INFO:   deviation: 3 	 Acc: 0.0020
+2024-11-09 23:09:39 - INFO:   deviation: 4 	 Acc: 0.0026
+2024-11-09 23:09:39 - INFO:   deviation: 5 	 Acc: 0.0024
+2024-11-09 23:09:39 - INFO:   deviation: 6 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: 7 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: 8 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: 9 	 Acc: 0.0023
+2024-11-09 23:09:39 - INFO:   deviation: 10 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: 11 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: 12 	 Acc: 0.0025
+2024-11-09 23:09:39 - INFO:   deviation: 13 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: 14 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: 15 	 Acc: 0.0023
+2024-11-09 23:09:39 - INFO:   deviation: 16 	 Acc: 0.0020
+2024-11-09 23:09:39 - INFO:   deviation: 17 	 Acc: 0.0025
+2024-11-09 23:09:39 - INFO:   deviation: 18 	 Acc: 0.0024
+2024-11-09 23:09:39 - INFO:   deviation: 19 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: 20 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: 21 	 Acc: 0.0039
+2024-11-09 23:09:39 - INFO:   deviation: 22 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 23 	 Acc: 0.0047
+2024-11-09 23:09:39 - INFO:   deviation: 24 	 Acc: 0.0034
+2024-11-09 23:09:39 - INFO:   deviation: 25 	 Acc: 0.0050
+2024-11-09 23:09:39 - INFO:   deviation: 26 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 27 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 28 	 Acc: 0.0061
+2024-11-09 23:09:39 - INFO:   deviation: 29 	 Acc: 0.0039
+2024-11-09 23:09:39 - INFO:   deviation: 30 	 Acc: 0.0048
+2024-11-09 23:09:39 - INFO:   deviation: 31 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 32 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 33 	 Acc: 0.0030
+2024-11-09 23:09:39 - INFO:   deviation: 34 	 Acc: 0.0053
+2024-11-09 23:09:39 - INFO:   deviation: 35 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 36 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 37 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 38 	 Acc: 0.0050
+2024-11-09 23:09:39 - INFO:   deviation: 39 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 40 	 Acc: 0.0040
+2024-11-09 23:09:39 - INFO:   deviation: 41 	 Acc: 0.0043
+2024-11-09 23:09:39 - INFO:   deviation: 42 	 Acc: 0.0030
+2024-11-09 23:09:39 - INFO:   deviation: 43 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 44 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 45 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 46 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 47 	 Acc: 0.0039
+2024-11-09 23:09:39 - INFO:   deviation: 48 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 49 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 50 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 51 	 Acc: 0.0037
+2024-11-09 23:09:39 - INFO:   deviation: 52 	 Acc: 0.0047
+2024-11-09 23:09:39 - INFO:   deviation: 53 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 54 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 55 	 Acc: 0.0030
+2024-11-09 23:09:39 - INFO:   deviation: 56 	 Acc: 0.0053
+2024-11-09 23:09:39 - INFO:   deviation: 57 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 58 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 59 	 Acc: 0.0062
+2024-11-09 23:09:39 - INFO:   deviation: 60 	 Acc: 0.0029
+2024-11-09 23:09:39 - INFO:   deviation: 61 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 62 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 63 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 64 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 65 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 66 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 67 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 68 	 Acc: 0.0043
+2024-11-09 23:09:39 - INFO:   deviation: 69 	 Acc: 0.0034
+2024-11-09 23:09:39 - INFO:   deviation: 70 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 71 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 72 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 73 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 74 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 75 	 Acc: 0.0042
+2024-11-09 23:09:39 - INFO:   deviation: 76 	 Acc: 0.0048
+2024-11-09 23:09:39 - INFO:   deviation: 77 	 Acc: 0.0035
+2024-11-09 23:09:39 - INFO:   deviation: 78 	 Acc: 0.0037
+2024-11-09 23:09:39 - INFO:   deviation: 79 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 80 	 Acc: 0.0035
+2024-11-09 23:09:39 - INFO:   deviation: 81 	 Acc: 0.0048
+2024-11-09 23:09:39 - INFO:   deviation: 82 	 Acc: 0.0042
+2024-11-09 23:09:39 - INFO:   deviation: 83 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 84 	 Acc: 0.0041
+2024-11-09 23:09:39 - INFO:   deviation: 85 	 Acc: 0.0047
+2024-11-09 23:09:39 - INFO:   deviation: 86 	 Acc: 0.0042
+2024-11-09 23:09:39 - INFO:   deviation: 87 	 Acc: 0.0032
+2024-11-09 23:09:39 - INFO:   deviation: 88 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 89 	 Acc: 0.0057
+2024-11-09 23:09:39 - INFO:   deviation: 90 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 91 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 92 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 93 	 Acc: 0.0048
+2024-11-09 23:09:39 - INFO:   deviation: 94 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 95 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 96 	 Acc: 0.0033
+2024-11-09 23:09:39 - INFO:   deviation: 97 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 98 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 99 	 Acc: 0.0040
+2024-11-09 23:09:39 - INFO:   deviation: 100 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 101 	 Acc: 0.0021
+2024-11-09 23:09:39 - INFO:   deviation: 102 	 Acc: 0.0022
+2024-11-09 23:09:39 - INFO:   deviation: 103 	 Acc: 0.0023
+2024-11-09 23:09:39 - INFO:   deviation: 104 	 Acc: 0.0019
+2024-11-09 23:09:39 - INFO:   deviation: 105 	 Acc: 0.0063
+2024-11-09 23:09:39 - INFO:   deviation: 106 	 Acc: 0.0077
+2024-11-09 23:09:39 - INFO:   deviation: 107 	 Acc: 0.0072
+2024-11-09 23:09:39 - INFO:   deviation: 108 	 Acc: 0.0075
+2024-11-09 23:09:39 - INFO:   deviation: 109 	 Acc: 0.0067
+2024-11-09 23:09:39 - INFO:   deviation: 110 	 Acc: 0.0069
+2024-11-09 23:09:39 - INFO:   deviation: 111 	 Acc: 0.0073
+2024-11-09 23:09:39 - INFO:   deviation: 112 	 Acc: 0.0070
+2024-11-09 23:09:39 - INFO:   deviation: 113 	 Acc: 0.0091
+2024-11-09 23:09:39 - INFO:   deviation: 114 	 Acc: 0.0058
+2024-11-09 23:09:39 - INFO:   deviation: 115 	 Acc: 0.0066
+2024-11-09 23:09:39 - INFO:   deviation: 116 	 Acc: 0.0082
+2024-11-09 23:09:39 - INFO:   deviation: 117 	 Acc: 0.0064
+2024-11-09 23:09:39 - INFO:   deviation: 118 	 Acc: 0.0063
+2024-11-09 23:09:39 - INFO:   deviation: 119 	 Acc: 0.0060
+2024-11-09 23:09:39 - INFO:   deviation: 120 	 Acc: 0.0066
+2024-11-09 23:09:39 - INFO:   deviation: 121 	 Acc: 0.0072
+2024-11-09 23:09:39 - INFO:   deviation: 122 	 Acc: 0.0062
+2024-11-09 23:09:39 - INFO:   deviation: 123 	 Acc: 0.0070
+2024-11-09 23:09:39 - INFO:   deviation: 124 	 Acc: 0.0071
+2024-11-09 23:09:39 - INFO:   deviation: 125 	 Acc: 0.0071
+2024-11-09 23:09:39 - INFO:   deviation: 126 	 Acc: 0.0071
+2024-11-09 23:09:39 - INFO:   deviation: 127 	 Acc: 0.0071
+2024-11-09 23:09:39 - INFO:   deviation: 128 	 Acc: 0.0075
+2024-11-09 23:09:39 - INFO:   deviation: 129 	 Acc: 0.0068
+2024-11-09 23:09:39 - INFO:   deviation: 130 	 Acc: 0.0064
+2024-11-09 23:09:39 - INFO:   deviation: 131 	 Acc: 0.0067
+2024-11-09 23:09:39 - INFO:   deviation: 132 	 Acc: 0.0065
+2024-11-09 23:09:39 - INFO:   deviation: 133 	 Acc: 0.0057
+2024-11-09 23:09:39 - INFO:   deviation: 134 	 Acc: 0.0072
+2024-11-09 23:09:39 - INFO:   deviation: 135 	 Acc: 0.0072
+2024-11-09 23:09:39 - INFO:   deviation: 136 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 137 	 Acc: 0.0059
+2024-11-09 23:09:39 - INFO:   deviation: 138 	 Acc: 0.0066
+2024-11-09 23:09:39 - INFO:   deviation: 139 	 Acc: 0.0066
+2024-11-09 23:09:39 - INFO:   deviation: 140 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 141 	 Acc: 0.0059
+2024-11-09 23:09:39 - INFO:   deviation: 142 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 143 	 Acc: 0.0068
+2024-11-09 23:09:39 - INFO:   deviation: 144 	 Acc: 0.0060
+2024-11-09 23:09:39 - INFO:   deviation: 145 	 Acc: 0.0078
+2024-11-09 23:09:39 - INFO:   deviation: 146 	 Acc: 0.0063
+2024-11-09 23:09:39 - INFO:   deviation: 147 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 148 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 149 	 Acc: 0.0060
+2024-11-09 23:09:39 - INFO:   deviation: 150 	 Acc: 0.0054
+2024-11-09 23:09:39 - INFO:   deviation: 151 	 Acc: 0.0045
+2024-11-09 23:09:39 - INFO:   deviation: 152 	 Acc: 0.0067
+2024-11-09 23:09:39 - INFO:   deviation: 153 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 154 	 Acc: 0.0056
+2024-11-09 23:09:39 - INFO:   deviation: 155 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 156 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 157 	 Acc: 0.0062
+2024-11-09 23:09:39 - INFO:   deviation: 158 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 159 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 160 	 Acc: 0.0056
+2024-11-09 23:09:39 - INFO:   deviation: 161 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 162 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 163 	 Acc: 0.0056
+2024-11-09 23:09:39 - INFO:   deviation: 164 	 Acc: 0.0062
+2024-11-09 23:09:39 - INFO:   deviation: 165 	 Acc: 0.0042
+2024-11-09 23:09:39 - INFO:   deviation: 166 	 Acc: 0.0049
+2024-11-09 23:09:39 - INFO:   deviation: 167 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 168 	 Acc: 0.0059
+2024-11-09 23:09:39 - INFO:   deviation: 169 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 170 	 Acc: 0.0056
+2024-11-09 23:09:39 - INFO:   deviation: 171 	 Acc: 0.0063
+2024-11-09 23:09:39 - INFO:   deviation: 172 	 Acc: 0.0062
+2024-11-09 23:09:39 - INFO:   deviation: 173 	 Acc: 0.0051
+2024-11-09 23:09:39 - INFO:   deviation: 174 	 Acc: 0.0046
+2024-11-09 23:09:39 - INFO:   deviation: 175 	 Acc: 0.0044
+2024-11-09 23:09:39 - INFO:   deviation: 176 	 Acc: 0.0043
+2024-11-09 23:09:39 - INFO:   deviation: 177 	 Acc: 0.0055
+2024-11-09 23:09:39 - INFO:   deviation: 178 	 Acc: 0.0052
+2024-11-09 23:09:39 - INFO:   deviation: 179 	 Acc: 0.0061
+2024-11-09 23:09:39 - INFO:   deviation: 180 	 Acc: 0.0068
+2024-11-09 23:09:39 - INFO:   deviation: 181 	 Acc: 0.0057
+2024-11-09 23:09:39 - INFO:   deviation: 182 	 Acc: 0.0047
+2024-11-09 23:09:39 - INFO:   deviation: 183 	 Acc: 0.0048
+2024-11-09 23:09:39 - INFO:   deviation: 184 	 Acc: 0.0043
+2024-11-09 23:09:39 - INFO:   deviation: 185 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: 186 	 Acc: 0.0007
+2024-11-09 23:09:39 - INFO:   deviation: 187 	 Acc: 0.0005
+2024-11-09 23:09:39 - INFO:   deviation: 189 	 Acc: 0.0000
+2024-11-09 23:09:56 - INFO: Epoch: 0      Train Loss: 4.6139e+00  Test Loss: 4.3082e+00
+2024-11-09 23:10:12 - INFO: Epoch: 1      Train Loss: 2.5683e+00  Test Loss: 3.0760e+00
+2024-11-09 23:10:29 - INFO: Epoch: 2      Train Loss: 1.1987e+00  Test Loss: 2.0716e+00
+2024-11-09 23:10:29 - INFO: data type: 13_xm0 	 Acc: 0.9998222222222222
+2024-11-09 23:10:29 - INFO: data type: 23_xm0 	 Acc: 0.9992888888888889
+2024-11-09 23:10:29 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:10:29 - INFO: data type: 31_xm0 	 Acc: 0.9996444444444444
+2024-11-09 23:10:29 - INFO: data type: 32_xm0 	 Acc: 0.9992888888888889
+2024-11-09 23:10:29 - INFO: data type: 34_xm0 	 Acc: 0.7329777777777777
+2024-11-09 23:10:29 - INFO: data type: 12_xm0 	 Acc: 0.9843555555555555
+2024-11-09 23:10:29 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:10:29 - INFO: data type: 21_xm0 	 Acc: 0.9975111111111111
+2024-11-09 23:10:29 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:10:30 - INFO: data type: 24_xm0 	 Acc: 0.9998222222222222
+2024-11-09 23:10:30 - INFO: data type: 42_xm0 	 Acc: 0.9952
+2024-11-09 23:10:30 - INFO: data type: 11_xm0 	 Acc: 0.8844444444444445
+2024-11-09 23:10:30 - INFO: data type: 22_xm0 	 Acc: 0.9523555555555555
+2024-11-09 23:10:30 - INFO: data type: 33_xm0 	 Acc: 0.7948444444444445
+2024-11-09 23:10:30 - INFO: data type: 44_xm0 	 Acc: 0.9893333333333333
+2024-11-09 23:10:31 - INFO: data type: 13_xel 	 Acc: 0.9999802469135802
+2024-11-09 23:10:32 - INFO: data type: 23_xel 	 Acc: 0.9999012345679013
+2024-11-09 23:10:32 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:10:33 - INFO: data type: 31_xel 	 Acc: 0.9999604938271605
+2024-11-09 23:10:34 - INFO: data type: 32_xel 	 Acc: 0.9999604938271605
+2024-11-09 23:10:35 - INFO: data type: 34_xel 	 Acc: 0.8309925925925926
+2024-11-09 23:10:35 - INFO: data type: 12_xel 	 Acc: 0.9991308641975308
+2024-11-09 23:10:36 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:10:37 - INFO: data type: 21_xel 	 Acc: 0.9992296296296296
+2024-11-09 23:10:38 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:10:38 - INFO: data type: 24_xel 	 Acc: 0.9998419753086419
+2024-11-09 23:10:39 - INFO: data type: 42_xel 	 Acc: 0.9998617283950617
+2024-11-09 23:10:40 - INFO: data type: 11_xel 	 Acc: 0.9160493827160494
+2024-11-09 23:10:41 - INFO: data type: 22_xel 	 Acc: 0.991683950617284
+2024-11-09 23:10:41 - INFO: data type: 33_xel 	 Acc: 0.8568888888888889
+2024-11-09 23:10:42 - INFO: data type: 44_xel 	 Acc: 0.9992296296296296
+2024-11-09 23:10:43 - INFO: Deviation Distribution:
+2024-11-09 23:10:43 - INFO:   deviation: -6 	 Acc: 0.0199
+2024-11-09 23:10:43 - INFO:   deviation: 3 	 Acc: 0.2252
+2024-11-09 23:10:43 - INFO:   deviation: 4 	 Acc: 0.7534
+2024-11-09 23:10:43 - INFO:   deviation: 6 	 Acc: 0.0011
+2024-11-09 23:10:43 - INFO:   deviation: 7 	 Acc: 0.0003
+2024-11-09 23:10:59 - INFO: Epoch: 3      Train Loss: 8.5330e-02  Test Loss: 2.6943e+00
+2024-11-09 23:11:21 - INFO: Epoch: 4      Train Loss: 1.1401e-02  Test Loss: 3.0701e+00
+2024-11-09 23:11:38 - INFO: Epoch: 5      Train Loss: 4.6026e-03  Test Loss: 3.3494e+00
+2024-11-09 23:11:38 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:11:38 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:11:38 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:11:38 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:11:38 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:11:38 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:11:38 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 11_xm0 	 Acc: 0.9968
+2024-11-09 23:11:39 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:11:39 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:11:40 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:11:41 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:11:41 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:11:42 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:11:43 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:11:44 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:11:44 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:11:45 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:11:46 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:11:47 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:11:47 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:11:48 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:11:49 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:11:50 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:11:50 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:11:51 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:11:52 - INFO: Deviation Distribution:
+2024-11-09 23:11:52 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:12:08 - INFO: Epoch: 6      Train Loss: 2.3737e-03  Test Loss: 3.5577e+00
+2024-11-09 23:12:28 - INFO: Epoch: 7      Train Loss: 1.3766e-03  Test Loss: 3.7500e+00
+2024-11-09 23:12:44 - INFO: Epoch: 8      Train Loss: 8.5552e-04  Test Loss: 3.9270e+00
+2024-11-09 23:12:44 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:12:44 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:12:45 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:12:45 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:12:46 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:12:46 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:12:46 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:12:46 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:12:47 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:12:47 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:12:48 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:12:49 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:12:49 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:12:50 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:12:51 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:12:52 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:12:52 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:12:53 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:12:54 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:12:55 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:12:55 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:12:56 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:12:57 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:12:58 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:12:58 - INFO: Deviation Distribution:
+2024-11-09 23:12:58 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:13:15 - INFO: Epoch: 9      Train Loss: 5.5687e-04  Test Loss: 4.0811e+00
+2024-11-09 23:13:31 - INFO: Epoch: 10     Train Loss: 3.7900e-04  Test Loss: 4.2095e+00
+2024-11-09 23:13:45 - INFO: Epoch: 11     Train Loss: 2.7062e-04  Test Loss: 4.3329e+00
+2024-11-09 23:13:45 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:13:45 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:13:45 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:13:46 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:13:46 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:13:46 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:13:46 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:13:47 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:13:48 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:13:48 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:13:49 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:13:49 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:13:50 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:13:50 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:13:51 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:13:52 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:13:52 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:13:53 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:13:53 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:13:54 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:13:55 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:13:55 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:13:56 - INFO: Deviation Distribution:
+2024-11-09 23:13:56 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:14:07 - INFO: Epoch: 12     Train Loss: 2.0035e-04  Test Loss: 4.4446e+00
+2024-11-09 23:14:24 - INFO: Epoch: 13     Train Loss: 1.5209e-04  Test Loss: 4.5469e+00
+2024-11-09 23:14:38 - INFO: Epoch: 14     Train Loss: 1.1752e-04  Test Loss: 4.6395e+00
+2024-11-09 23:14:38 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:14:38 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:14:38 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:14:39 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:14:40 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:14:40 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:14:41 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:14:41 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:14:42 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:14:42 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:14:43 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:14:44 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:14:44 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:14:45 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:14:46 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:14:46 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:14:47 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:14:47 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:14:48 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:14:48 - INFO: Deviation Distribution:
+2024-11-09 23:14:48 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:15:01 - INFO: Epoch: 15     Train Loss: 9.2026e-05  Test Loss: 4.7437e+00
+2024-11-09 23:15:19 - INFO: Epoch: 16     Train Loss: 7.2777e-05  Test Loss: 4.8321e+00
+2024-11-09 23:15:32 - INFO: Epoch: 17     Train Loss: 5.8009e-05  Test Loss: 4.9084e+00
+2024-11-09 23:15:32 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:15:32 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:15:32 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:15:33 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:15:34 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:15:34 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:15:35 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:15:36 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:15:36 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:15:37 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:15:38 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:15:38 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:15:39 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:15:40 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:15:41 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:15:41 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:15:42 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:15:42 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:15:43 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:15:44 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:15:44 - INFO: Deviation Distribution:
+2024-11-09 23:15:44 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:15:58 - INFO: Epoch: 18     Train Loss: 4.6529e-05  Test Loss: 4.9969e+00
+2024-11-09 23:16:15 - INFO: Epoch: 19     Train Loss: 3.7507e-05  Test Loss: 5.0829e+00
+2024-11-09 23:16:27 - INFO: Epoch: 20     Train Loss: 3.0362e-05  Test Loss: 5.1647e+00
+2024-11-09 23:16:27 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:16:27 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:16:27 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:16:27 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:16:28 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:16:29 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:16:29 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:16:30 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:16:31 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:16:31 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:16:32 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:16:32 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:16:33 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:16:34 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:16:34 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:16:35 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:16:35 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:16:36 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:16:36 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:16:37 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:16:38 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:16:38 - INFO: Deviation Distribution:
+2024-11-09 23:16:38 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:16:51 - INFO: Epoch: 21     Train Loss: 2.4658e-05  Test Loss: 5.2413e+00
+2024-11-09 23:17:11 - INFO: Epoch: 22     Train Loss: 2.0076e-05  Test Loss: 5.3264e+00
+2024-11-09 23:17:26 - INFO: Epoch: 23     Train Loss: 1.6384e-05  Test Loss: 5.3970e+00
+2024-11-09 23:17:26 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:17:26 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:17:26 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:17:26 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:17:27 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:17:28 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:17:29 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:17:29 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:17:30 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:17:31 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:17:31 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:17:32 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:17:33 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:17:34 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:17:34 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:17:35 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:17:35 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:17:36 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:17:37 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:17:38 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:17:38 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:17:39 - INFO: Deviation Distribution:
+2024-11-09 23:17:39 - INFO:   deviation: 4 	 Acc: 1.0000
+2024-11-09 23:17:55 - INFO: Epoch: 24     Train Loss: 1.3397e-05  Test Loss: 5.4759e+00
+2024-11-09 23:18:14 - INFO: Epoch: 25     Train Loss: 1.0974e-05  Test Loss: 5.5506e+00
+2024-11-09 23:18:30 - INFO: Epoch: 26     Train Loss: 8.9998e-06  Test Loss: 5.6305e+00
+2024-11-09 23:18:30 - INFO: data type: 13_xm0 	 Acc: 1.0
+2024-11-09 23:18:30 - INFO: data type: 23_xm0 	 Acc: 1.0
+2024-11-09 23:18:30 - INFO: data type: 43_xm0 	 Acc: 0.0
+2024-11-09 23:18:31 - INFO: data type: 31_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 32_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 34_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 12_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 14_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 21_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 41_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 24_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 42_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 11_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 22_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 33_xm0 	 Acc: 1.0
+2024-11-09 23:18:31 - INFO: data type: 44_xm0 	 Acc: 1.0
+2024-11-09 23:18:32 - INFO: data type: 13_xel 	 Acc: 1.0
+2024-11-09 23:18:33 - INFO: data type: 23_xel 	 Acc: 1.0
+2024-11-09 23:18:34 - INFO: data type: 43_xel 	 Acc: 0.0
+2024-11-09 23:18:34 - INFO: data type: 31_xel 	 Acc: 1.0
+2024-11-09 23:18:35 - INFO: data type: 32_xel 	 Acc: 1.0
+2024-11-09 23:18:36 - INFO: data type: 34_xel 	 Acc: 1.0
+2024-11-09 23:18:36 - INFO: data type: 12_xel 	 Acc: 1.0
+2024-11-09 23:18:37 - INFO: data type: 14_xel 	 Acc: 1.0
+2024-11-09 23:18:38 - INFO: data type: 21_xel 	 Acc: 1.0
+2024-11-09 23:18:38 - INFO: data type: 41_xel 	 Acc: 1.0
+2024-11-09 23:18:39 - INFO: data type: 24_xel 	 Acc: 1.0
+2024-11-09 23:18:40 - INFO: data type: 42_xel 	 Acc: 1.0
+2024-11-09 23:18:41 - INFO: data type: 11_xel 	 Acc: 1.0
+2024-11-09 23:18:41 - INFO: data type: 22_xel 	 Acc: 1.0
+2024-11-09 23:18:42 - INFO: data type: 33_xel 	 Acc: 1.0
+2024-11-09 23:18:43 - INFO: data type: 44_xel 	 Acc: 1.0
+2024-11-09 23:18:43 - INFO: Deviation Distribution:
+2024-11-09 23:18:43 - INFO:   deviation: 4 	 Acc: 1.0000
