@@ -1,0 +1,54 @@
+# _*_ coding:utf-8 _*_
+
+#网络设定
+
+device_rank: "0"
+t: 0.5
+lr: 5e-2
+hidden_layers_width: [20]
+ini_output_dir: output/test/test1/
+initialization: "Gaussian" #'Gaussian', 'He', 'Xavier'
+network_type: "linear" #'linear', 'vgg'
+bias: True
+act_func: "Tanh"
+
+#dropout及修改lr
+dropout: False
+dropout_pro: 0.0
+use_nesterov: False
+
+
+#数据集
+data: "1Dpro" #"MNIST", "1Dpro", "cifar10"
+input_dim: 1
+output_dim: 1
+training_size: 20
+test_size: 1000
+training_batch_size: 20
+var_batch_size: 50
+test_batch_size: 1000
+data_boundary: ["-2*math.pi", "2*math.pi"]
+
+#画图及保存
+plot_epoch: 10000
+
+save_epoch: 10000
+
+training_steps: 150000
+stop_loss: 1e-6
+
+plot_output: True
+
+#实验需求
+
+loss: "mse"
+
+#结果保存
+save_para: [113000, 115000]
+save_grad: [113000, 115000]
+save_loss: True
+save_acc: False
+save_output: False
+save_result_epoch: 10000
+
+resume_model: 'D:\lab\Tkinter-Designer\output\model\tmp0.pth.tar'

@@ -1,0 +1,48 @@
+act_func: Tanh
+bias: true
+data: 1Dpro
+data_boundary:
+- -math.pi
+- math.pi
+device_rank: '2'
+dropout: false
+dropout_pro: 0.0
+hidden_layers_width:
+- 100
+- 100
+- 100
+- 100
+- 100
+- 100
+- 100
+
+ini_output_dir: /root/zhangzhongwang/data/book
+initialization: Gaussian
+input_dim: 1
+loss: mse
+lr: 0.02
+network_type: linear
+output_dim: 1
+plot_epoch: 10000
+plot_output: True
+resume_model:  
+save_acc: false
+save_epoch: 10000
+save_grad: false
+
+target_func: torch.sin(x)
+
+save_loss: true
+save_output: True
+save_para: False
+
+save_result_epoch: 10000
+stop_loss: 1.0e-06
+t: 0.5
+test_batch_size: 1000
+test_size: 1000
+training_batch_size: 10
+training_size: 10
+training_steps: 100000
+use_nesterov: false
+

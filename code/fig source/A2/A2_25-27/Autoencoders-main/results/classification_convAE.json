@@ -1,0 +1,18 @@
+{
+	"shallowConvAE_filts20_dim100_basic_lr0.7_bs1000_ep500": {
+		"loss": 0.30206865072250366,
+		"accuracy": 0.9129999876022339
+	},
+	"shallowConvAE_filts20_dim100_denoising0.2_lr0.7_bs1000_ep500": {
+		"loss": 0.28810790181159973,
+		"accuracy": 0.909600019454956
+	},
+	"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.5_bs512_ep500": {
+		"loss": 0.2423814982175827,
+		"accuracy": 0.9279000163078308
+	},
+	"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.1_lr0.5_bs512_ep100": {
+		"loss": 0.22109247744083405,
+		"accuracy": 0.9348000288009644
+	}
+}

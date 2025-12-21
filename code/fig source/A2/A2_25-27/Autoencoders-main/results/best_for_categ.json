@@ -1,0 +1,132 @@
+{
+	"shallowAE": {
+		"basic": {
+			"shallowAE_200_basic_lr0.5_bs512_ep500": 0.00198,
+			"shallowAE_200_basic_lr0.7_bs1000_ep500": 0.00198,
+			"shallowAE_200_basic_lr0.5_bs512_ep100": 0.00199,
+			"shallowAE_200_basic_lr0.3_bs32_ep100": 0.002,
+			"shallowAE_100_basic_lr0.5_bs512_ep500": 0.00271,
+			"shallowAE_100_basic_lr0.7_bs1000_ep500": 0.00271,
+			"shallowAE_100_basic_lr0.5_bs512_ep100": 0.00272,
+			"shallowAE_100_basic_lr0.3_bs32_ep100": 0.00273,
+			"shallowAE_200_basic_lr0.3_bs32_ep20": 0.00329,
+			"shallowAE_100_basic_lr0.3_bs32_ep20": 0.004
+		},
+		"denoising": {
+			"shallowAE_200_denoising0.2_lr0.7_bs1000_ep500": 0.01028,
+			"shallowAE_200_denoising0.2_lr0.5_bs512_ep500": 0.01029,
+			"shallowAE_200_denoising0.2_lr0.5_bs512_ep100": 0.01033,
+			"shallowAE_200_denoising0.2_lr0.3_bs32_ep100": 0.0104,
+			"shallowAE_200_denoising0.2_lr0.3_bs32_ep20": 0.01067,
+			"shallowAE_200_denoising0.2_lr0.1_bs32_ep100": 0.01079,
+			"shallowAE_200_denoising0.2_lr0.1_bs32_ep20": 0.01082,
+			"shallowAE_200_denoising0.1_lr0.7_bs1000_ep500": 0.01083,
+			"shallowAE_200_denoising0.1_lr0.5_bs512_ep100": 0.01085,
+			"shallowAE_200_denoising0.1_lr0.5_bs512_ep500": 0.01085
+		},
+		"contractive": {
+			"shallowAE_200_contractive_lr0.5_bs512_ep500": 0.00426,
+			"shallowAE_200_contractive_lr0.7_bs1000_ep500": 0.00426,
+			"shallowAE_200_contractive_lr0.5_bs512_ep100": 0.00427,
+			"shallowAE_200_contractive_lr0.3_bs32_ep100": 0.00428,
+			"shallowAE_100_contractive_lr0.5_bs512_ep500": 0.00436,
+			"shallowAE_100_contractive_lr0.7_bs1000_ep500": 0.00436,
+			"shallowAE_100_contractive_lr0.5_bs512_ep100": 0.00437,
+			"shallowAE_100_contractive_lr0.3_bs32_ep100": 0.00438,
+			"shallowAE_100_contractive_lr0.3_bs32_ep20": 0.00495,
+			"shallowAE_100_contractive_lr0.1_bs32_ep100": 0.00511
+		}
+	},
+	"deepAE": {
+		"basic": {
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.3_bs32_ep100": 0.01347,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.3_bs32_ep100_pretrain": 0.01422,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.1_bs32_ep100": 0.0149,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.1_bs32_ep100_pretrain": 0.0162,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.3_bs32_ep20": 0.0164,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.3_bs32_ep20_pretrain": 0.0176,
+			"deepAE_(784, 200, 10)_basic_lr0.3_bs32_ep100": 0.01788,
+			"deepAE_(784, 200, 10)_basic_lr0.1_bs32_ep100": 0.01965,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.1_bs32_ep20": 0.01966,
+			"deepAE_(784, 500, 200, 100, 10)_basic_lr0.5_bs512_ep500": 0.02058
+		},
+		"denoising": {
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.1_lr0.3_bs32_ep100": 0.0175,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.3_bs32_ep20": 0.01771,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.1_bs32_ep100": 0.01803,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.3_bs32_ep100": 0.01818,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.1_lr0.3_bs32_ep100_pretrain": 0.01821,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.1_lr0.3_bs32_ep20": 0.01839,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.1_bs32_ep100_pretrain": 0.01896,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.1_lr0.3_bs32_ep20_pretrain": 0.02001,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.3_bs32_ep100_pretrain": 0.02018,
+			"deepAE_(784, 500, 200, 100, 10)_denoising0.2_lr0.3_bs32_ep20_pretrain": 0.0207
+		},
+		"contractive": {
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.1_bs32_ep100": 0.01689,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.1_bs32_ep100_pretrain": 0.01729,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.1_bs32_ep20": 0.01958,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.7_bs1000_ep500": 0.02083,
+			"deepAE_(784, 200, 10)_contractive_lr0.1_bs32_ep100": 0.02166,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.7_bs1000_ep500_pretrain": 0.02166,
+			"deepAE_(784, 200, 10)_contractive_lr0.3_bs32_ep20": 0.02189,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.5_bs512_ep500": 0.02222,
+			"deepAE_(784, 200, 10)_contractive_lr0.5_bs512_ep100": 0.02252,
+			"deepAE_(784, 500, 200, 100, 10)_contractive_lr0.1_bs32_ep20_pretrain": 0.0232
+		}
+	},
+	"shallowConvAE": {
+		"basic": {
+			"shallowConvAE_filts20_dim100_basic_lr0.7_bs1000_ep500": 0.00206,
+			"shallowConvAE_filts20_dim100_basic_lr0.5_bs512_ep100": 0.00207,
+			"shallowConvAE_filts20_dim100_basic_lr0.3_bs32_ep100": 0.00214,
+			"shallowConvAE_filts20_dim100_basic_lr0.1_bs32_ep100": 0.00247,
+			"shallowConvAE_filts10_dim100_basic_lr0.7_bs1000_ep500": 0.0026,
+			"shallowConvAE_filts10_dim100_basic_lr0.5_bs512_ep100": 0.00262,
+			"shallowConvAE_filts10_dim100_basic_lr0.3_bs32_ep100": 0.00271,
+			"shallowConvAE_filts10_dim100_basic_lr0.1_bs32_ep100": 0.00289,
+			"shallowConvAE_filts5_dim200_basic_lr0.7_bs1000_ep500": 0.00319,
+			"shallowConvAE_filts5_dim200_basic_lr0.5_bs512_ep100": 0.00322
+		},
+		"denoising": {
+			"shallowConvAE_filts20_dim100_denoising0.2_lr0.7_bs1000_ep500": 0.00694,
+			"shallowConvAE_filts20_dim100_denoising0.2_lr0.5_bs512_ep100": 0.00698,
+			"shallowConvAE_filts20_dim100_denoising0.2_lr0.1_bs32_ep100": 0.00712,
+			"shallowConvAE_filts20_dim100_denoising0.2_lr0.3_bs32_ep100": 0.00714,
+			"shallowConvAE_filts20_dim100_denoising0.1_lr0.5_bs512_ep100": 0.00727,
+			"shallowConvAE_filts20_dim100_denoising0.1_lr0.7_bs1000_ep500": 0.0073,
+			"shallowConvAE_filts20_dim100_denoising0.1_lr0.3_bs32_ep100": 0.00739,
+			"shallowConvAE_filts20_dim100_denoising0.2_lr0.3_bs32_ep20": 0.00747,
+			"shallowConvAE_filts20_dim100_denoising0.1_lr0.1_bs32_ep100": 0.00779,
+			"shallowConvAE_filts10_dim100_denoising0.2_lr0.7_bs1000_ep500": 0.00784
+		},
+		"contractive": {}
+	},
+	"deepConvAE": {
+		"basic": {
+			"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.5_bs512_ep500": 0.00213,
+			"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.5_bs512_ep100": 0.00216,
+			"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.3_bs32_ep100": 0.00227,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_basic__lr0.5_bs512_ep500": 0.00238,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_basic__lr0.5_bs512_ep100": 0.00241,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_basic__lr0.3_bs32_ep100": 0.00255,
+			"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.3_bs32_ep20": 0.00262,
+			"deepConvAE_filts(10, 20, 50)_central100_basic__lr0.1_bs32_ep100": 0.00269,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_basic__lr0.3_bs32_ep20": 0.00272,
+			"deepConvAE_filts(4, 8, 16)_central100_basic__lr0.5_bs512_ep500": 0.00292
+		},
+		"denoising": {
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.1_lr0.5_bs512_ep100": 0.00552,
+			"deepConvAE_filts(10, 20, 50)_central100_denoising_0.1_lr0.7_bs1000_ep500": 0.00558,
+			"deepConvAE_filts(10, 20, 50)_central100_denoising_0.1_lr0.5_bs512_ep100": 0.0056,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.1_lr0.7_bs1000_ep500": 0.0056,
+			"deepConvAE_filts(10, 20, 50)_central100_denoising_0.1_lr0.5_bs512_ep500": 0.00563,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.1_lr0.5_bs512_ep500": 0.00563,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.2_lr0.5_bs512_ep500": 0.00566,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.2_lr0.5_bs512_ep100": 0.00568,
+			"deepConvAE_filts(10, 20, 50)_central100_pool_denoising_0.2_lr0.7_bs1000_ep500": 0.00568,
+			"deepConvAE_filts(10, 20, 50)_central100_denoising_0.2_lr0.1_bs32_ep100": 0.00569
+		},
+		"contractive": {}
+	}
+}

@@ -1,0 +1,115 @@
+<mxfile host="Electron" modified="2025-08-06T15:02:02.746Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="lDtWHYREFFNkuh49nV3C" version="24.0.4" type="device">
+  <diagram name="第 1 页" id="P4dVzfKvw5L-oQqM2NJe">
+    <mxGraphModel dx="2544" dy="1176" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="1" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-2" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-632" y="110" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-4" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="110" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-5" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-497" y="110" width="86" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-6" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-224" y="110" width="86" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-3" value="&lt;span style=&quot;font-size: 40px;&quot;&gt;我的 名字是 小明 ，我 来自 中国 。&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="110" width="640" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-8" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-2" target="gmIEtfKyztkYcZ1GpnMC-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-450" y="340" as="sourcePoint" />
+            <mxPoint x="-400" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-567" y="200" />
+              <mxPoint x="-454" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-9" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-4" target="gmIEtfKyztkYcZ1GpnMC-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-280" y="180" as="sourcePoint" />
+            <mxPoint x="-167" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-275" y="200" />
+              <mxPoint x="-181" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-10" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-383" y="261" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-11" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-246" y="261" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-12" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-595" y="261" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-7" value="&lt;span style=&quot;font-size: 40px;&quot;&gt;求序列 X各元素 的 平方 的 和 。&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="261" width="580" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-13" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-11" target="gmIEtfKyztkYcZ1GpnMC-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-310" y="390" as="sourcePoint" />
+            <mxPoint x="-216" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-216" y="360" />
+              <mxPoint x="-515" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-14" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-10" target="gmIEtfKyztkYcZ1GpnMC-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-206" y="331" as="sourcePoint" />
+            <mxPoint x="-505" y="331" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-338" y="360" />
+              <mxPoint x="-515" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-15" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E5CCFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-348" y="421" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-17" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-630" y="421" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-19" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-15" target="gmIEtfKyztkYcZ1GpnMC-21">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-216" y="481" as="sourcePoint" />
+            <mxPoint x="-216" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-263" y="521" />
+              <mxPoint x="-445" y="521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="gmIEtfKyztkYcZ1GpnMC-15" target="gmIEtfKyztkYcZ1GpnMC-17">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-206" y="491" as="sourcePoint" />
+            <mxPoint x="-505" y="491" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-263" y="521" />
+              <mxPoint x="-585" y="521" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-21" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF4C3;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-490" y="421" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-18" value="&lt;span style=&quot;font-size: 40px;&quot;&gt;计算 小明 和 小红 的 平均身高 。&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-720" y="421" width="592" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-22" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;锚点&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=24;fontColor=#B266FF;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-632" y="70" width="50" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="gmIEtfKyztkYcZ1GpnMC-23" value="&lt;span style=&quot;font-size: 24px;&quot;&gt;关键项&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;fontSize=24;fontColor=#CC6600;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="-497" y="70" width="91" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
