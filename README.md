@@ -1,826 +1,826 @@
 
-# 深度学习现象导论
+# Introduction to Deep Learning Phenomena
 
-本仓库包含了关于深度学习的讲义和相关资源，从现象出发，帮助深入理解深度学习的核心概念。面向深度学习相关的人员，包括研究人员，技术使用者，学生等
+This repository contains lecture notes and related resources on deep learning, using observed phenomena as a starting point for understanding its core concepts. It is intended for researchers, practitioners, students, and others interested in deep learning.
 
-## 课程视频
+## Course Videos
 
-完整的课程视频可以在 [Bilibili](https://space.bilibili.com/95975441/channel/seriesdetail?sid=3749682) （许志钦）上观看，涵盖了深度学习的基础和进阶内容。
+The complete course videos by Zhiqin Xu are available on [Bilibili](https://space.bilibili.com/95975441/channel/seriesdetail?sid=3749682), covering both introductory and advanced topics in deep learning.
 
-## 更新内容（2025年6月28日）
-1 主要修改了一些文字和表达错误。
-2 增加第十五章“神经网络求解微分方程”
-
-
-## 更新内容（2024年11月13日）
-
-### 1. 实验部分
-   - **新增内容**：添加了实验部分，包括详细的实验讲义和对应的 Jupyter 文件。这些资料提供了深度学习的实际应用案例和数据分析，以加强讲义内容的理解。
-
-### 2. 初始化对推理的影响
-   - **理论驱动的应用**：新增了一节关于初始化对推理性能影响的讨论，将凝聚理论应用到大语言模型中，展示了如何将理论见解有效地融入实际应用，形成从理论到应用的完整故事线。
-
-### 3. 模型章节修改
-   - **变分自编码器更新**：对变分自编码器部分进行了改进。
-
-## 第一章 深度学习介绍
-
-### **整体介绍**
-
-本章讲解了神经网络的运作机制（反向传播、梯度下降）、优化算法的演进以及损失函数的几何景观。与此同时，本章揭示了深度学习与传统统计学习理论的矛 **泛化之谜**（即过参数化模型反而拥有更好的泛化能力），并提出了**隐式偏好**这一核心概念来解释该现象。最后，提出**现象驱动**研究范式。
-
----
-
-### **内容提纲**
-
-<details>
-<summary><b>1. 深度学习的本质</b></summary>
-
-*   **数据拟合 (Data Fitting)：**
-    *   深度学习的数学本质是寻找一个函数模型，使其能逼近数据背后的客观规律（目标函数）。
-    *   目标是从输入空间到输出空间的映射，需在未见过的测试数据上表现良好（泛化）。
-*   **神经网络架构：**
-    *   **神经元机制：** 模拟生物神经元，通过线性加权（$w^Tx + b$）和非线性激活函数（ReLU, Sigmoid, Tanh等）处理信息。
-    *   **多层结构：** 单层感知机只能解决线性问题（如无法解决 XOR 问题），多层神经网络通过层层叠加非线性变换，具备了极强的表达能力（万有逼近定理）。
-</details>
-
-<details>
-<summary><b>2. 模型的训练与优化机制</b></summary>
-
-*   **损失函数 (Loss Function)：**
-    *   用于衡量模型预测值与真实标签的差异。
-    *   **回归问题：** 常用均方误差 (MSE)、绝对误差 (MAE)。
-    *   **分类问题：** 常用交叉熵 (Cross-Entropy)，通常配合 Softmax 将输出转化为概率分布。
-*   **损失景观 (Loss Landscape)：**
-    *   描述损失函数随参数变化的几何形态。
-    *   深度学习的景观通常是非凸的高维曲面，包含大量的局部极小值、鞍点。
-*   **优化方法 (Optimization)：**
-    *   **反向传播 (Back Propagation)：** 利用链式法则高效计算梯度，获得参数更新方向。
-    *   **梯度下降 (GD) 及其变体：**
-        *   **SGD (随机梯度下降)：** 每次只用少量样本，计算快且引入随机噪声有助于逃离局部最优。
-        *   **动量法 (Momentum/Nesterov)：** 引入“惯性”跨越平坦区域或鞍点。
-        *   **自适应方法 (AdaGrad, Adam)：** 为不同参数自动调整学习率，加速收敛。
-</details>
-
-<details>
-<summary><b>3. 训练的关键细节与理论限制</b></summary>
-
-*   **参数初始化 (Initialization)：**
-    *   初始值的选择决定了训练的起点和动力学路径。
-    *   常用方法（LeCun, Xavier, Kaiming 初始化）旨在保持信号在深层传播时的方差稳定，防止梯度消失或爆炸。
-*   **没有免费的午餐定理 (No Free Lunch Theorem)：**
-    *   没有任何一种算法能在所有可能的问题分布上都表现最优。
-    *   深度学习的成功在于其架构（如CNN、Transformer）恰好适配了真实世界数据（图像、文本）的特定结构。
-</details>
-
-<details>
-<summary><b>4. 核心理论：泛化之谜与隐式偏好</b></summary>
-
-*   **泛化之谜 (Generalization Puzzle)：**
-    *   **传统观念：** 统计学习理论认为模型越复杂（参数越多），越容易过拟合（U形误差曲线）。
-    *   **深度学习现象：** 现代的神经网络模型是**过参数化**的（参数量远超样本量），但它们不仅能完美拟合训练数据（训练误差为0），还能保持极好的泛化能力。
-*   **隐式偏好 (Implicit Bias)：**
-    *   **问题：** 在没有显式正则化项的情况下，为什么神经网络倾向于选择“好”的解？
-    *   **解释：** 神经网络的特定架构配合特定的优化算法（如 SGD），自身带有“隐式正则化”效果，倾向于优先学习低复杂度的模式。
-*   **研究范式：现象驱动**
-    *   鉴于数学理论滞后于工程实践，提倡现象驱动研究：先通过大量实验观察宏观规律（如 Scaling Law），再建立数学模型解释这些现象。
-</details>
-
-## 第二章 数据与神经网络结构
+## Updates (June 28, 2025)
+1 Mainly corrected wording and expression errors.
+2 Added Chapter 15, "Solving Differential Equations with Neural Networks."
 
 
+## Updates (November 13, 2024)
 
-### **整体介绍**
-本章首先介绍了**全连接网络**，然后介绍**残差网络（ResNet）**，解释了如何通过“跳跃连接”解决深层网络的训练难题。在此基础上，本章介绍了不同数据类型的架构演进：为了适配**图像数据**的空间局部性与不变性，发展出了**卷积神经网络（CNN）**；为了处理**语言数据**的长程依赖与并行计算需求，从**循环神经网络（RNN）**迭代至彻底改变AI范式的**Transformer**架构。
+### 1. Experiments
+   - **New materials:** Added an experimental section with detailed lab notes and corresponding Jupyter notebooks. These materials provide practical deep learning examples and data analyses to reinforce the concepts in the lecture notes.
+
+### 2. The Effect of Initialization on Reasoning
+   - **Theory-driven applications:** Added a section discussing how initialization affects reasoning performance. It applies condensation theory to large language models, illustrating how theoretical insights can inform practical applications and connecting theory with practice.
+
+### 3. Revisions to the Chapter on Models
+   - **Variational autoencoder updates:** Improved the section on variational autoencoders.
+
+## Chapter 1: Introduction to Deep Learning
+
+### **Overview**
+
+This chapter explains how neural networks work (backpropagation and gradient descent), the evolution of optimization algorithms, and the geometry of loss landscapes. It also explores the tension between deep learning and classical statistical learning theory: the **generalization puzzle**, in which overparameterized models can achieve better generalization. The chapter introduces **implicit bias** as a central concept for explaining this phenomenon and concludes by proposing a **phenomenon-driven** research paradigm.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 全连接神经网络架构及残差网络架构</b></summary>
+<summary><b>1. The Essence of Deep Learning</b></summary>
 
-*   **全连接网络 (FCN)：**
-    *   **定义：** 最基础的结构，层与层之间所有神经元两两连接。
-    *   **局限：** 虽然理论上具备万有逼近能力，但忽略了数据的空间/时间结构，处理高维数据（如图像）时参数量爆炸，且泛化能力较弱。
-*   **残差网络 (ResNet)：**
-    *   **解决的核心问题：** “退化现象”（Degradation），即随着网络层数增加，训练误差反而上升，而非过拟合。
-    *   **核心机制：** 引入**跳跃连接 (Skip Connection)**。
-    *   **意义：** 有效缓解了深层网络中的梯度消失问题，使得训练成百上千层的网络成为可能。
+*   **Data Fitting:**
+    *   Mathematically, deep learning seeks a function model that approximates the underlying patterns in data (the target function).
+    *   The goal is to learn a mapping from the input space to the output space that performs well on unseen test data (generalization).
+*   **Neural Network Architectures:**
+    *   **How neurons work:** Inspired by biological neurons, artificial neurons process information through a weighted linear combination ($w^Tx + b$) and a nonlinear activation function (ReLU, sigmoid, tanh, etc.).
+    *   **Multilayer structure:** A single-layer perceptron can solve only linearly separable problems (and therefore cannot solve XOR). By stacking nonlinear transformations, multilayer neural networks gain powerful expressive capabilities (the universal approximation theorem).
 </details>
 
 <details>
-<summary><b>2. 视觉任务：从生物启发到卷积网络 (CNN)</b></summary>
+<summary><b>2. Model Training and Optimization</b></summary>
 
-*   **图像数据特性：**
-    *   **局部相关性：** 邻近像素通常强相关。
-    *   **不变性：** 平移、旋转、缩放不变性及统计不变性。
-*   **生物学启发：**
-    *   源自对生物视皮层（V1区）的研究，发现简单细胞（提取边缘方向）和复杂细胞（具有位置不变性）。
-*   **CNN 核心组件：**
-    *   **卷积层 (Convolution)：** 利用**局部连接**和**权重共享**机制，大幅减少参数量，有效提取局部特征（如边缘、纹理）。
-    *   **池化层 (Pooling)：** 进行下采样（最大池化/平均池化），引入平移不变性，扩大感受野。
+*   **Loss Functions:**
+    *   Measure the discrepancy between model predictions and ground-truth labels.
+    *   **Regression:** Common choices include mean squared error (MSE) and mean absolute error (MAE).
+    *   **Classification:** Cross-entropy is commonly used, often with softmax to convert outputs into a probability distribution.
+*   **Loss Landscapes:**
+    *   Describe the geometry of the loss function as model parameters vary.
+    *   Deep learning loss landscapes are typically nonconvex, high-dimensional surfaces with many local minima and saddle points.
+*   **Optimization Methods:**
+    *   **Backpropagation:** Uses the chain rule to compute gradients efficiently and determine parameter update directions.
+    *   **Gradient descent (GD) and its variants:**
+        *   **Stochastic gradient descent (SGD):** Uses a small number of samples at each step, reducing computation and introducing stochastic noise that can help escape local optima.
+        *   **Momentum methods (Momentum/Nesterov):** Introduce "inertia" to traverse flat regions or saddle points.
+        *   **Adaptive methods (AdaGrad, Adam):** Automatically adjust learning rates for individual parameters to accelerate convergence.
 </details>
 
 <details>
-<summary><b>3. 语言任务：从循环网络 (RNN) 到 Transformer</b></summary>
+<summary><b>3. Key Training Details and Theoretical Limitations</b></summary>
 
-*   **语言数据特性：** 序列性、变长、强上下文依赖、离散符号。
-*   **循环神经网络 (RNN) 与 LSTM：**
-    *   **RNN：** 通过隐藏状态传递记忆，但存在严重的梯度消失/爆炸问题，且无法并行计算。
-    *   **LSTM/GRU：** 引入门控机制（遗忘门、输入门等）和记忆单元 (Cell State)，解决了长序列训练中的梯度问题，能捕捉长距离依赖。
-*   **Transformer（核心重点）：**
-    *   **革命性突破：** 抛弃循环结构，完全基于**注意力机制 (Attention)**，实现了**并行计算**。
-    *   **关键技术：**
-        *   **位置编码 (Positional Encoding)：** 如正余弦编码、RoPE，弥补注意力机制缺失的序列顺序信息。
-        *   **自注意力 (Self-Attention)：** 通过 Query-Key-Value 计算，让每个词都能关注到序列中的所有词，捕捉全局依赖。
-        *   **多头注意力 (Multi-Head)：** 在不同子空间并行提取特征，增强表达能力。
-    *   **架构变体：** Encoder-Decoder (原始架构)、Decoder-Only (GPT系列，适合生成)、Encoder-Only (BERT，适合理解)。
+*   **Parameter Initialization:**
+    *   The choice of initial values determines the starting point and dynamical trajectory of training.
+    *   Common methods (LeCun, Xavier, and Kaiming initialization) aim to stabilize signal variance as signals propagate through deep networks, preventing vanishing or exploding gradients.
+*   **The No Free Lunch Theorem:**
+    *   No single algorithm is optimal across all possible problem distributions.
+    *   Deep learning succeeds because its architectures (such as CNNs and Transformers) match the specific structures of real-world data (such as images and text).
 </details>
 
 <details>
-<summary><b>4. 生成模型初探</b></summary>
+<summary><b>4. Core Theory: The Generalization Puzzle and Implicit Bias</b></summary>
 
-*   **自编码器 (Auto-Encoder, AE)：**
-    *   由编码器（压缩数据）和解码器（重构数据）组成，用于学习数据的低维表示。
-*   **变分自编码器 (VAE)：**
-    *   在AE的基础上引入概率分布（通常是高斯分布）。
-    *   通过**重参数化技巧** (Reparameterization Trick) 使采样过程可导。
-    *   **特点：** 隐变量空间连续，具备生成新样本的能力（而不仅仅是记忆训练数据）。
+*   **The Generalization Puzzle:**
+    *   **Classical view:** Statistical learning theory suggests that more complex models (with more parameters) are more prone to overfitting (a U-shaped error curve).
+    *   **Deep learning phenomenon:** Modern neural networks are **overparameterized** (with far more parameters than training samples), yet they can both fit the training data perfectly (zero training error) and generalize extremely well.
+*   **Implicit Bias:**
+    *   **Question:** Why do neural networks tend to select "good" solutions even without explicit regularization terms?
+    *   **Explanation:** Particular neural network architectures, combined with particular optimization algorithms (such as SGD), have an inherent "implicit regularization" effect that favors learning low-complexity patterns first.
+*   **Research Paradigm: Phenomenon-Driven Research**
+    *   Given that mathematical theory lags behind engineering practice, this approach advocates first identifying macroscopic patterns (such as scaling laws) through extensive experiments, then building mathematical models to explain them.
 </details>
 
-## 第三章 维数灾难
+## Chapter 2: Data and Neural Network Architectures
 
-### **整体介绍**
 
-本章探讨了机器学习和数据科学中的核心挑战 **“维数灾难” (Curse of Dimensionality)**。首先本章节揭示了高维空间中许多反直觉的几何特性，例如数据极度稀疏、体积集中在表面（球壳）、以及随机向量倾向于正交等。接着通过数值积分、偏微分方程和函数逼近等具体实例，展示了传统网格算法在高维问题面前的失效。最后，重点讨论了克服维数灾难的策略：从经典的**蒙特卡洛方法**（利用随机性摆脱维度依赖），到现代的**神经网络方法**。特别是通过引入 **Barron 空间** 理论，从数学上解释了为什么深度学习能够在高维数据（如图像、文本）上取得成功，证明了在特定函数空间下，神经网络的逼近和泛化误差与维度无关。
+
+### **Overview**
+This chapter first introduces **fully connected networks**, followed by **residual networks (ResNets)**, explaining how skip connections address the challenges of training deep networks. It then traces the evolution of architectures for different data types: **convolutional neural networks (CNNs)** were developed to accommodate the spatial locality and invariances of **image data**, while the need to capture long-range dependencies in **language data** and support parallel computation drove the transition from **recurrent neural networks (RNNs)** to the **Transformer** architecture, which transformed the AI paradigm.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 高维空间数据特点</b></summary>
+<summary><b>1. Fully Connected and Residual Network Architectures</b></summary>
 
-*   **数据的稀疏性：**
-    *   在高维单位立方体中，若要覆盖所有子区域，所需样本量随维数呈指数级增长 ($n \ge k^d$)。
-    *   现实中的高维数据（如图片）在空间中极度稀疏，绝大多数区域是“空”的。
-*   **体积集中在表面：**
-    *   随着维数增加，单位球的体积几乎全部集中在表面附近极薄的“球壳”内。
-    *   **实验佐证：** 训练神经网络拟合高维二次函数时，边界附近的误差极小，而球心（内部）的误差很大，因为内部几乎没有采样点。
-*   **距离的集中效应与正交性：**
-    *   **距离集中：** 随机采样点之间的距离趋向于由维度决定的常数（如 $\sqrt{2}$），方差极小，“最近邻”概念失效。
-    *   **角度集中：** 随机向量之间的夹角大概率接近 90度（正交），导致余弦相似度在某些情况下失效。
-*   **高斯环带效应 (Gaussian Annulus Theorem)：**
-    *   高维高斯分布的样本点并不聚集在概率密度最大的原点，而是分布在半径约为 $\sqrt{d}$ 的环带上。
-*   **随机投影降维：**
-    *   **Johnson-Lindenstrauss 引理：** 高维数据可以通过随机线性映射投影到低维空间，且保持点对距离近似不变。
-*   **数据的线性可分性：**
-    *   高维空间提供了更多自由度，使得低维不可分的数据（如 XOR 问题）在高维变得线性可分（核方法的原理）。
+*   **Fully Connected Networks (FCNs):**
+    *   **Definition:** The most basic architecture, in which every neuron in one layer connects to every neuron in the next.
+    *   **Limitations:** Although theoretically capable of universal approximation, these networks ignore the spatial and temporal structure of data. Their parameter counts grow dramatically for high-dimensional inputs (such as images), and their generalization is relatively weak.
+*   **Residual Networks (ResNets):**
+    *   **Core problem addressed:** "Degradation," in which training error increases as more layers are added, rather than an increase in overfitting.
+    *   **Core mechanism:** Introduce **skip connections**.
+    *   **Significance:** Effectively alleviate vanishing gradients in deep networks, making it possible to train networks with hundreds or thousands of layers.
 </details>
 
 <details>
-<summary><b>2. 维数灾难的具体实例</b></summary>
+<summary><b>2. Vision Tasks: From Biological Inspiration to Convolutional Networks (CNNs)</b></summary>
 
-*   **高维数值积分：**
-    *   传统网格法（如梯形法则）需要的节点数随维数指数爆炸 ($n^d$)，计算不可行。
-*   **高维偏微分方程 (PDE)：**
-    *   如量子物理中的薛定谔方程（$3d$ 维）和金融工程中的 Black-Scholes 方程（与资产数量相关），传统差分法面临自由度爆炸。
-*   **高维函数逼近：**
-    *   逼近误差 $\epsilon \approx n^{-s/d}$。维数 $d$ 作为分母，极大地拖慢了收敛速度，即便函数很光滑也难以逼近。
+*   **Properties of Image Data:**
+    *   **Local correlations:** Neighboring pixels are usually strongly correlated.
+    *   **Invariances:** Translation, rotation, scale, and statistical invariance.
+*   **Biological Inspiration:**
+    *   Research on the visual cortex (area V1) identified simple cells (which detect edge orientations) and complex cells (which exhibit position invariance).
+*   **Core CNN Components:**
+    *   **Convolutional layers:** Use **local connectivity** and **weight sharing** to greatly reduce parameter counts and efficiently extract local features (such as edges and textures).
+    *   **Pooling layers:** Perform downsampling (max pooling or average pooling), introducing translation invariance and enlarging the receptive field.
 </details>
 
 <details>
-<summary><b>3. 克服维数灾难的方法：蒙特卡洛</b></summary>
+<summary><b>3. Language Tasks: From Recurrent Networks (RNNs) to Transformers</b></summary>
 
-*   **蒙特卡洛方法 (Monte Carlo)：**
-    *   **核心思想：** 利用随机抽样和统计平均来近似计算。
-    *   **优势：** 收敛速度为 $O(n^{-1/2})$，**与维数 $d$ 无关**。
-    *   **应用：** 既然体积集中在表面，蒙特卡洛方法能自适应地在这些区域采样。AlphaGo 利用蒙特卡洛树搜索解决了围棋的高维状态空间搜索问题。
-    *   **局限：** 收敛率相对较慢，需要大量样本才能显著降低误差。
+*   **Properties of Language Data:** Sequential structure, variable length, strong contextual dependencies, and discrete symbols.
+*   **Recurrent Neural Networks (RNNs) and LSTMs:**
+    *   **RNNs:** Carry memory through hidden states, but suffer from severe vanishing or exploding gradients and cannot parallelize computation across sequence steps.
+    *   **LSTMs/GRUs:** Introduce gating mechanisms (such as forget and input gates) and memory mechanisms (such as the cell state) to address gradient problems in training on long sequences and capture long-range dependencies.
+*   **Transformers (Key Focus):**
+    *   **Major breakthrough:** Replace recurrence with an architecture based entirely on **attention**, enabling **parallel computation**.
+    *   **Key techniques:**
+        *   **Positional encoding:** Methods such as sinusoidal encoding and RoPE supply the sequence-order information missing from attention mechanisms.
+        *   **Self-attention:** Query-key-value computations allow each word to attend to all words in the sequence and capture global dependencies.
+        *   **Multi-head attention:** Extracts features in parallel across different subspaces, increasing expressive power.
+    *   **Architectural variants:** Encoder-decoder (the original architecture), decoder-only (the GPT family, suited to generation), and encoder-only (BERT, suited to understanding).
 </details>
 
 <details>
-<summary><b>4. 克服维数灾难的方法：神经网络与 Barron 空间</b></summary>
+<summary><b>4. An Introduction to Generative Models</b></summary>
 
-*   **万有逼近定理的局限：**
-    *   虽然证明了神经网络能逼近任意连续函数，但未说明参数量与维数的关系。
-*   **Barron 空间理论：**
-    *   **定义：** 一类具有特定积分表示形式的函数空间，专为分析神经网络设计。
-    *   **核心结论 (E et al., 2019)：**
-        *   **逼近能力：** 宽度为 $m$ 的两层神经网络逼近 Barron 空间函数，误差为 $O(m^{-1/2})$，**与维数 $d$ 无关**。
-        *   **泛化能力：** 泛化误差收敛速度为 $O(n^{-1/4})$，同样**与维数 $d$ 无关**。
-    *   **意义：** 从理论上解释了为什么神经网络在处理高维数据时不会遭受维数灾难。
+*   **Autoencoders (AEs):**
+    *   Consist of an encoder (which compresses data) and a decoder (which reconstructs data), and learn low-dimensional representations.
+*   **Variational Autoencoders (VAEs):**
+    *   Extend autoencoders by introducing probability distributions (typically Gaussian).
+    *   Use the **reparameterization trick** to make the sampling process differentiable.
+    *   **Characteristics:** A continuous latent space enables the generation of new samples, rather than merely memorizing training data.
 </details>
 
-## 第四章 频率原则
+## Chapter 3: The Curse of Dimensionality
 
-### **整体介绍**
+### **Overview**
 
-本章主要介绍了神经网络训练中的 **“频率原则” (Frequency Principle)**，即神经网络倾向于 **“先学低频，后学高频”**。这种隐式偏好解释了为什么过参数化的神经网络在拟合数据时，往往能得到光滑的、泛化能力较好的解，而不是那些拟合了噪声的高频震荡解。章节从一维简单函数的拟合实验入手，逐步深入到高维图像任务，通过傅里叶分析等数学工具，揭示了神经网络对不同频率成分的学习速度差异。此外，本章还探讨了基于频率原则对**Early-stopping**的理解，并指出了神经网络在处理高频信息（如高维数值模拟）时的局限性。
+This chapter examines a central challenge in machine learning and data science: the **curse of dimensionality**. It first reveals counterintuitive geometric properties of high-dimensional spaces, including extreme data sparsity, the concentration of volume near the surface (in a thin spherical shell), and the tendency of random vectors to be orthogonal. Examples from numerical integration, partial differential equations, and function approximation then demonstrate why traditional grid-based algorithms fail in high dimensions. Finally, the chapter discusses strategies for overcoming the curse of dimensionality, from classical **Monte Carlo methods**, which use randomness to avoid dimension dependence, to modern **neural network methods**. In particular, **Barron space** theory provides a mathematical explanation for the success of deep learning on high-dimensional data (such as images and text), establishing dimension-independent approximation and generalization error rates in specific function spaces.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 频率原则的现象与定义</b></summary>
+<summary><b>1. Properties of Data in High-Dimensional Spaces</b></summary>
 
-*   **低维实验观测：**
-    *   通过拟合 $\sin(x)$ 等简单一维函数，观察到神经网络倾向于生成**光滑**的曲线来连接数据点，而不是剧烈震荡的曲线。
-    *   即使目标函数包含高频成分（如 $\sin(5x)$），网络也会优先拟合低频部分（如 $\sin(x)$），表现为“先整体轮廓，后细节纹理”的学习过程。
-*   **频率原则 (Frequency Principle) 定义：**
-    *   神经网络在训练过程中，会按照**从低频到高频**的顺序拟合目标函数。
-    *   低频成分收敛速度快，高频成分收敛速度慢。
-    *   这一现象在不同激活函数、损失函数和网络结构下普遍存在。
+*   **Data Sparsity:**
+    *   In a high-dimensional unit cube, the number of samples needed to cover all subregions grows exponentially with dimension ($n \ge k^d$).
+    *   Real-world high-dimensional data (such as images) are extremely sparse in the ambient space, leaving most regions "empty."
+*   **Volume Concentration Near the Surface:**
+    *   As dimension increases, nearly all the volume of a unit ball lies in a very thin spherical shell near its surface.
+    *   **Experimental evidence:** When a neural network is trained to fit a high-dimensional quadratic function, errors near the boundary are very small, while errors near the center (in the interior) are large because almost no samples lie there.
+*   **Distance Concentration and Orthogonality:**
+    *   **Distance concentration:** Distances between randomly sampled points approach a dimension-dependent constant (such as $\sqrt{2}$) with very small variance, undermining the notion of a "nearest neighbor."
+    *   **Angle concentration:** The angle between random vectors is very likely to be close to 90 degrees (orthogonal), making cosine similarity ineffective in some settings.
+*   **The Gaussian Annulus Theorem:**
+    *   Samples from a high-dimensional Gaussian distribution do not cluster at the origin, where the probability density is highest. Instead, they lie in an annulus with a radius of approximately $\sqrt{d}$.
+*   **Dimensionality Reduction by Random Projection:**
+    *   **The Johnson-Lindenstrauss lemma:** High-dimensional data can be projected into a lower-dimensional space through a random linear mapping while approximately preserving pairwise distances.
+*   **Linear Separability of Data:**
+    *   High-dimensional spaces offer more degrees of freedom, allowing data that are not linearly separable in low dimensions (such as XOR) to become linearly separable in higher dimensions (the principle behind kernel methods).
 </details>
 
 <details>
-<summary><b>2. 频率原则的理论与应用启示</b></summary>
+<summary><b>2. Examples of the Curse of Dimensionality</b></summary>
 
-*   **解释泛化能力：**
-    *   因为网络优先学习低频（光滑）信息，而真实数据通常由低频主导，噪声往往在高频。因此，这种偏好使得网络在训练早期就能学到“好”的规律，天然具有抗噪和泛化能力。
-*   **Early-stopping 的机制：**
-    *   从频率角度看，Early-stopping 实际上是在网络学会低频信号后、学会高频噪声前停止训练，从而起到**低通滤波器**的作用，防止过拟合。
-*   **神经网络的局限性：**
-    *   **高频灾难：** 对于那些**高频成分主导**的任务（如求解某些偏微分方程、高精细图像重构、奇偶函数分类），标准神经网络很难训练，收敛极慢。
-    *   解释了为什么网络在拟合奇偶函数（高频振荡）时表现像随机猜测。
+*   **High-Dimensional Numerical Integration:**
+    *   Traditional grid-based methods (such as the trapezoidal rule) require a number of nodes that grows exponentially with dimension ($n^d$), making computation infeasible.
+*   **High-Dimensional Partial Differential Equations (PDEs):**
+    *   Examples include the Schrödinger equation in quantum physics ($3d$ dimensions) and the Black-Scholes equation in financial engineering (whose dimension depends on the number of assets). Traditional finite-difference methods face an explosion in the number of degrees of freedom.
+*   **High-Dimensional Function Approximation:**
+    *   The approximation error is $\epsilon \approx n^{-s/d}$. The dimension $d$ in the denominator greatly slows convergence, making approximation difficult even for very smooth functions.
 </details>
 
 <details>
-<summary><b>3. 高维空间中的频率分析方法</b></summary>
+<summary><b>3. Overcoming the Curse of Dimensionality: Monte Carlo Methods</b></summary>
 
-*   **挑战：**
-    *   高维数据（如图像）的傅里叶变换面临计算量爆炸（维数灾难），难以直接分析。
-*   **高维分析工具：**
-    *   **投影法 (Projection Method)：** 将高维数据投影到低维方向（如主成分方向），再进行一维傅里叶变换分析。
-    *   **滤波法 (Filtering Method)：** 利用高斯滤波将信号分离为低频和高频部分，分别观察其在训练过程中的相对误差收敛情况。
+*   **Monte Carlo Methods:**
+    *   **Core idea:** Use random sampling and statistical averaging to approximate quantities of interest.
+    *   **Advantage:** The convergence rate is $O(n^{-1/2})$, **independent of the dimension $d$**.
+    *   **Applications:** Because volume concentrates near the surface, Monte Carlo methods naturally sample these regions. AlphaGo uses Monte Carlo tree search to address search in the high-dimensional state space of Go.
+    *   **Limitation:** Convergence is relatively slow, so many samples are needed to substantially reduce error.
 </details>
 
 <details>
-<summary><b>4. 高维实验结果</b></summary>
+<summary><b>4. Overcoming the Curse of Dimensionality: Neural Networks and Barron Spaces</b></summary>
 
-*   **图像分类 (CIFAR10)：**
-    *   实验验证了在真实高维数据上，神经网络依然遵循频率原则：低频部分先收敛，高频部分后收敛。
+*   **Limitations of the Universal Approximation Theorem:**
+    *   Although it establishes that neural networks can approximate arbitrary continuous functions, it does not specify how the required number of parameters depends on dimension.
+*   **Barron Space Theory:**
+    *   **Definition:** A class of function spaces with specific integral representations, developed for analyzing neural networks.
+    *   **Main results (E et al., 2019):**
+        *   **Approximation:** A two-layer neural network of width $m$ approximates functions in Barron space with an error of $O(m^{-1/2})$, **independent of the dimension $d$**.
+        *   **Generalization:** The generalization error converges at a rate of $O(n^{-1/4})$, also **independent of the dimension $d$**.
+    *   **Significance:** Provides a theoretical explanation for why neural networks can avoid the curse of dimensionality when handling high-dimensional data.
 </details>
 
-## 第五章 基于频率原则设计高效神经网络
+## Chapter 4: The Frequency Principle
 
-### **整体介绍**
+### **Overview**
 
-
-本章介绍了多种基于频率原则的改进策略，并展示了这些方法在科学计算（如求解偏微分方程）和计算机视觉（如神经辐射场 NeRF）等领域的成功应用。
+This chapter introduces the **Frequency Principle** in neural network training: networks tend to **learn low frequencies first and high frequencies later**. This implicit bias explains why overparameterized neural networks often find smooth solutions that generalize well when fitting data, rather than highly oscillatory solutions that fit noise. Starting with experiments on simple one-dimensional functions and progressing to high-dimensional image tasks, the chapter uses mathematical tools such as Fourier analysis to reveal differences in how quickly neural networks learn different frequency components. It also examines **early stopping** through the lens of the Frequency Principle and identifies limitations of neural networks when handling high-frequency information, such as in high-dimensional numerical simulations.
 
 ---
 
-### **内容提纲**
-
+### **Outline**
 
 <details>
-<summary><b>基于频率原则设计高效神经网络</b></summary>
+<summary><b>1. Observations and Definition of the Frequency Principle</b></summary>
 
-*   **多尺度神经网络：**
-    *   **核心思想：** 通过对输入坐标进行不同尺度的拉伸（$k \cdot x$），将原本的高频成分在网络看来转化为“低频”，从而加速收敛。
-    *   **结构：** 包含多个子网络，每个子网络负责不同的频率范围，类似于傅里叶级数分解。
-    *   **应用：** 成功解决了传统网络难以求解的高频波传播、多尺度偏微分方程等问题。
-*   **基于子空间分解的神经网络：**
-    *   将目标函数显式分解为低频部分和高频部分，分别用不同的模块去拟合，并引入正交约束，进一步提升精度。
-*   **神经辐射场:**
-    *   NeRF 如果没有位置编码（一种特殊的 Fourier 特征），只能渲染出模糊的低频图像；引入后能捕捉清晰的高频纹理和边缘。
-*   **Fourier 特征网络 (Fourier Features)：**
-    *   **核心思想：** 在输入层引入随机频率的正余弦映射 $\gamma(v) = [\cos(2\pi b v), \sin(2\pi b v)]$。
+*   **Observations in Low-Dimensional Experiments:**
+    *   When fitting simple one-dimensional functions such as $\sin(x)$, neural networks tend to connect data points with **smooth** curves rather than highly oscillatory ones.
+    *   Even when the target function contains high-frequency components, such as $\sin(5x)$, the network first fits low-frequency components, such as $\sin(x)$, learning the overall shape before finer details and textures.
+*   **Definition of the Frequency Principle:**
+    *   During training, neural networks fit the target function in order **from low to high frequencies**.
+    *   Low-frequency components converge quickly, while high-frequency components converge slowly.
+    *   This phenomenon is widely observed across different activation functions, loss functions, and network architectures.
 </details>
 
-## 第六章 频率原则的机制分析
+<details>
+<summary><b>2. Theoretical and Practical Implications of the Frequency Principle</b></summary>
 
-### **整体介绍**
+*   **Explaining Generalization:**
+    *   Networks learn low-frequency (smooth) information first, and real-world data are typically dominated by low frequencies, while noise often lies at high frequencies. This bias allows networks to learn useful patterns early in training, providing inherent noise resistance and generalization ability.
+*   **The Mechanism of Early Stopping:**
+    *   From a frequency perspective, early stopping ends training after the network has learned the low-frequency signal but before it learns high-frequency noise, acting as a **low-pass filter** to prevent overfitting.
+*   **Limitations of Neural Networks:**
+    *   **The High-Frequency Challenge:** Standard neural networks are difficult to train and converge extremely slowly on tasks **dominated by high-frequency components**, such as solving certain partial differential equations, reconstructing highly detailed images, or classifying parity functions.
+    *   This explains why networks perform like random guessing when fitting parity functions, which exhibit high-frequency oscillations.
+</details>
 
-本章深入探讨了**频率原则**背后的数学机制和影响因素。本章通过**线性频率原则（LFP）模型**和**等价变分问题**，从理论上量化了神经网络对不同频率成分的收敛速度。分析了**初始化权重大小**、**激活函数类型**以及**损失函数形式**对频率原则的影响，揭示了过大的初始化权重可能导致频率原则失效，而特定的损失函数（如包含导数项）能加速高频收敛。此外，通过引入 **FP-范数** 和 **FP-空间**，建立了泛化误差的先验估计理论。
+<details>
+<summary><b>3. Methods for Frequency Analysis in High-Dimensional Spaces</b></summary>
+
+*   **Challenges:**
+    *   Fourier transforms of high-dimensional data, such as images, face an explosion in computational cost (the curse of dimensionality), making direct analysis difficult.
+*   **Tools for High-Dimensional Analysis:**
+    *   **Projection Method:** Project high-dimensional data onto low-dimensional directions, such as principal component directions, and then apply one-dimensional Fourier analysis.
+    *   **Filtering Method:** Use Gaussian filtering to separate signals into low- and high-frequency components, then track the convergence of their respective relative errors during training.
+</details>
+
+<details>
+<summary><b>4. Results of High-Dimensional Experiments</b></summary>
+
+*   **Image Classification (CIFAR10):**
+    *   Experiments confirm that neural networks still follow the Frequency Principle on real-world high-dimensional data: low-frequency components converge first, followed by high-frequency components.
+</details>
+
+## Chapter 5: Designing Efficient Neural Networks Based on the Frequency Principle
+
+### **Overview**
+
+
+This chapter introduces several improvement strategies based on the Frequency Principle and demonstrates their successful applications in scientific computing, such as solving partial differential equations, and computer vision, such as neural radiance fields (NeRF).
 
 ---
 
-### **内容提纲**
+### **Outline**
+
 
 <details>
-<summary><b>1. 频率原则的影响因素</b></summary>
+<summary><b>Designing Efficient Neural Networks Based on the Frequency Principle</b></summary>
 
-*   **初始化权重大小：**
-    *   **现象：** 大初始化权重会削弱甚至破坏频率原则。
-    *   **原因：** 大权重会导致初始输出包含更多高频成分（振荡剧烈），使得训练初期高频拟合速度加快，不再严格遵循从低频到高频的顺序。
-    *   **结果：** 小初始化有助于平稳学习，而大初始化可能引入高频干扰，导致泛化变差。
-*   **激活函数的影响：**
-    *   **单调衰减类（如 tanh, ReLU）：** 其傅里叶变换随频率单调衰减，容易观察到频率原则。
-    *   **非单调类（如 Ricker）：** 若激活函数在频域不是单调下降（例如先升后降），会导致对应频率的收敛顺序改变，使频率原则失效。
-*   **损失函数形式的影响：**
-    *   **普通均方误差（MSE）：** 遵循标准的频率原则。
-    *   **包含导数的损失（如 Sobolev 范数）：** 导数在频域对应乘以频率因子 $k$，这相当于放大了高频成分的权重，从而显著加快高频信息的收敛速度。
+*   **Multiscale Neural Networks:**
+    *   **Core Idea:** Rescale input coordinates at different scales ($k \cdot x$) so that originally high-frequency components appear as low frequencies to the network, accelerating convergence.
+    *   **Architecture:** Use multiple subnetworks, each responsible for a different frequency range, in a manner analogous to Fourier series decomposition.
+    *   **Applications:** These methods have successfully addressed problems that are difficult for conventional networks, including high-frequency wave propagation and multiscale partial differential equations.
+*   **Neural Networks Based on Subspace Decomposition:**
+    *   Explicitly decompose the target function into low- and high-frequency components, fit them with separate modules, and introduce orthogonality constraints to further improve accuracy.
+*   **Neural Radiance Fields:**
+    *   Without positional encoding (a particular form of Fourier features), NeRF can render only blurry, low-frequency images; adding it enables the capture of sharp, high-frequency textures and edges.
+*   **Fourier Feature Networks:**
+    *   **Core Idea:** Introduce sine and cosine mappings with random frequencies at the input layer: $\gamma(v) = [\cos(2\pi b v), \sin(2\pi b v)]$.
 </details>
 
-<details>
-<summary><b>2. 频率原则的简单理论分析</b></summary>
+## Chapter 6: Mechanisms Underlying the Frequency Principle
 
-*   **傅里叶分析视角：**
-    *   对两层 tanh 网络进行傅里叶变换，发现其幅度谱随频率指数衰减（$e^{-|\pi k / 2w|}$）。
-    *   **动力学方程：** 推导出的梯度下降动力学显示，低频成分的梯度幅值远大于高频成分，导致低频优先收敛。
-*   **核心结论：** 深度学习对低频的偏好源于**激活函数的光滑性**以及**梯度下降**的更新机制。
-</details>
+### **Overview**
 
-<details>
-<summary><b>3. 线性频率原则 (LFP) 模型</b></summary>
-
-*   **模型构建：**
-    *   在宽网络（神经元数量大）和小学习率假设下，将神经网络动力学近似为线性演化方程。
-    *   推导出神经网络输出 $u$ 随时间 $t$ 的演化规律，形式上类似于热传导方程的频域版本。
-*   **等价变分问题：**
-    *   证明了神经网络的训练过程等价于求解一个变分问题：$\min \int (\gamma(\xi))^{-2} |\hat{f}(\xi)|^2 d\xi$。
-    *   **物理意义：** 网络倾向于寻找一个函数，使得其高频成分受到 $\gamma(\xi)^{-2}$（随频率增加而剧增）的惩罚，从而迫使解保持光滑（低频主导）。
-    *   **反对称初始化 (ASI)：** 提出 ASI 技术（两个相同初始化网络相减），消除初始非零输出的影响，确保模型严格从零开始学习低频。
-</details>
-
-<details>
-<summary><b>4. 高频收敛极限与 FP-空间</b></summary>
-
-*   **FP-范数与 FP-空间：**
-    *   定义了特定于神经网络的范数（FP-norm），用于衡量函数在神经网络下的复杂度。
-    *   **泛化误差界：** 证明了泛化误差上界与训练样本量 $n$ 的关系为 $O(n^{-1/4})$，且该收敛速度**与数据维数 $d$ 无关**，再次印证了神经网络克服维数灾难的能力。
-*   **高频收敛极限：**
-    *   **临界指数 $\alpha = d$：** 在变分模型中，频率惩罚项的衰减指数 $\alpha$ 必须大于数据维数 $d$，解才具有光滑性；若 $\alpha < d$，解会退化（仅在训练点有值，其余为0）。
-    *   **启示：** 神经网络固有的频率衰减特性决定了它难以拟合极高频的函数，这是其“光滑偏好”的数学本质。
-</details>
-
-## 第七章 相图分析
-
-### **整体介绍**
-
-本章探讨了**参数初始化**对神经网络训练动力学的决定性影响。借用热力学中“相图”的概念，通过定义状态量（如参数变化的相对距离），将神经网络的训练动力学划分为 **线性区域**（Linear Regime）和 **非线性区域**（Nonlinear Regime，或称凝聚区域）。本章通过实验观察和严谨的尺度理论分析，构建了两层全连接ReLU神经网络的相图，揭示了网络宽度、初始化方差与特征学习能力之间的深刻联系。
+This chapter examines the mathematical mechanisms and factors underlying the **Frequency Principle**. Using the **Linear Frequency Principle (LFP) model** and an **equivalent variational problem**, it theoretically quantifies how quickly neural networks converge at different frequencies. It analyzes the effects of **initial weight magnitude**, **activation function type**, and **loss function form**, showing that excessively large initial weights can invalidate the Frequency Principle, while certain loss functions, such as those containing derivative terms, can accelerate high-frequency convergence. It also introduces the **FP-norm** and **FP-space** to establish a theory of a priori generalization error estimates.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 神经网络在不同初始化下的表现</b></summary>
+<summary><b>1. Factors Affecting the Frequency Principle</b></summary>
 
-*   **现象驱动：**
-    *   实验表明，参数初始化的尺度大小直接决定了模型最终学到的函数形态。
-    *   **大初始化：** 函数表现出锯齿状波动。
-    *   **小初始化：** 函数表现线性插值。
-*   **线性与非线性行为的界定：**
-    *   **线性行为 (Lazy Training)：** 当参数变化极小，网络可用初始化处的泰勒一阶展开近似（类似于核方法/NTK），此时损失函数近似凸函数。
-    *   **非线性行为 (Feature Learning)：** 参数发生显著变化，无法用线性模型近似，网络能够根据数据特征调整内部表示。
-    *   **度量指标：** 引入**相对距离 (Relative Distance, RD)**，衡量训练结束时参数相对于初始值的偏移程度。
+*   **Initial Weight Magnitude:**
+    *   **Observation:** Large initial weights weaken or even disrupt the Frequency Principle.
+    *   **Explanation:** Large weights cause the initial output to contain more high-frequency components (strong oscillations), accelerating high-frequency fitting early in training so that learning no longer strictly proceeds from low to high frequencies.
+    *   **Consequence:** Small initialization promotes smooth learning, whereas large initialization can introduce high-frequency interference and impair generalization.
+*   **Effects of Activation Functions:**
+    *   **Monotonically Decaying Class (e.g., tanh, ReLU):** Their Fourier transforms decay monotonically with frequency, making the Frequency Principle readily observable.
+    *   **Nonmonotonic Class (e.g., Ricker):** If an activation function is not monotonically decreasing in the frequency domain, for example, if it first rises and then falls, the convergence order of the corresponding frequencies changes, causing the Frequency Principle to fail.
+*   **Effects of the Loss Function:**
+    *   **Standard Mean Squared Error (MSE):** Follows the standard Frequency Principle.
+    *   **Losses Involving Derivatives (e.g., Sobolev Norms):** Differentiation corresponds to multiplication by a frequency factor $k$ in the frequency domain, effectively increasing the weight of high-frequency components and substantially accelerating their convergence.
 </details>
 
 <details>
-<summary><b>2. 线性区域与非线性区域的划分（相图构建）</b></summary>
+<summary><b>2. A Simple Theoretical Analysis of the Frequency Principle</b></summary>
 
-*   **动力学相变：**
-    *   随着网络宽度 $m \to \infty$，RD 指标表现出分叉行为：要么趋于 $0$（线性区域），要么趋于无穷大（非线性区域）。
-*   **相图的构成：**
-    *   **线性区域 (Linear Regime)：** RD 趋于 0。参数几乎不动，网络类似随机特征模型。
-    *   **凝聚区域 (Condensed Regime)：** RD 趋于无穷。参数显著移动并出现 **凝聚现”**（即大量神经元权重方向趋同，指向特定的特征方向）。这是深度学习超越传统核方法的关键所在。
-    *   **临界区域 (Critical Regime)：** 线性和凝聚区域的分界线。
+*   **Fourier Analysis Perspective:**
+    *   The Fourier transform of a two-layer tanh network reveals an amplitude spectrum that decays exponentially with frequency ($e^{-|\pi k / 2w|}$).
+    *   **Dynamical Equations:** The derived gradient descent dynamics show that gradient magnitudes for low-frequency components are much larger than those for high-frequency components, causing low frequencies to converge first.
+*   **Key Conclusion:** Deep learning's preference for low frequencies arises from the **smoothness of activation functions** and the update mechanism of **gradient descent**.
 </details>
 
 <details>
-<summary><b>3. 凝聚现象 (Condensation)</b></summary>
+<summary><b>3. The Linear Frequency Principle (LFP) Model</b></summary>
 
-*   **定义：** 在非线性区域（小初始化）训练时，神经元的权重向量不再保持随机分布，而是向少数几个特定方向**凝聚**。
-*   **意义：** 凝聚现象是神经网络进行有效**特征学习**的标志。
+*   **Model Construction:**
+    *   Assuming a wide network (many neurons) and a small learning rate, approximate neural network dynamics by a linear evolution equation.
+    *   Derive how the neural network output $u$ evolves over time $t$, yielding a form similar to the heat equation in the frequency domain.
+*   **Equivalent Variational Problem:**
+    *   Neural network training is shown to be equivalent to solving a variational problem: $\min \int (\gamma(\xi))^{-2} |\hat{f}(\xi)|^2 d\xi$.
+    *   **Physical Interpretation:** The network seeks a function whose high-frequency components are penalized by $\gamma(\xi)^{-2}$, which grows rapidly with frequency, forcing the solution to remain smooth and dominated by low frequencies.
+    *   **Antisymmetric Initialization (ASI):** The proposed ASI technique subtracts two identically initialized networks to eliminate the effect of a nonzero initial output, ensuring that the model learns low frequencies starting exactly from zero.
 </details>
 
+<details>
+<summary><b>4. Limits of High-Frequency Convergence and FP-Space</b></summary>
 
-## 第八章 凝聚现象
+*   **FP-Norm and FP-Space:**
+    *   A norm specific to neural networks (the FP-norm) is defined to measure a function's complexity from the network's perspective.
+    *   **Generalization Error Bound:** The upper bound on generalization error is shown to scale with the number of training samples $n$ as $O(n^{-1/4})$. This convergence rate is **independent of the data dimension $d$**, further demonstrating the ability of neural networks to overcome the curse of dimensionality.
+*   **Limits of High-Frequency Convergence:**
+    *   **Critical Exponent $\alpha = d$:** In the variational model, the decay exponent $\alpha$ of the frequency penalty must exceed the data dimension $d$ for the solution to be smooth; if $\alpha < d$, the solution degenerates, taking nonzero values only at the training points and being zero elsewhere.
+    *   **Implication:** The intrinsic frequency decay of neural networks makes fitting extremely high-frequency functions difficult, providing a mathematical explanation for their preference for smoothness.
+</details>
 
-### **整体介绍**
+## Chapter 7: Phase Diagram Analysis
 
-本章详细介绍了神经网络在非线性训练状态下的一个核心现象 **凝聚现象 (Condensation)**。这一现象指的是同层神经元在训练过程中，其输入权重方向和输出函数趋于一致。这种机制揭示了神经网络如何通过隐式地降低模型复杂度（宽网络等价于窄网络）来提升泛化能力和特征学习效率。本章不仅通过全连接、卷积和残差网络的实验展示了凝聚现象的普遍性，还介绍了在训练初始阶段（初始凝聚）的发生机制，以及 **Dropout** 如何作为一种显式手段促进凝聚。
+### **Overview**
+
+This chapter explores the decisive influence of **parameter initialization** on neural network training dynamics. Borrowing the concept of a phase diagram from thermodynamics, it defines state variables, such as the relative distance of parameter changes, to divide training dynamics into a **linear regime** and a **nonlinear regime**, also called the condensation regime. Through experimental observations and rigorous scaling analysis, the chapter constructs a phase diagram for two-layer fully connected ReLU networks, revealing deep connections among network width, initialization variance, and feature learning ability.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 凝聚现象的实验观察</b></summary>
+<summary><b>1. Neural Network Behavior under Different Initializations</b></summary>
 
-*   **现象描述：** 在训练过程中，原本随机初始化的神经元，其权重方向逐渐向少数几个特定方向集中，模长逐渐增大，仿佛“长”出了几个主导方向。
-*   **普遍存在：**
-    *   **全连接网络：** 在拟合一维函数时，神经元权重从随机分布凝聚成离散的几个方向。
-    *   **卷积神经网络 (CNN)：** 在 CIFAR10 数据集上训练 ResNet，末层卷积核的权重呈现明显的块状结构，表明不同卷积核趋于一致。
-    *   **残差网络 (ResNet)：** 凝聚现象在深层网络中同样存在，且与激活函数类型密切相关（激活函数决定了凝聚方向的数量）。
-*   **结论：** 凝聚现象不依赖于网络宽度、深度、结构或数据量，是神经网络非线性训练的特征。
+*   **Phenomenon-Driven Observations:**
+    *   Experiments show that the scale of parameter initialization directly determines the shape of the function ultimately learned by the model.
+    *   **Large Initialization:** The learned function exhibits jagged fluctuations.
+    *   **Small Initialization:** The learned function exhibits linear interpolation.
+*   **Distinguishing Linear and Nonlinear Behavior:**
+    *   **Linear Behavior (Lazy Training):** When parameters change very little, the network can be approximated by a first-order Taylor expansion around initialization, similar to kernel methods or the NTK; the loss function is approximately convex in this setting.
+    *   **Nonlinear Behavior (Feature Learning):** Parameters change substantially, preventing approximation by a linear model and allowing the network to adapt its internal representations to features in the data.
+    *   **Metric:** **Relative Distance (RD)** measures how far the parameters at the end of training have moved relative to their initial values.
 </details>
 
 <details>
-<summary><b>2. 凝聚现象的定义与理解</b></summary>
+<summary><b>2. Separating the Linear and Nonlinear Regimes: Constructing the Phase Diagram</b></summary>
 
-*   **定义：** 在神经网络的训练过程中，同层神经元的行为表现出了一种明显的趋同性。
-    *   **权重凝聚：** 输入权重向量的方向趋同（余弦相似度接近1或-1）。
-    *   **函数凝聚：** 神经元对输入的响应函数趋同。
-*   **理论意义：**
-    *   **控制复杂度：** 凝聚使得宽网络（大量神经元）在功能上退化为窄网络（少量有效神经元），从而隐式地降低了模型的有效参数量，防止过拟合。
+*   **Dynamical Phase Transition:**
+    *   As the network width $m \to \infty$, RD exhibits bifurcation behavior: it either tends to $0$ (the linear regime) or diverges to infinity (the nonlinear regime).
+*   **Components of the Phase Diagram:**
+    *   **Linear Regime:** RD tends to 0. Parameters barely move, and the network behaves like a random feature model.
+    *   **Condensed Regime:** RD tends to infinity. Parameters move substantially and exhibit **condensation**, in which many neuron weight vectors align with particular feature directions. This is central to deep learning's ability to go beyond traditional kernel methods.
+    *   **Critical Regime:** The boundary between the linear and condensed regimes.
 </details>
 
 <details>
-<summary><b>3. 初始凝聚 (Initial Condensation)</b></summary>
+<summary><b>3. Condensation</b></summary>
 
-*   **现象：** 在小初始化（Small Initialization）条件下，训练初期损失函数会出现停滞。在此期间，神经元权重虽然还在原点附近，但其方向已经迅速调整并趋于一致。
-*   **机制探索：**
-    *   通过动力学方程分析，发现 $0$ 点附近的梯度场存在特定的稳定线（Stable Lines）。
-    *   神经元在梯度的驱动下，迅速被吸引到这些稳定线方向上。
-    *   凝聚方向的数量与激活函数在零点泰勒展开的主导项阶数（重数）有关（如 tanh 是 $2$ 个方向，x*tanh 是 $4$ 个方向）。
+*   **Definition:** During training in the nonlinear regime (small initialization), neuron weight vectors no longer remain randomly distributed but instead **condense** along a few specific directions.
+*   **Significance:** Condensation is a hallmark of effective **feature learning** in neural networks.
 </details>
 
-<details>
-<summary><b>4. Dropout 促进凝聚</b></summary>
 
-*   **实验发现：** 即使在大初始化（通常导致线性行为）下，引入 Dropout 也能诱导神经元发生凝聚，并显著平滑模型输出。
-*   **隐式正则化：**
-    *   推导 Dropout 的等效损失函数，发现它引入了一个显式的正则项 $R_1(\theta)$。
-    *   该正则项惩罚神经元输出的差异，迫使同层神经元的权重方向趋同（平行），从而在数学上证明了 Dropout 促进凝聚的机制。
-*   **泛化收益：** Dropout 通过促进凝聚，降低了模型拟合所需的最小样本量，使得模型在有限数据下也能表现出良好的泛化能力。
-</details>
+## Chapter 8: Condensation
 
-## 第九章 损失景观的嵌入原则
+### **Overview**
 
-### **整体介绍**
-
-本章介绍了 **嵌入原则 (Embedding Principle)**，揭示不同规模（宽度和深度）神经网络之间损失景观的内在联系。从实验中观察到的 **宽度相似性** 出发，即不同宽度的网络在训练过程中会在相同的损失值处停滞，且输出函数高度一致。基于此，从数学上定义了如何通过**神经元分裂**等操作将窄网络的临界点“嵌入”到宽网络的参数空间中。
+This chapter examines **condensation**, a central phenomenon in the nonlinear training regime of neural networks. During training, neurons in the same layer tend to align their input weight directions and produce similar output functions. This mechanism reveals how neural networks improve generalization and feature learning efficiency by implicitly reducing model complexity, making a wide network functionally equivalent to a narrow one. The chapter demonstrates the prevalence of condensation through experiments with fully connected, convolutional, and residual networks. It also explains how condensation emerges at the start of training (**initial condensation**) and how **Dropout** can explicitly promote it.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 现象观察：宽度相似性</b></summary>
+<summary><b>1. Experimental Observations of Condensation</b></summary>
 
-*   **损失停滞现象：**
-    *   在训练过程中，不同宽度的神经网络（从小到大）往往会在几乎相同的损失值处发生停滞（Loss Stagnation），形成阶梯状的损失曲线。
-*   **输出函数的一致性：**
-    *   在这些停滞点，尽管网络参数维度不同，但它们学到的输出函数是高度相似的。
-    *   **内部表示：** 可视化显示，在停滞点处，宽网络内部的神经元发生了“凝聚”，其有效结构等效于一个较窄的网络。
+*   **Description:** During training, the weight directions of initially random neurons gradually concentrate around a few specific directions, while their magnitudes increase, as if a few dominant directions were "growing" out of the network.
+*   **Prevalence:**
+    *   **Fully connected networks:** When fitting one-dimensional functions, neuron weights condense from a random distribution into a few discrete directions.
+    *   **Convolutional neural networks (CNNs):** When training ResNet on CIFAR10, the weights of the final convolutional layer exhibit a clear block structure, indicating that different convolutional kernels become similar.
+    *   **Residual networks (ResNet):** Condensation also occurs in deep networks and is closely related to the activation function, which determines the number of condensation directions.
+*   **Conclusion:** Condensation is independent of network width, depth, architecture, and dataset size; it is a characteristic of nonlinear neural network training.
 </details>
 
 <details>
-<summary><b>2. 核心原则：嵌入原则 (Embedding Principle)</b></summary>
+<summary><b>2. Defining and Understanding Condensation</b></summary>
 
-*   **核心定义：**
-    *   一个较宽神经网络的损失景观“包含”了所有比它更窄的网络的临界点（Critical Points）。
-*   **实现机制：神经元分裂 (Neuron Splitting)**
-    *   通过将窄网络中的一个神经元分裂为两个（输入权重相同，输出权重按比例分配），可以无损地将其嵌入到宽网络中，且保持输出函数不变。
-    *   这意味着宽网络的参数空间中存在着对应于窄网络解的子空间。
+*   **Definition:** During neural network training, neurons in the same layer exhibit a pronounced tendency to behave similarly.
+    *   **Weight condensation:** Input weight vectors align in direction, with cosine similarity approaching 1 or -1.
+    *   **Function condensation:** Neurons develop similar response functions to their inputs.
+*   **Theoretical significance:**
+    *   **Complexity control:** Condensation makes a wide network with many neurons functionally equivalent to a narrow network with only a few effective neurons, implicitly reducing the model's effective parameter count and preventing overfitting.
 </details>
 
 <details>
-<summary><b>3. 深入分析：为何宽网络更好训练？</b></summary>
+<summary><b>3. Initial Condensation</b></summary>
 
-*   **损失景观的能谱分析：**
-    *   统计大量实验发现，损失函数值的分布具有离散的“能级”，这些能级对应于不同宽度的“完美”窄网络嵌入后的损失值。
-*   **Hessian 矩阵特征值分析（核心机制）：**
-    *   **窄网络的陷阱：** 在窄网络中，某个临界点可能是**局部极小点**（Hessian 矩阵特征值全为正），导致训练陷入停滞，无法逃离。
-    *   **宽网络的出路：** 当该点被嵌入到宽网络后，Hessian 矩阵会出现**负特征值**（下降方向）。这意味着原本的“陷阱”变成了**鞍点**。
-    *   **结论：** 网络越宽，潜在的下降方向越多，越容易逃离次优解，从而收敛到泛化性能更好的全局极小点。
+*   **Observation:** With small initialization, the loss stagnates early in training. During this period, neuron weights remain near the origin, but their directions rapidly adjust and align.
+*   **Mechanism:**
+    *   Analysis of the dynamical equations reveals specific stable lines in the gradient field near $0$.
+    *   Driven by the gradient, neurons are rapidly attracted toward these stable lines.
+    *   The number of condensation directions depends on the order (multiplicity) of the leading term in the activation function's Taylor expansion at zero; for example, tanh gives $2$ directions, while x*tanh gives $4$ directions.
 </details>
 
 <details>
-<summary><b>4. 扩展与推广：深度与临界流形</b></summary>
+<summary><b>4. How Dropout Promotes Condensation</b></summary>
 
-*   **临界流形 (Critical Manifold)：**
-    *   嵌入操作不是唯一的（有多种分裂方式），因此窄网络的单个临界点在宽网络中对应的是一个高维的“临界流形”。
-    *   该流形具有高度的退化性（Degeneracy），对优化动力学有重要吸引作用。
-*   **深度上的嵌入原则：**
-    *   理论不仅适用于宽度，也适用于**深度**。
-    *   **层线性化 (Layer Linearization)：** 通过插入近似恒等映射的线性层，可以将浅层网络的解嵌入到深层网络中。
-    *   这意味着深层网络的损失景观也包含了浅层网络的临界点，解释了深层网络训练中经历的阶段性特征。
+*   **Experimental findings:** Even with large initialization, which typically leads to linear behavior, introducing Dropout can induce condensation and substantially smooth the model's output.
+*   **Implicit regularization:**
+    *   Deriving the equivalent loss function for Dropout reveals an explicit regularization term $R_1(\theta)$.
+    *   This term penalizes differences between neuron outputs, forcing the weight directions of neurons in the same layer to align in parallel, thereby providing a mathematical explanation for how Dropout promotes condensation.
+*   **Generalization benefits:** By promoting condensation, Dropout reduces the minimum number of samples needed to fit a model, enabling good generalization even with limited data.
 </details>
 
-## 第十章 乐观估计
+## Chapter 9: The Embedding Principle of Loss Landscapes
 
-### **整体介绍**
+### **Overview**
 
-本章介绍了 **乐观估计 (Optimistic Estimate)**。本章指出，非线性模型（如神经网络）在特定条件下（如凝聚现象）可以表现得像一个更简单的模型。通过引入了 **模型秩 (Model Rank)** 的概念来量化恢复目标函数所需的最小样本量，即**乐观样本量**。理论与实验表明，对于神经网络，这一样本量仅与目标函数的**内在宽度**（复杂度）相关，而与网络的实际宽度无关。
+This chapter introduces the **embedding principle**, which reveals intrinsic connections between the loss landscapes of neural networks with different widths and depths. It begins with the experimental observation of **width similarity**: during training, networks of different widths stagnate at the same loss values and produce highly similar output functions. Building on this observation, the chapter mathematically defines how operations such as **neuron splitting** can "embed" critical points of a narrow network into the parameter space of a wider network.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 模型秩与乐观估计</b></summary>
+<summary><b>1. Observing Width Similarity</b></summary>
 
-*   **核心问题：** 探索过参数化模型为何能泛化良好，甚至在样本量远小于参数量时恢复目标函数。
-*   **定义：模型秩 (Model Rank)**
-    *   描述在给定参数点附近，模型局部线性化后的自由度（切空间的维数）。
-    *   对于线性模型，模型秩等于参数数量；对于非线性模型，模型秩随参数位置变化。
-*   **乐观样本量：**
-    *   定义为在“最优”参数点（目标集）附近初始化时，恢复目标函数所需的最小样本量。
-    *   它构成了实际训练中所需样本量的理论下界。
+*   **Loss stagnation:**
+    *   During training, neural networks of different widths, from narrow to wide, often stagnate at nearly identical loss values, producing staircase-shaped loss curves.
+*   **Similarity of output functions:**
+    *   At these stagnation points, the learned output functions are highly similar despite differences in the dimensionality of the networks' parameter spaces.
+    *   **Internal representations:** Visualizations show that neurons inside a wide network condense at stagnation points, making its effective structure equivalent to that of a narrower network.
 </details>
 
 <details>
-<summary><b>2. 理论验证与对比实验</b></summary>
+<summary><b>2. The Core Principle: The Embedding Principle</b></summary>
 
-*   **简单非线性回归：**
-    *   对比线性模型与非线性模型（如 $f = \theta_0 + \theta_1x_1 + \theta_2\theta_3x_2$）。
-    *   实验显示，非线性模型在过参数化下仅需极少样本（乐观样本量）即可恢复特定目标函数，而线性模型则无法做到。
-*   **矩阵分解 (Matrix Completion)：**
-    *   非线性矩阵分解模型（$W=AB$）能以远低于线性模型（直接优化 $W$）的样本量恢复低秩矩阵。
-    *   实验验证了所需样本量与矩阵的秩相关，符合理论推导的乐观样本量公式。
-*   **神经网络模型：**
-    *   实验表明，神经网络恢复目标函数所需的样本量接近理论上的乐观样本量。
-    *   **超参数的作用：** 适当的超参数（如小初始化）能引导模型进入“好”的区域（凝聚区域），从而在实际中逼近乐观估计的性能。
+*   **Core definition:**
+    *   The loss landscape of a wider neural network "contains" the critical points of all narrower networks.
+*   **Mechanism: Neuron splitting**
+    *   Splitting a neuron in a narrow network into two neurons with identical input weights and proportionally divided output weights embeds the narrow network into a wider one without changing its output function.
+    *   This means that the parameter space of a wide network contains subspaces corresponding to solutions of narrower networks.
 </details>
 
 <details>
-<summary><b>3. 神经网络架构设计的启示</b></summary>
+<summary><b>3. Why Are Wider Networks Easier to Train?</b></summary>
 
-*   **宽度的“免费”表达能力：**
-    *   **结论：** 增加神经网络的宽度（全连接层神经元数或卷积核数）不会增加恢复目标函数所需的乐观样本量。
-    *   **意义：** 我们可以放心地使用超宽网络来增强表达能力，而无需担心需要指数级增加训练数据。乐观样本量仅取决于目标函数的**内在宽度**。
-*   **连接的“昂贵”表达能力：**
-    *   **结论：** 增加神经元之间的连接（如从卷积层变为全连接层）会显著增加乐观样本量。
-    *   **对比：** 权重共享的 CNN 相比无权重共享网络及全连接网络，所需样本量大幅减少。这解释了为何 CNN 在图像任务（局部性强）上优于全连接网络。
+*   **Energy spectrum analysis of the loss landscape:**
+    *   Statistics from extensive experiments reveal discrete "energy levels" in the distribution of loss values, corresponding to the losses of embedded "perfect" narrow networks of different widths.
+*   **Hessian eigenvalue analysis (the key mechanism):**
+    *   **Traps in narrow networks:** In a narrow network, a critical point may be a **local minimum**, with all Hessian eigenvalues positive, causing training to stagnate with no escape route.
+    *   **Escape routes in wide networks:** After this point is embedded into a wider network, the Hessian acquires **negative eigenvalues**, indicating descent directions. The former "trap" becomes a **saddle point**.
+    *   **Conclusion:** Wider networks have more potential descent directions, making it easier to escape suboptimal solutions and converge to global minima with better generalization.
 </details>
 
+<details>
+<summary><b>4. Extensions: Depth and Critical Manifolds</b></summary>
 
-## 第十一章 解的平坦性
+*   **Critical manifolds:**
+    *   Embedding is not unique: neurons can be split in multiple ways. A single critical point of a narrow network therefore corresponds to a high-dimensional "critical manifold" in a wider network.
+    *   This manifold is highly degenerate and exerts an important attracting influence on optimization dynamics.
+*   **The embedding principle for depth:**
+    *   The theory applies to **depth** as well as width.
+    *   **Layer linearization:** Inserting linear layers that approximate the identity map embeds solutions of shallow networks into deeper networks.
+    *   The loss landscapes of deeper networks therefore also contain the critical points of shallower networks, explaining the distinct stages observed during deep network training.
+</details>
 
-### **整体介绍**
+## Chapter 10: Optimistic Estimate
 
-本章介绍了**解的平坦性 (Flatness)**，并阐述了其与模型泛化能力之间的联系。经验规律表明，“平坦”的极小点通常比“尖锐”的极小点具有更好的泛化能力。本章介绍了影响解平坦性的三个因素：**批次大小 (Batch Size)**、**随机梯度下降 (SGD) 的噪音结构**以及 **Dropout**。最后，介绍了训练过程中出现的**“稳定边缘” (Edge of Stability)** 现象，揭示了梯度下降在非凸优化中的复杂动力学行为。
+### **Overview**
+
+This chapter introduces the **optimistic estimate**. Under certain conditions, such as condensation, nonlinear models including neural networks can behave like simpler models. The chapter introduces **model rank** to quantify the minimum number of samples needed to recover a target function, referred to as the **optimistic sample size**. Theory and experiments show that, for neural networks, this sample size depends only on the target function's **intrinsic width** (complexity), rather than the actual width of the network.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 解的平坦性及其意义</b></summary>
+<summary><b>1. Model Rank and the Optimistic Estimate</b></summary>
 
-*   **定义：**
-    *   直观上，平坦性指损失函数在极小值点附近的曲率大小。
-    *   **数学度量：** 常用 Hessian 矩阵的特征值（尤其是最大特征值 $\lambda_{max}$）来衡量。$\lambda_{max}$ 越小，解越平坦；$\lambda_{max}$ 越大，解越尖锐。
-    *   另一种度量是看损失函数在参数随机扰动下的变化幅度。
-*   **与泛化能力的关系：**
-    *   **平坦解 (Flat Minima)：** 对参数扰动不敏感，意味着在测试集（数据分布略有偏移）上也能保持较好的性能，泛化能力强。
-    *   **尖锐解 (Sharp Minima)：** 对参数变化非常敏感，容易过拟合，泛化能力差。
+*   **Core question:** Why can overparameterized models generalize well and even recover a target function when the number of samples is far smaller than the number of parameters?
+*   **Definition: Model rank**
+    *   Model rank describes the degrees of freedom of a model's local linearization near a given parameter point, namely the dimension of its tangent space.
+    *   For linear models, model rank equals the number of parameters; for nonlinear models, it varies with the parameter location.
+*   **Optimistic sample size:**
+    *   The minimum number of samples needed to recover a target function when initialization is near the "optimal" parameter points (the target set).
+    *   It provides a theoretical lower bound on the sample size required in actual training.
 </details>
 
 <details>
-<summary><b>2. 影响平坦性的关键因素</b></summary>
+<summary><b>2. Theoretical Validation and Comparative Experiments</b></summary>
 
-*   **批次大小 (Batch Size)：**
-    *   **小批次 (Small Batch)：** 引入较大的随机噪声，有助于模型逃离尖锐的局部极小点，倾向于收敛到平坦解，泛化更好。
-    *   **大批次 (Large Batch)：** 梯度估计更精确，但容易陷入最近的（可能是尖锐的）极小点，导致泛化性能下降。
-*   **随机梯度下降 (SGD) 的噪音结构：**
-    *   **各向异性噪音：** SGD 的噪音并非均匀的高斯噪声，其协方差矩阵与 Hessian 矩阵对齐。
-    *   **逃离机制：** 在曲率大（尖锐）的方向上，梯度噪音也大，这迫使 SGD 快速逃离尖锐区域；在平坦区域，噪音较小，易于停留。
-    *   **隐式正则化：** SGD 等效于在损失函数中加入了一个惩罚项，该项惩罚梯度的方差，从而偏好平坦解。
-*   **Dropout：**
-    *   **作用：** Dropout 通过随机丢弃神经元，相当于对模型施加了强扰动。
-    *   **平坦化效应：** 为了在该扰动下保持低损失，模型必须寻找对参数缺失不敏感的解，即平坦解。这解释了 Dropout 提升泛化的机制。
+*   **Simple nonlinear regression:**
+    *   Compare linear models with nonlinear models such as $f = \theta_0 + \theta_1x_1 + \theta_2\theta_3x_2$.
+    *   Experiments show that an overparameterized nonlinear model can recover a specific target function from very few samples, matching the optimistic sample size, whereas a linear model cannot.
+*   **Matrix factorization (matrix completion):**
+    *   A nonlinear matrix factorization model ($W=AB$) can recover a low-rank matrix using far fewer samples than a linear model that directly optimizes $W$.
+    *   Experiments confirm that the required sample size depends on the matrix rank, consistent with the theoretically derived formula for the optimistic sample size.
+*   **Neural network models:**
+    *   Experiments show that the sample size needed for neural networks to recover a target function is close to the theoretical optimistic sample size.
+    *   **The role of hyperparameters:** Appropriate hyperparameters, such as small initialization, can guide a model into "good" regions where condensation occurs, bringing practical performance close to the optimistic estimate.
 </details>
 
 <details>
-<summary><b>3. 稳定边缘现象 (Edge of Stability)</b></summary>
+<summary><b>3. Implications for Neural Network Architecture Design</b></summary>
 
-*   **现象描述：**
-    *   在使用梯度下降（GD）训练神经网络时，损失函数的锐度（$\lambda_{max}$）会自发上升并维持在 $2/\eta$ 附近（$\eta$ 为学习率）。
-*   **动力学解释：**
-    *   **稳定性界限：** 线性稳定性理论指出，当 $\lambda_{max} > 2/\eta$ 时，优化过程会变得不稳定（震荡）。
-    *   **自调节机制：** 训练过程始终在“稳定”与“不稳定”的边缘游走。这一现象挑战了传统的收敛理论，表明现代神经网络的训练往往不是简单的单调下降，而是一种处于混沌边缘的动态平衡。
+*   **The "free" expressive power of width:**
+    *   **Conclusion:** Increasing network width, whether by adding neurons to fully connected layers or adding convolutional kernels, does not increase the optimistic sample size needed to recover a target function.
+    *   **Significance:** Very wide networks can enhance expressive power without requiring an exponential increase in training data. The optimistic sample size depends only on the target function's **intrinsic width**.
+*   **The "costly" expressive power of connections:**
+    *   **Conclusion:** Adding connections between neurons, such as replacing a convolutional layer with a fully connected layer, substantially increases the optimistic sample size.
+    *   **Comparison:** CNNs with shared weights require far fewer samples than networks without weight sharing and fully connected networks. This explains why CNNs outperform fully connected networks on image tasks, where locality is strong.
 </details>
 
-## 第十二章 锚函数：研究语言模型的一类简单函数
 
-### **整体介绍**
+## Chapter 11: Flatness of Solutions
 
-本章介绍了针对大语言模型（LLM）研究中面临的任务未知、计算昂贵及可解释性差等挑战，提出的名为 **“锚函数” (Anchor Function)** 的框架，设计了一系列简化的**类语言任务**（如“3x to x”的恒等学习）。这些任务保留了自然语言中核心的“锚点-关键值”逻辑结构，但剔除了复杂的自然语境干扰。
+### **Overview**
+
+This chapter introduces **flatness** and its relationship to model generalization. Empirical observations suggest that "flat" minima typically generalize better than "sharp" minima. The chapter discusses three factors that affect flatness: **batch size**, **the noise structure of stochastic gradient descent (SGD)**, and **Dropout**. It concludes with the **edge of stability** phenomenon observed during training, revealing the complex dynamics of gradient descent in nonconvex optimization.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 研究背景与思路</b></summary>
+<summary><b>1. Flatness and Its Significance</b></summary>
 
-*   **面临的挑战：**
-    *   **任务未知：** Next token prediction 训练方式与具体下游任务目标不直接相关。
-    *   **成本高昂：** 训练大模型需要海量数据和算力，学术界难以复现。
-    *   **不可解释性：** 推理过程复杂，难以归因。
-*   **语言任务特征：**
-    *   自然语言中广泛存在**逻辑推理链**和 **锚点-关键值 (Anchor-Key)** 结构。
+*   **Definition:**
+    *   Intuitively, flatness refers to the curvature of the loss function near a minimum.
+    *   **Mathematical measures:** Flatness is commonly measured using Hessian eigenvalues, especially the largest eigenvalue $\lambda_{max}$. A smaller $\lambda_{max}$ indicates a flatter solution, while a larger $\lambda_{max}$ indicates a sharper one.
+    *   Another measure considers how much the loss changes under random perturbations of the parameters.
+*   **Relationship to generalization:**
+    *   **Flat minima:** Insensitivity to parameter perturbations suggests that performance remains good on test data with a slightly shifted distribution, yielding strong generalization.
+    *   **Sharp minima:** High sensitivity to parameter changes makes these solutions prone to overfitting and poor generalization.
 </details>
 
 <details>
-<summary><b>2. 锚函数与类语言任务</b></summary>
+<summary><b>2. Key Factors Affecting Flatness</b></summary>
 
-*   **锚函数 (Anchor Function)：**
-    *   定义：一种从序列到标签的映射，输出由序列中的“锚点”决定。
+*   **Batch size:**
+    *   **Small batches:** Introduce greater stochastic noise, helping the model escape sharp local minima and favoring convergence to flat solutions with better generalization.
+    *   **Large batches:** Provide more accurate gradient estimates but can become trapped in the nearest minimum, which may be sharp, reducing generalization performance.
+*   **The noise structure of stochastic gradient descent (SGD):**
+    *   **Anisotropic noise:** SGD noise is not uniform Gaussian noise; its covariance matrix aligns with the Hessian.
+    *   **Escape mechanism:** Gradient noise is greater in directions of high curvature, forcing SGD to leave sharp regions quickly. Noise is smaller in flat regions, making it easier to remain there.
+    *   **Implicit regularization:** SGD is equivalent to adding a penalty term to the loss function that penalizes gradient variance, thereby favoring flat solutions.
+*   **Dropout:**
+    *   **Effect:** Randomly dropping neurons subjects the model to strong perturbations.
+    *   **Flattening effect:** To maintain a low loss under these perturbations, the model must find solutions that are insensitive to missing parameters, namely flat solutions. This explains how Dropout improves generalization.
 </details>
 
 <details>
-<summary><b>3. 数据划分与泛化评估</b></summary>
+<summary><b>3. The Edge of Stability</b></summary>
 
-*   **数据划分策略：** 为了严谨验证泛化能力，设计了特殊的划分方式。
-    *   **模-余数划分：** 确保训练集和测试集中的“锚点-关键值”组合完全隔离。
-    *   **基于锚点的划分：** 某些锚点仅在训练集出现，测试其在新组合下的表现。
-    *   **复合锚点划分：** 训练部分组合，测试未见过的组合逻辑。
-*   **泛化类型：**
-    *   **数据泛化：** 任务见过，但数据样本未见过（如学会加法后计算新数字）。
-    *   **任务泛化：** 组合方式未见过（如学会了操作A和B，测试A+B的组合），难度更高。
+*   **Description:**
+    *   When neural networks are trained with gradient descent (GD), the sharpness of the loss ($\lambda_{max}$) spontaneously increases and remains near $2/\eta$, where $\eta$ is the learning rate.
+*   **Dynamical explanation:**
+    *   **Stability threshold:** Linear stability theory indicates that optimization becomes unstable and oscillatory when $\lambda_{max} > 2/\eta$.
+    *   **Self-regulation:** Training continually moves along the boundary between stability and instability. This challenges traditional convergence theory, suggesting that modern neural network training often involves a dynamic equilibrium at the edge of chaos rather than simple monotonic descent.
 </details>
 
-<details>
-<summary><b>4. 移位 (Shift) 与 广播 (Broadcast)</b></summary>
+## Chapter 12: Anchor Functions: A Class of Simple Functions for Studying Language Models
 
-*   **核心机制：** 通过分析简化的两层 Transformer 模型，发现其解决锚函数任务依赖两个关键操作：
-    *   **移位 (Shift)：** 第一层注意力机制将“关键值”的信息移动到“锚点”位置。
-    *   **广播 (Broadcast)：** 第二层注意力机制将锚点位置的信息广播到输出位置。
-*   **普遍性验证：**
-    *   在真实的 **Llama2-7B** 大模型中，也观察到了类似的注意力头模式：浅层倾向于移位操作，深层倾向于广播操作。
-    *   证明了锚函数是理解复杂大模型内部运作的一个有效基准。
-</details>
+### **Overview**
 
-## 第十三章 复杂度控制对语言模型推理能力的影响
-
-### **整体介绍**
-
-本章介绍了超参数对大语言模型（LLM）处理复杂推理任务（特别是组合泛化）的影响。核心观点是：**模型的超参数（如初始化尺度、权重衰减），决定了模型是倾向于“死记硬背”（记忆型解）还是“举一反三”（推理型解）**。通过“复合函数”任务， 体现了 **“复杂度控制”**的关键作用：强复杂度控制（小初始化+大权重衰减）能引导模型学习结构化的、可泛化的推理规则，从而在分布外（OOD）任务上表现优异；而弱复杂度控制则导致模型倾向于记忆训练数据，缺乏泛化能力。
+This chapter introduces the **anchor function** framework, developed to address challenges in large language model (LLM) research, including unspecified tasks, high computational costs, and limited interpretability. The framework defines a series of simplified **language-like tasks**, such as identity learning from "3x to x". These tasks retain the core "anchor-key" logical structure of natural language while removing the complications of natural linguistic context.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 引言与背景：模型能力的“基因”</b></summary>
+<summary><b>1. Research Background and Approach</b></summary>
 
-*   **研究动机：** 探究模型是真正学会了推理规则，还是仅仅记住了输入输出映射？
-*   **核心隐喻：** 就像基因决定生物性状（如肤色、瞳色），模型的超参数（初始化、权重衰减等）决定了其推理能力的层级（是记录数据，还是发现定律）。
+*   **Challenges:**
+    *   **Unspecified tasks:** The next-token prediction training objective is not directly tied to specific downstream task objectives.
+    *   **High costs:** Training large models requires vast amounts of data and computation, making results difficult to reproduce in academia.
+    *   **Limited interpretability:** Reasoning processes are complex, making their underlying mechanisms difficult to identify.
+*   **Characteristics of language tasks:**
+    *   **Logical reasoning chains** and **anchor-key structures** are widespread in natural language.
 </details>
 
 <details>
-<summary><b>2. 实验框架：复合函数</b></summary>
+<summary><b>2. Anchor Functions and Language-Like Tasks</b></summary>
 
-*   **任务定义：** 设计了形如 $f(x) = g(g(x; a_i); a_j)$ 的复合函数任务。
-    *   **锚点 (Anchor)：** $a_i, a_j$ 代表特定的运算规则（如 +1, -2）。
-    *   **关键项 (Key Token)：** $x$ 是被运算的数字。
-*   **数据划分：**
-    *   **训练集/ID测试集：** 包含部分锚点组合（如 $a, b; a, c$）。
-    *   **OOD测试集：** 包含训练中未见过的锚点组合（如 $c, d$），用于测试模型的组合泛化能力。
-*   **核心变量：**
-    *   **初始化率 ($\gamma$)：** 控制参数初始化的大小。$\gamma$ 越大，初始化尺度越小。
-    *   **权重衰减 (Weight Decay)：** 控制 $L_2$ 正则化强度。
+*   **Anchor function:**
+    *   Definition: A mapping from a sequence to a label, where the output is determined by the "anchor" in the sequence.
 </details>
 
 <details>
-<summary><b>3. 复杂度控制的影响机制</b></summary>
+<summary><b>3. Data Splits and Generalization Evaluation</b></summary>
 
-*   **三种学习阶段：**
-    *   **阶段 1（均表现差）：** 初始化极大或极小，模型既无法泛化到 ID 也无法泛化到 OOD。
-    *   **阶段 2（记忆型解）：** 初始化适中。模型在 ID 上表现好，但 OOD 差。模型将复合锚点对（如 $c, d$）视为一个独立的标签进行记忆，缺乏对单个锚点规则的理解，（$c,d$ 与 $d,c$ 处理方式不同）。
-    *   **阶段 3（推理型解）：** **小初始化 + 大权重衰减**。模型在 ID 和 OOD 上均表现优异。模型学会了单个锚点的运算规则，并能将其组合。
-*   **复杂度控制的定义：**
-    *   通过降低初始化尺度或增加权重衰减，可以限制模型的有效复杂度。
-    *   **强复杂度控制**迫使模型寻找更简单、更通用的规则（推理），而非记忆复杂的个例。
+*   **Data-splitting strategies:** Special splits are designed to rigorously evaluate generalization.
+    *   **Modulo-remainder split:** Ensures that anchor-key combinations in the training and test sets are completely disjoint.
+    *   **Anchor-based split:** Certain anchors appear only in the training set, and their performance in new combinations is evaluated.
+    *   **Composite-anchor split:** Trains on some combinations and tests the logic of unseen combinations.
+*   **Types of generalization:**
+    *   **Data generalization:** The task is familiar, but the data samples are unseen, such as performing addition on new numbers after learning the operation.
+    *   **Task generalization:** The combination is unseen, such as testing the composition A+B after learning operations A and B separately; this is more challenging.
 </details>
-
 
 <details>
-<summary><b>4. 现实任务验证与 Scaling Law</b></summary>
+<summary><b>4. Shift and Broadcast</b></summary>
 
-*   **任务验证：** 在 Concept Graphs（组合泛化）、SCAN/COGS、法律推理等现实场景中，均验证了“小初始化有助于推理泛化”的结论。
-*   **不同初始化的Scaling Law 的启示：**
-    *   控制模型复杂度（小初始化）能显著降低测试误差的截距。
-    *   这意味着在同等数据或参数量下，经过良好复杂度控制的模型能达到更高的性能上限。
+*   **Core mechanism:** Analysis of a simplified two-layer Transformer reveals that solving anchor-function tasks relies on two key operations:
+    *   **Shift:** The first attention layer moves information about the key to the anchor position.
+    *   **Broadcast:** The second attention layer broadcasts information from the anchor position to the output position.
+*   **Evidence of broader applicability:**
+    *   Similar attention-head patterns are observed in the full-scale **Llama2-7B** model: shallower layers tend to perform shifts, while deeper layers tend to perform broadcasts.
+    *   This demonstrates that anchor functions provide an effective benchmark for understanding the internal workings of complex large models.
 </details>
 
-## 第十四章 深度神经网络的更多现象
+## Chapter 13: The Effect of Complexity Control on Reasoning in Language Models
 
-### **整体介绍**
+### **Overview**
 
-本章进一步介绍了除频率原则和凝聚现象之外，深度学习领域中一系列令人着迷且反直觉的现象。
+This chapter examines how hyperparameters affect large language models (LLMs) on complex reasoning tasks, especially compositional generalization. Its central claim is that **model hyperparameters, such as initialization scale and weight decay, determine whether a model tends toward rote memorization (memorization-based solutions) or the ability to apply learned rules to new situations (reasoning-based solutions)**. Composite-function tasks demonstrate the crucial role of **complexity control**: strong complexity control (small initialization and large weight decay) guides models toward structured, generalizable reasoning rules, leading to strong performance on out-of-distribution (OOD) tasks. Weak complexity control, by contrast, encourages memorization of training data and poor generalization.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 大语言模型的宏观规律</b></summary>
+<summary><b>1. Introduction and Background: The "Genes" of Model Capabilities</b></summary>
 
-*   **缩放定律 (Scaling Law)：**
-    *   **定义：** 模型性能（损失函数）与模型参数量 ($N$)、数据量 ($D$)、计算量 ($C$) 之间呈幂律关系（$L \propto X^{-\alpha}$）。
-    *   **启示：** 只要增加规模，性能就会持续提升，但存在收益递减。
-*   **大模型密度定律 (Density Law)：**
-    *   **定义：** 随着时间推移，新发布的模型在达到相同性能时所需的参数量（有效参数量）越来越少，即模型“密度”呈指数级增长。
-    *   **趋势：** 模型推理成本每 3-4 个月减半，发展速度超越摩尔定律。
+*   **Research motivation:** Does a model truly learn reasoning rules, or does it merely memorize input-output mappings?
+*   **Central metaphor:** Just as genes determine biological traits, such as skin and eye color, a model's hyperparameters, including initialization and weight decay, determine its level of reasoning ability: recording data or discovering rules.
 </details>
 
 <details>
-<summary><b>2. 大语言模型中的现象</b></summary>
+<summary><b>2. Experimental Framework: Composite Functions</b></summary>
 
-*   **上下文内学习 (In-Context Learning, ICL)：**
-    *   **现象：** 模型无需参数更新，仅通过提示中的少量示例（Few-shot）即可学会新任务（如情感分析、图像分割）。
-    *   **意义：** 这种能力类似人类的学习方式，是 LLM 区别于传统模型的显著特征。
-*   **思维链 (Chain of Thought, CoT)：**
-    *   **现象：** 通过引导模型生成中间推理步骤（而非直接输出答案），显著提升了其在数学、逻辑推理等复杂任务上的表现。
-    *   **涌现性：** CoT 能力通常只在足够大规模的模型（如 >100B 参数）中才会涌现。
+*   **Task definition:** Composite-function tasks take the form $f(x) = g(g(x; a_i); a_j)$.
+    *   **Anchors:** $a_i, a_j$ represent specific operations, such as +1 or -2.
+    *   **Key token:** $x$ is the number on which the operations are performed.
+*   **Data splits:**
+    *   **Training set / ID test set:** Contains a subset of anchor combinations, such as $a, b; a, c$.
+    *   **OOD test set:** Contains anchor combinations unseen during training, such as $c, d$, to evaluate compositional generalization.
+*   **Key variables:**
+    *   **Initialization rate ($\gamma$):** Controls the magnitude of parameter initialization. A larger $\gamma$ corresponds to a smaller initialization scale.
+    *   **Weight decay:** Controls the strength of $L_2$ regularization.
 </details>
 
 <details>
-<summary><b>3. 训练动力学中的现象</b></summary>
+<summary><b>3. How Complexity Control Affects Learning</b></summary>
 
-*   **顿悟 (Grokking) 现象：**
-    *   **描述：** 在某些任务（如算法运算）中，模型在训练误差降至 0 后，测试误差仍然很高（过拟合），但经过长时间继续训练，测试误差突然大幅下降，实现泛化。
-    *   **启示：** “过拟合”可能只是暂时的，长时间训练有助于模型从记忆转向理解规则。
-*   **幸运彩票现象 (Lottery Ticket Hypothesis)：**
-    *   **假设：** 随机初始化的密集网络中存在一个稀疏子网络（中奖彩票），若单独训练该子网络，能达到与原网络相当的性能。
-    *   **意义：** 网络的巨大参数量可能只是为了更容易找到这个“中奖”的稀疏结构。
-*   **双下降 (Double Descent) 现象：**
-    *   **描述：** 随着模型复杂度增加，测试误差先下降，后上升（传统过拟合），然后**再次下降**。
-    *   **条件：** 这种现象在存在标签噪声时尤为明显，挑战了经典的偏差-方差权衡理论。
+*   **Three learning regimes:**
+    *   **Regime 1 (poor performance on both):** With extremely large or extremely small initialization, the model fails to generalize to either ID or OOD data.
+    *   **Regime 2 (memorization-based solutions):** With moderate initialization, the model performs well on ID data but poorly on OOD data. It memorizes each composite anchor pair, such as $c, d$, as a separate label without understanding the rules for individual anchors, treating $c,d$ and $d,c$ differently.
+    *   **Regime 3 (reasoning-based solutions):** **Small initialization + large weight decay** yields strong performance on both ID and OOD data. The model learns the operations associated with individual anchors and can compose them.
+*   **Definition of complexity control:**
+    *   Reducing the initialization scale or increasing weight decay limits the model's effective complexity.
+    *   **Strong complexity control** forces the model to seek simpler, more general rules (reasoning) rather than memorize complex individual cases.
 </details>
+
 
 <details>
-<summary><b>4. 损失景观与特征空间的几何性质</b></summary>
+<summary><b>4. Validation on Real-World Tasks and Scaling Laws</b></summary>
 
-*   **神经塌缩 (Neural Collapse)：**
-    *   **现象：** 在训练后期，同一类别的样本特征在特征空间中塌缩成一个点（类中心），且不同类别的中心呈现等角分布（ETF）。
-    *   **意义：** 表明网络在训练末期学会了提取最具判别性的特征，忽略了类内差异。
-*   **模式连接 (Mode Connectivity)：**
-    *   **现象：** 不同的局部极小点（训练解）之间，可以通过一条损失值很低的非线性路径连接起来。
-    *   **启示：** 损失景观中的极小点并不是孤立的深坑，而是位于一个连通的低损失流形上。
+*   **Task validation:** Experiments on Concept Graphs (compositional generalization), SCAN/COGS, and legal reasoning support the conclusion that small initialization improves generalization in reasoning.
+*   **Insights from scaling laws under different initializations:**
+    *   Controlling model complexity through small initialization can substantially lower the intercept of the test-error scaling curve.
+    *   This means that, for the same amount of data or number of parameters, models with effective complexity control can achieve a higher performance ceiling.
 </details>
 
-## 第十五章 神经网络求解微分方程
+## Chapter 14: Further Phenomena in Deep Neural Networks
 
-### **整体介绍**
+### **Overview**
 
-本章介绍了深度学习在科学计算领域（AI for Science）的核心应用 **求解微分方程**。与传统的数值方法（如有限差分、有限元法）不同，神经网络提供了一种无网格、适应高维问题的全新求解范式。首先通过牛顿运动定律的例子引入了将微分方程求解转化为优化问题的基本思想，随后详细介绍了两大类主要方法：**参数化解的方法**（如 PINN、Deep Ritz、WAN）和**参数化算子的方法**（如 DeepONet、FNO）。
+This chapter introduces a range of fascinating and counterintuitive deep learning phenomena beyond the Frequency Principle and condensation.
 
 ---
 
-### **内容提纲**
+### **Outline**
 
 <details>
-<summary><b>1. 神经网络求解微分方程的基本思想</b></summary>
+<summary><b>1. Macroscopic Laws of Large Language Models</b></summary>
 
-*   **替代模型与优化视角：**
-    *   将微分方程求解问题转化为一个**优化问题**（如能量最小化）。
-    *   利用神经网络作为函数逼近器，通过训练调整参数以最小化残差或能量泛函。
-*   **举例：牛顿运动定律**
-    *   以求解物体位置 $s(t)$ 为例，构建包含控制方程残差 $|m\frac{d^2s}{dt^2} - F|^2$ 和初始条件误差的损失函数。
-    *   通过在时间域内随机采样（无网格）来计算损失并更新网络参数。
+*   **Scaling law:**
+    *   **Definition:** Model performance (loss) follows a power-law relationship with the number of model parameters ($N$), the amount of data ($D$), and the amount of computation ($C$): $L \propto X^{-\alpha}$.
+    *   **Implication:** Increasing scale continues to improve performance, although with diminishing returns.
+*   **Density law for large models:**
+    *   **Definition:** Over time, newly released models require fewer parameters (effective parameter count) to achieve the same performance, meaning that model "density" grows exponentially.
+    *   **Trend:** Model inference costs halve every 3-4 months, outpacing Moore's law.
 </details>
 
 <details>
-<summary><b>2. 参数化解的方法 (Solving Instances)</b></summary>
+<summary><b>2. Phenomena in Large Language Models</b></summary>
 
-*   **最小二乘法 (PINN)：**
-    *   **物理驱动神经网络 (Physics-Informed Neural Networks)：** 将PDE的残差、边界条件和初始条件作为惩罚项加入损失函数。
-    *   **特点：** 简单直观，利用自动微分计算导数，无需网格，适合高维和复杂区域。
-*   **变分方法 (Deep Ritz Method)：**
-    *   **原理：** 基于变分原理，将求解PDE转化为最小化能量泛函（如狄利克雷能量）。
-    *   **特点：** 对解的光滑性要求较低（只需一阶导数），数值稳定性较好，常用于求解椭圆型方程。
-*   **弱解求解法 (WAN)：**
-    *   **原理：** 基于PDE的弱形式（积分形式），引入对抗网络作为测试函数。
-    *   **特点：** 通过极小极大（Min-Max）博弈求解，适合处理解的正则性较差（如激波）的情况。
+*   **In-context learning (ICL):**
+    *   **Phenomenon:** Without updating their parameters, models can learn new tasks, such as sentiment analysis or image segmentation, from just a few examples in a prompt (few-shot learning).
+    *   **Significance:** This capability resembles human learning and is a distinguishing feature of LLMs compared with traditional models.
+*   **Chain of thought (CoT):**
+    *   **Phenomenon:** Prompting models to generate intermediate reasoning steps, rather than directly output answers, substantially improves performance on complex tasks such as mathematics and logical reasoning.
+    *   **Emergence:** CoT capabilities typically emerge only in sufficiently large models, such as those with more than 100 billion parameters.
 </details>
 
 <details>
-<summary><b>3. 参数化算子的方法 (Learning Operators)</b></summary>
+<summary><b>3. Phenomena in Training Dynamics</b></summary>
 
-*   **核心目标：** 学习从输入函数（如初始条件、源项）到输出函数（解）的映射算子，而非求解单个方程。
-*   **代表方法：**
-    *   **DeepONet：** 基于通用逼近定理，学习算子的非线性映射。
-    *   **傅里叶神经算子 (FNO)：** 在频域利用积分变换学习算子，具有分辨率无关性。
-*   **优势：** 一旦训练完成，推理速度极快，适合需要反复求解同一类方程（如反问题、实时控制）的场景。
+*   **Grokking:**
+    *   **Description:** On certain tasks, such as algorithmic computation, test error remains high (overfitting) after training error reaches 0. After prolonged further training, however, test error suddenly drops sharply and the model generalizes.
+    *   **Implication:** Overfitting may be temporary; prolonged training can help a model move from memorization to understanding rules.
+*   **Lottery ticket hypothesis:**
+    *   **Hypothesis:** A randomly initialized dense network contains a sparse subnetwork (a winning ticket) that, when trained on its own, can match the performance of the original network.
+    *   **Significance:** A network's large parameter count may simply make it easier to find this "winning" sparse structure.
+*   **Double descent:**
+    *   **Description:** As model complexity increases, test error first decreases, then increases (traditional overfitting), and then **decreases again**.
+    *   **Conditions:** This phenomenon is especially pronounced in the presence of label noise, challenging the classical bias-variance trade-off.
 </details>
 
 <details>
-<summary><b>4. 神经网络与传统方法的对比：频率偏好</b></summary>
+<summary><b>4. Geometry of the Loss Landscape and Feature Space</b></summary>
 
-*   **频率原则 (Frequency Principle)：**
-    *   神经网络倾向于**优先学习低频成分**，对高频细节（如剧烈震荡、突变）收敛极慢。
-*   **传统数值方法（如Jacobi迭代）：**
-    *   通常对**高频误差**消除得很快，但在消除低频误差时效率低下（这促成了多重网格法的诞生）。
-*   **互补与融合：**
-    *   **混合策略：** 先用神经网络快速拟合低频轮廓，再用传统方法修正高频细节。
-    *   **多尺度神经网络 (MscaleDNN)：** 通过在网络中引入不同尺度的子网络，强制模型关注高频成分，有效解决了高频收敛慢的问题。
+*   **Neural collapse:**
+    *   **Phenomenon:** Late in training, features of samples from the same class collapse to a single point (the class center) in feature space, while the centers of different classes form an equiangular configuration (ETF).
+    *   **Significance:** This indicates that, near the end of training, the network learns to extract the most discriminative features while disregarding within-class differences.
+*   **Mode connectivity:**
+    *   **Phenomenon:** Different local minima (trained solutions) can be connected by a nonlinear path along which the loss remains low.
+    *   **Implication:** Minima in the loss landscape are not isolated pits but lie on a connected low-loss manifold.
+</details>
+
+## Chapter 15: Solving Differential Equations with Neural Networks
+
+### **Overview**
+
+This chapter introduces **solving differential equations**, a core application of deep learning in scientific computing (AI for Science). Neural networks offer a new, mesh-free solution paradigm suited to high-dimensional problems, alongside traditional numerical methods such as finite differences and finite elements. An example based on Newton's laws of motion introduces the basic idea of reformulating differential equations as optimization problems. The chapter then details two major categories of methods: **parameterizing solutions** (such as PINN, Deep Ritz, and WAN) and **parameterizing operators** (such as DeepONet and FNO).
+
+---
+
+### **Outline**
+
+<details>
+<summary><b>1. The Basic Idea of Solving Differential Equations with Neural Networks</b></summary>
+
+*   **Surrogate models and the optimization perspective:**
+    *   Reformulate the differential-equation problem as an **optimization problem**, such as energy minimization.
+    *   Use a neural network as a function approximator and train its parameters to minimize a residual or energy functional.
+*   **Example: Newton's laws of motion**
+    *   To solve for an object's position $s(t)$, construct a loss function containing the governing-equation residual $|m\frac{d^2s}{dt^2} - F|^2$ and the initial-condition error.
+    *   Compute the loss and update network parameters using random, mesh-free sampling over the time domain.
 </details>
 
 <details>
-<summary><b>5. 深度学习求解PDE的优劣势</b></summary>
+<summary><b>2. Methods That Parameterize Solutions (Solving Instances)</b></summary>
 
-*   **优势：**
-    *   **无网格：** 避免了复杂几何区域的网格生成难题。
-    *   **高维能力：** 能够有效处理高维PDE（如薛定谔方程、布莱克-舒尔斯方程），克服维数灾难。
-    *   **反问题求解：** 将参数反演与正向求解统一在同一个优化框架下，极其便利。
-*   **不足：**
-    *   **精度有限：** 难以达到传统科学计算的高精度（如 $10^{-10}$）。
-    *   **缺乏理论保证：** 收敛性和误差界尚无完备理论支持。
-    *   **训练代价：** 对于单个方程求解，训练时间远超传统方法，且可能陷入局部最优。
+*   **Least-squares method (PINN):**
+    *   **Physics-informed neural networks:** Incorporate the PDE residual, boundary conditions, and initial conditions into the loss function as penalty terms.
+    *   **Features:** Simple and intuitive; uses automatic differentiation to compute derivatives; requires no mesh; suitable for high-dimensional problems and complex domains.
+*   **Variational method (Deep Ritz method):**
+    *   **Principle:** Uses a variational principle to reformulate the PDE as the minimization of an energy functional, such as the Dirichlet energy.
+    *   **Features:** Requires less solution smoothness (only first derivatives), offers better numerical stability, and is commonly used for elliptic equations.
+*   **Weak-solution method (WAN):**
+    *   **Principle:** Uses the weak (integral) formulation of a PDE and introduces an adversarial network as the test function.
+    *   **Features:** Solves the problem through a min-max game and is suitable for solutions with low regularity, such as shocks.
 </details>
 
-## 联系方式
+<details>
+<summary><b>3. Methods That Parameterize Operators (Learning Operators)</b></summary>
 
-如有问题或进一步讨论，请联系：[xuzhiqin@sjtu.edu.cn](mailto:xuzhiqin@sjtu.edu.cn)
+*   **Core objective:** Learn an operator mapping input functions, such as initial conditions or source terms, to output functions (solutions), rather than solve a single equation.
+*   **Representative methods:**
+    *   **DeepONet:** Learns the nonlinear mapping of an operator based on the universal approximation theorem.
+    *   **Fourier neural operator (FNO):** Learns operators using integral transforms in the frequency domain and is resolution-independent.
+*   **Advantage:** Once trained, inference is extremely fast, making these methods suitable for applications that repeatedly solve the same class of equations, such as inverse problems and real-time control.
+</details>
+
+<details>
+<summary><b>4. Comparing Neural Networks with Traditional Methods: Frequency Bias</b></summary>
+
+*   **Frequency Principle:**
+    *   Neural networks tend to **learn low-frequency components first** and converge very slowly on high-frequency details, such as rapid oscillations or abrupt changes.
+*   **Traditional numerical methods, such as Jacobi iteration:**
+    *   They typically eliminate **high-frequency errors** quickly but are inefficient at eliminating low-frequency errors, which motivated the development of multigrid methods.
+*   **Complementarity and integration:**
+    *   **Hybrid strategy:** Use a neural network to quickly fit the low-frequency structure, then use a traditional method to correct high-frequency details.
+    *   **Multiscale deep neural networks (MscaleDNN):** Introduce subnetworks at different scales to force the model to attend to high-frequency components, effectively addressing slow convergence at high frequencies.
+</details>
+
+<details>
+<summary><b>5. Advantages and Limitations of Solving PDEs with Deep Learning</b></summary>
+
+*   **Advantages:**
+    *   **Mesh-free:** Avoids the difficulty of generating meshes for complex geometric domains.
+    *   **High-dimensional capability:** Can effectively handle high-dimensional PDEs, such as the Schrödinger and Black-Scholes equations, overcoming the curse of dimensionality.
+    *   **Inverse problems:** Conveniently unifies parameter inversion and forward solution within a single optimization framework.
+*   **Limitations:**
+    *   **Limited accuracy:** Struggles to achieve the high precision of traditional scientific computing, such as $10^{-10}$.
+    *   **Lack of theoretical guarantees:** Comprehensive theoretical support for convergence and error bounds remains incomplete.
+    *   **Training cost:** For a single equation, training takes much longer than traditional methods and may become trapped in local optima.
+</details>
+
+## Contact
+
+For questions or further discussion, please contact [xuzhiqin@sjtu.edu.cn](mailto:xuzhiqin@sjtu.edu.cn).
 
